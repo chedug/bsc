@@ -1,0 +1,261 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                            %
+%    Dyussenov Nuraly BSc Thesis Work        %
+%                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt,a4paper,oneside]{book} % twoside,openany
+
+% Packages
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\usepackage{amsmath,amssymb,amsthm}
+
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{caption,subcaption}
+\graphicspath{{./figures/}}
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{refcheck}
+\usepackage{tikz}
+
+% Theoremlike environment
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{assumption}[theorem]{Assumption}
+
+% Ususal abbreviations
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+
+% Probability theory
+\newcommand{\A}{\mathcal{A}}
+\newcommand{\B}{\mathcal{B}}
+\newcommand{\C}{\mathcal{C}}
+\newcommand{\F}{\mathcal{F}}
+\newcommand{\G}{\mathcal{G}}
+\newcommand{\X}{\mathcal{X}}
+\newcommand{\Y}{\mathcal{Y}}
+\newcommand{\M}{\mathcal{M}}
+
+\renewcommand{\P}{\mathbb{P}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\D}{\mathbb{D}}
+\newcommand{\law}[1]{\text{Law}(#1)}
+
+\newcommand{\Pas}{\text{a.s.}}
+\newcommand{\ind}{\mathds{1}}
+
+% Analysis
+\newcommand{\eps}{\varepsilon}
+\newcommand{\la}{\lambda}
+\newcommand{\ga}{\gamma}
+\newcommand{\ka}{\kappa}
+\newcommand{\dtv}{d_{\text{TV}}}
+
+% Integration
+\newcommand{\dint}{\mathrm{d}} 
+
+\newcommand{\lfrf}[1]{\lfloor #1\rfloor}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55% Page layout
+\usepackage{indentfirst}
+%\usepackage{fullpage}
+\usepackage[a4paper]{geometry}
+\geometry{tmargin=3cm,lmargin=3.5cm,rmargin=2cm}
+% manual page formatting
+%\setlength{\headsep}{25pt}
+\hyphenation{}
+
+% headers and footers
+\usepackage{fancyhdr}
+\usepackage{mathptmx}
+
+\newcommand\HRule{\rule{\textwidth}{1pt}}
+
+\usepackage{varwidth}
+
+%\usepackage{booktabs}
+\usepackage{multirow,array}
+\usepackage{siunitx}
+
+% Quotations
+\usepackage{csquotes}
+
+\makeatletter
+\renewcommand{\@chapapp}{}% Not necessary...
+\newenvironment{chapquote}[2][2em]
+{\setlength{\@tempdima}{#1}%
+	\def\chapquote@author{#2}%
+	\parshape 1 \@tempdima \dimexpr\textwidth-2\@tempdima\relax%
+	\itshape}
+{\par\normalfont\hfill--\ \chapquote@author\hspace*{\@tempdima}\par\bigskip}
+\makeatother
+
+
+\usepackage{titlesec, blindtext, color}
+\definecolor{gray75}{gray}{0.75}
+\newcommand{\hsp}{\hspace{20pt}}
+
+
+\newcommand{\stdwidth}{0.61\linewidth}
+
+% Space above chapter titles
+\usepackage{titlesec}
+
+\renewcommand{\baselinestretch}{1.5}
+
+
+
+\begin{document}
+
+\begin{titlepage}
+	
+	%\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+	
+	\center % Center everything on the page
+	
+	%----------------------------------------------------------------------------------------
+	%	HEADING SECTIONS
+	%----------------------------------------------------------------------------------------
+	
+	\textsc{\LARGE Budapesti University of Technology and Economics}\\[1.5cm] % Name of your university/college
+	\textsc{\Large Institute of Mathematics}\\[0.5cm] % Major heading such as course name
+	\textsc{\large Faculty of Mathematics}\\[0.5cm] % Minor heading such as course title
+	
+	%----------------------------------------------------------------------------------------
+	%	TITLE SECTION
+	%----------------------------------------------------------------------------------------
+	
+	\HRule \\[0.4cm]
+	{ \Large \bfseries Linear Regression through Origin
+		 }\\[0.4cm]
+	\HRule \\[1.5cm]
+	
+	%----------------------------------------------------------------------------------------
+	%	AUTHOR SECTION
+	%----------------------------------------------------------------------------------------
+	
+	\begin{tabular}{L{6cm} R{8cm}}
+	\emph{Author:}   & \emph{Supervisor:} \\
+	Dyussenov Nuraly & Dr. Jozsef Mala   \\
+	                 & Associate Professor, BME Fac. of Nat. Sci. 
+	\end{tabular}\\[1.3cm]
+
+	
+	\vfill
+	{\Large Budapest, \today}\\[1.2cm] % Date, change the \today to a set date if you want to be precise
+		
+	\includegraphics[trim={0cm 0cm 0cm 0cm},clip,width=0.5\linewidth]{bme_logo_nagy.eps}
+	 % Include a department/university logo - this will require the graphicx package
+	
+	%\vfill % Fill the rest of the page with whitespace
+	
+\end{titlepage}
+
+	%\newpage\null\thispagestyle{empty}\newpage
+
+	\frontmatter
+	%\chapter*{\centering Kivonat}
+	
+	\tableofcontents
+	\listoftables
+	\listoffigures
+		
+	\mainmatter
+	
+	\fancypagestyle{plain}{%
+
+		\fancyhf{}
+		\fancyhead[L]{\rule[-2ex]{0pt}{2ex}\small \leftmark} 
+		\fancyhead[R]{} 
+		\fancyfoot[L]{}
+		\fancyfoot[C]{-- \thepage\ --}
+		\fancyfoot[R]{} 
+		\renewcommand{\headrulewidth}{1.5pt}
+		\renewcommand{\footrulewidth}{1pt}}
+	\pagestyle{plain}
+	
+	\titleformat{\chapter}[display]{\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+	\titlespacing*{\chapter}{10pt}{20pt}{40pt}
+	 
+	\titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter.\hsp}{0pt}{\Huge\bfseries} 
+	  
+	\chapter{Introduction} % ~2-3 pages
+	
+	\begin{chapquote}{XY} % Quotation (optional)
+	''Bla-bla-bla''
+	\end{chapquote}
+
+
+	\chapter{Theoretical background} % ~10 pages (by Dec 31)
+	% Every chapter should start with a short summary
+
+	\section{Statistics Basics}
+	% Give definitions of Smooth manifold, differentiable maps between manifolds, diffeomorphisms, vectorfields, differential equations and flows, riemannian structure
+
+	\section{Simple Linear Regression}
+	% Definitions of dynamical systems, autonomous differential equations, flows, attractors, and topological properties, invariant like Lyapunov exponent, etc. With examples...
+
+	\section{Simple Linear Regression with no intercept term}
+	% State these theorems, the connection between them and their meanings, historical background, Takens' original motivations
+	
+	\section{To add}	
+	% Defnition, examples, representation via iterated random functions, analogy with dynamical systems, Rényi information dimension of a point cloud
+	
+	
+	\chapter{Applications to Linear Regression through Origin} % (By Jan 31)
+
+	\section{Something to add 1} 
+	% UNICORNS, Temporary Outlier Factor
+	% Outlier types (point, trend and contextual outliers)
+	
+	\section{Something to add 1} 
+	% Sugihara's algorithm (CCM) and the new entropy-based methods
+
+	\chapter{Theoretical results} % (By Feb 26)
+	
+	\section{A theoretical resilt}
+	
+	\section{Towards some advanced topic}
+	% Why is it desirable to establish such result? Do a short literature review. State a conjecture on the potential form of Taken's embedding theorem. Try to prove it (or at least test it) for autoregressive processes.
+
+	\chapter{Programming simulations} % (By March 31)
+	% Demonstrate the applicability of these algorithms on interesting data sets
+	% Implementation details, how to find optimal time lag, and embedding dimension
+
+
+		
+	\chapter{Summary and closing words}\label{ch:closing}
+	% 1 page
+	
+
+
+
+	% All in all 26-30 pages
+	
+	% IRODALOMJEGYZÉK
+	\bibliography{nuraly}
+	\bibliographystyle{plain}
+	
+	\appendix
+	
+	\chapter{Program Codes}\label{ap:codes}
+	
+\end{document}
