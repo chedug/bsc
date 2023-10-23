@@ -207,20 +207,69 @@
 	\chapter{Theoretical background} % ~10 pages (by Dec 31)
 	% Every chapter should start with a short summary
 
-	\section{Statistics Basics}
-	% Give definitions of Smooth manifold, differentiable maps between manifolds, diffeomorphisms, vectorfields, differential equations and flows, riemannian structure
 
+	\section{Statistics Basics}
+	% Give definitions of mean, variance, statistic, estimators, sufficiency, bias, MSE, and etc.
+
+\textbf{Definition (Data)} Let $(x_1, \ldots, x_n)$, where $x_i \in S$ for $i = 1, \ldots, n$. The set $S$ is typically $\mathbb{R}$, $\mathbb{R}^d$, or it can be any abstract set. However, for our purposes, $S$ (the sample space) will usually be $\mathbb{R}$.
+
+\textbf{Definition (Sample)} In statistics, our data are often modeled by a vector $\mathbf{X} = (X_1, X_2, \ldots, X_n)$ of i.i.d. (independent, identically distributed) random variables, called the sample (of which size is $n$), where the random variables $X_i$ take values in $\mathbb{Z}$ or $\mathbb{R}$. The common distribution of the $X_i$ is called the parent distribution, and we say that the sample is from that parent distribution.
+
+\textbf{Definition (Model)} A statistical model is a family $\{P_{\theta} \,|\, \theta \in \Theta\}$ of distributions on the sample space. When $\Theta \subset \mathbb{R}^d$, we say that we have a parametric model, and we call $\Theta$ the parameter set (space).
+
+\textbf{Definition (p-th Quantile of Data)} If $p \in (0, 1)$, then a $p$-th quantile (or a $p$-th percentile) of the data $(x_1, \ldots, x_n)$ is a $p$-th quantile of the corresponding empirical distribution function $\hat{F}_n$.
+
+\textbf{Definition (Sample mean)} Let $(X_1, \ldots, X_n)$ be a sample. Then the random variable
+\[ \bar{X} = X = \frac{1}{n} \sum_{i=1}^{n} X_i \]
+is called the sample mean.
+
+\textbf{Definition (Estimator)} An estimator is a statistic (a function of the sample data) used to estimate an unknown parameter in a statistical model. An estimator for the parameter $\theta$, denoted as $\hat{\theta}$, is any measurable function of the random variables $X_1, X_2, \ldots, X_n$.
+
+\textbf{Definition (Biased)} If $\hat{\theta}$ is an estimator of $\theta$, then we can define the quantity \textit{Bias}($\hat{\theta}$) = $\mathbb{E}_{\theta}[\hat{\theta}] - \theta$. The estimator $\hat{\theta}$ is called unbiased if its bias is 0.
+
+\textbf{Definition (MSE of an Estimator)} Let us have the model $\{P_{\theta} \,|\, \theta \in \Theta\}$ and let us have the sample $(X_1, \ldots, X_n)$ from it. The mean square error (or the quadratic risk) of an estimator $\hat{\theta} = \hat{\theta}(X_1, \ldots, X_n)$ for the parameter $\theta$ is defined by
+\[ \text{MSE}_{\theta}(\hat{\theta}) = \mathbb{E}_{\theta}((\hat{\theta} - \theta)^2) \]
+when $\theta$ is the true parameter.
+
+\textbf{Steiner's identity:} $\mathbb{E}((X - a)^2) = \text{Var}(X) + (a - \mathbb{E}(X))^2$
+
+\textbf{Interpretation in the context of mean square error (MSE):}
+
+\[ \text{MSE}_{\theta}(\hat{\theta}) = \text{Var}_{\theta}(\hat{\theta}) + (\text{Bias}_{\theta}(\hat{\theta}))^2 \]
+
+\textbf{Definition (Sufficiency)} Let the model be $\{P_{\theta} \,|\, \theta \in \Theta\}$ and $\mathbf{X} = (X_1, \ldots, X_n)$ be a sample from it. The statistic $T$ is called \textit{sufficient} for the parameter $\theta$ (or, for the model $\{P_{\theta} \,|\, \theta \in \Theta\}$) if the conditional distribution $P_{\theta}(\mathbf{X} \in \cdot \,|\, T = t)$ does not depend on $\theta$.
+
+\textbf{Theorem (Neyman-Fisher Factorization Theorem)} If the model is $\{p(x|\theta) \,|\, \theta \in \Theta\}$ where $p(x|\theta)$ is a probability mass/density function and $\mathbf{X} = (X_1, \ldots, X_n)$ is a sample from it, then the statistic $T$ is \textit{sufficient} for the parameter $\theta$ if and only if we can find nonnegative functions $g$ and $h$ such that
+\[ p_{\mathbf{X}}(x | \theta) = g(T(x), \theta)h(x). \]
+
+\textbf{Definition (Likelihood)} Let $\{p(x, \theta), \theta \in \Theta\}$ be a model. If the observed value of $X$ is $x$, we say that $p(x | \theta)$ is the \textit{likelihood} of $\theta$: $L(\theta) = p(x | \theta)$. Thus, we are considering the mass/density as a function of $\theta$, for a fixed $x$. If $x = (x_1, \ldots, x_n)$ is a realization of the sample $\mathbf{X} = (X_1, \ldots, X_n)$, then $p(x | \theta)$ is the product of the marginals,
+\[ L(\theta) = p(x | \theta) = \prod_{i=1}^{n} p(x_i | \theta). \]
+
+
+
+
+	\clearpage
+	
 	\section{Simple Linear Regression}
-	% Definitions of dynamical systems, autonomous differential equations, flows, attractors, and topological properties, invariant like Lyapunov exponent, etc. With examples...
+	% Definitions of SLR
+
+	\clearpage
 
 	\section{Simple Linear Regression with no intercept term}
-	% State these theorems, the connection between them and their meanings, historical background, Takens' original motivations
+	% State these theorems, the connection between them and their meanings, historical background
 	
-	\section{To add}	
-	% Defnition, examples, representation via iterated random functions, analogy with dynamical systems, Rényi information dimension of a point cloud
+	\clearpage
+
+	\section{Comparative Analysis}	
+	% If applicable, compare Linear Regression through Origin with other regression techniques. Discuss why this particular method was chosen over others, highlighting its advantages and limitations in comparison to traditional linear regression models.
 	
+	\clearpage
+
 	
-	\chapter{Applications to Linear Regression through Origin} % (By Jan 31)
+	\chapter{Applications to Linear Regression through Origin} % (By Nov 31)
+
+
+	\clearpage
 
 	\section{Something to add 1} 
 	% UNICORNS, Temporary Outlier Factor
