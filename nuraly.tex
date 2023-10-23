@@ -245,6 +245,11 @@ when $\theta$ is the true parameter.
 \textbf{Definition (Likelihood)} Let $\{p(x, \theta), \theta \in \Theta\}$ be a model. If the observed value of $X$ is $x$, we say that $p(x | \theta)$ is the \textit{likelihood} of $\theta$: $L(\theta) = p(x | \theta)$. Thus, we are considering the mass/density as a function of $\theta$, for a fixed $x$. If $x = (x_1, \ldots, x_n)$ is a realization of the sample $\mathbf{X} = (X_1, \ldots, X_n)$, then $p(x | \theta)$ is the product of the marginals,
 \[ L(\theta) = p(x | \theta) = \prod_{i=1}^{n} p(x_i | \theta). \]
 
+\textbf{Theorem (Rao-Blackwell)} Let $\{P_{\theta} \,|\, \theta \in \Theta\}$ be a model and $(X_1, \ldots, X_n)$ be a sample. Let $\hat{\theta}$ be an estimator of $\theta$ with $\text{Var}_{\theta}(\hat{\theta})$ finite for each $\theta$. If $T$ is a sufficient statistic for $\theta$, then $\theta^* = \mathbb{E}_{\theta}(\hat{\theta} | T)$ is a statistic, and we have for all $\theta$ that
+\[ \text{MSE}_{\theta}(\theta^*) \leq \text{MSE}_{\theta}(\hat{\theta}) \quad (1) \]
+and the inequality is strict unless $\hat{\theta}$ is a function of $T$ with probability $1$.
+
+
 
 
 
