@@ -258,6 +258,27 @@ and the inequality is strict unless $\hat{\theta}$ is a function of $T$ with pro
 	\section{Simple Linear Regression}
 	% Definitions of SLR
 
+	Consider the model function:
+\[
+y = \alpha + \beta x,
+\]
+which describes a line with slope $\beta$ and y-intercept $\alpha$. In general, such a relationship may not hold exactly for the largely unobserved population of values of the independent and dependent variables; we call the unobserved deviations from the above equation the errors. Suppose we observe $n$ data pairs and call them $\{(x_i, y_i), i = 1, \ldots, n\}$. We can describe the underlying relationship between $y_i$ and $x_i$ involving this error term $\varepsilon_i$ by:
+\[
+y_i = \alpha + \beta x_i + \varepsilon_i.
+\]
+This relationship between the true (but unobserved) underlying parameters $\alpha$ and $\beta$ and the data points is called a linear regression model.
+
+The goal is to find estimated values $\hat{\alpha}$ and $\hat{\beta}$ for the parameters $\alpha$ and $\beta$ which would provide the "best" fit in some sense for the data points. As mentioned in the introduction, in this article the "best" fit will be understood as in the least-squares approach: a line that minimizes the sum of squared residuals (see also Errors and residuals) $\hat{\varepsilon}_i$ (differences between actual and predicted values of the dependent variable $y$), each of which is given by, for any candidate parameter values $\alpha$ and $\beta$:
+\[
+\hat{\varepsilon}_i = y_i - \alpha - \beta x_i.
+\]
+In other words, $\hat{\alpha}$ and $\hat{\beta}$ solve the following minimization problem:
+\[
+\text{Find } \min_{\alpha, \beta} Q(\alpha, \beta), \quad \text{for } Q(\alpha, \beta) = \sum_{i=1}^{n} \hat{\varepsilon}_i^2 = \sum_{i=1}^{n} (y_i - \alpha - \beta x_i)^2.
+\]
+By expanding to get a quadratic expression in $\alpha$ and $\beta$, we can derive values of $\alpha$ and $\beta$ that minimize the objective function $Q$ (these minimizing values are denoted $\hat{\alpha}$ and $\hat{\beta}$):[6]
+
+
 	\clearpage
 
 	\section{Simple Linear Regression with no intercept term}
