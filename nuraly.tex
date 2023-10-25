@@ -225,7 +225,7 @@ is called the sample mean.
 
 \textbf{Definition (Estimator)} An estimator is a statistic (a function of the sample data) used to estimate an unknown parameter in a statistical model. An estimator for the parameter $\theta$, denoted as $\hat{\theta}$, is any measurable function of the random variables $X_1, X_2, \ldots, X_n$.
 
-\textbf{Definition (Biased)} If $\hat{\theta}$ is an estimator of $\theta$, then we can define the quantity \textit{Bias}($\hat{\theta}$) = $\mathbb{E}_{\theta}[\hat{\theta}] - \theta$. The estimator $\hat{\theta}$ is called unbiased if its bias is 0.
+\textbf{Definition (Unbiased Estimator)} If $\hat{\theta}$ is an estimator of $\theta$, then we can define the quantity \textit{Bias}($\hat{\theta}$) = $\mathbb{E}_{\theta}[\hat{\theta}] - \theta$. The estimator $\hat{\theta}$ is called unbiased if its bias is 0.
 
 \textbf{Definition (MSE of an Estimator)} Let us have the model $\{P_{\theta} \,|\, \theta \in \Theta\}$ and let us have the sample $(X_1, \ldots, X_n)$ from it. The mean square error (or the quadratic risk) of an estimator $\hat{\theta} = \hat{\theta}(X_1, \ldots, X_n)$ for the parameter $\theta$ is defined by
 \[ \text{MSE}_{\theta}(\hat{\theta}) = \mathbb{E}_{\theta}((\hat{\theta} - \theta)^2) \]
@@ -258,25 +258,79 @@ and the inequality is strict unless $\hat{\theta}$ is a function of $T$ with pro
 	\section{Simple Linear Regression}
 	% Definitions of SLR
 
-	Consider the model function:
+Consider the model function:
 \[
-y = \alpha + \beta x,
+y = \beta_0 + \beta_1 x,
 \]
-which describes a line with slope $\beta$ and y-intercept $\alpha$. In general, such a relationship may not hold exactly for the largely unobserved population of values of the independent and dependent variables; we call the unobserved deviations from the above equation the errors. Suppose we observe $n$ data pairs and call them $\{(x_i, y_i), i = 1, \ldots, n\}$. We can describe the underlying relationship between $y_i$ and $x_i$ involving this error term $\varepsilon_i$ by:
+which describes a line with slope $\beta_1$ and y-intercept $\beta_0$. In general, such a relationship may not hold exactly for the largely unobserved population of values of the independent and dependent variables; we call the unobserved deviations from the above equation the errors. Suppose we observe $n$ data pairs and call them $\{(x_i, y_i), i = 1, \ldots, n\}$. We can describe the underlying relationship between $y_i$ and $x_i$ involving this error term $\varepsilon_i$ by:
 \[
-y_i = \alpha + \beta x_i + \varepsilon_i.
+y_i = \beta_0 + \beta_1 x_i + \varepsilon_i.
 \]
-This relationship between the true (but unobserved) underlying parameters $\alpha$ and $\beta$ and the data points is called a linear regression model.
+This relationship between the true (but unobserved) underlying parameters $\beta_0$ and $\beta_1$ and the data points is called a linear regression model.
 
-The goal is to find estimated values $\hat{\alpha}$ and $\hat{\beta}$ for the parameters $\alpha$ and $\beta$ which would provide the "best" fit in some sense for the data points. As mentioned in the introduction, in this article the "best" fit will be understood as in the least-squares approach: a line that minimizes the sum of squared residuals (see also Errors and residuals) $\hat{\varepsilon}_i$ (differences between actual and predicted values of the dependent variable $y$), each of which is given by, for any candidate parameter values $\alpha$ and $\beta$:
+The goal is to find estimated values $\hat{\beta_0}$ and $\hat{\beta_1}$ for the parameters $\beta_0$ and $\beta_1$ which would provide the "best" fit in some sense for the data points. As mentioned in the introduction, in this article the "best" fit will be understood as in the least-squares approach: a line that minimizes the sum of squared residuals (see also Errors and residuals) $\hat{\varepsilon}_i$ (differences between actual and predicted values of the dependent variable $y$), each of which is given by, for any candidate parameter values $\beta_0$ and $\beta_1$:
 \[
-\hat{\varepsilon}_i = y_i - \alpha - \beta x_i.
+\hat{\varepsilon}_i = y_i - \beta_0 - \beta_1 x_i.
 \]
-In other words, $\hat{\alpha}$ and $\hat{\beta}$ solve the following minimization problem:
+In other words, $\hat{\beta_0}$ and $\hat{\beta_1}$ solve the following minimization problem:
 \[
-\text{Find } \min_{\alpha, \beta} Q(\alpha, \beta), \quad \text{for } Q(\alpha, \beta) = \sum_{i=1}^{n} \hat{\varepsilon}_i^2 = \sum_{i=1}^{n} (y_i - \alpha - \beta x_i)^2.
+\text{Find } \min_{\beta_0, \beta_1} Q(\beta_0, \beta_1), \quad \text{for } Q(\beta_0, \beta_1) = \sum_{i=1}^{n} \hat{\varepsilon}_i^2 = \sum_{i=1}^{n} (y_i - \beta_0 - \beta_1 x_i)^2.
 \]
-By expanding to get a quadratic expression in $\alpha$ and $\beta$, we can derive values of $\alpha$ and $\beta$ that minimize the objective function $Q$ (these minimizing values are denoted $\hat{\alpha}$ and $\hat{\beta}$):[6]
+
+We assume that the response variable is normally distributed as follows: 
+
+\[ Y_i \sim \mathcal{N}(\beta_0 + \beta_1 x_i, \sigma^2), \quad i = 1, \ldots, n \]
+such that the \(Y_i\) are independent and \(\beta_0\), \(\beta_1\), and \(\sigma\) are unknown parameters.
+
+If $x = (x_1, \ldots, x_n)$, $y = (y_1, \ldots, y_n)$, and we let $S_{xy} = \sum_{i=1}^{n} x_i y_i - n\bar{x}\bar{y}$, then it is easy to see that
+\[ S_{xy} = \sum_{i=1}^{n} (x_i - \bar{x})(y_i - \bar{y}). \]
+
+
+Likelihood function
+\[
+L(y_1, \ldots, y_n | \beta_0, \beta_1, \sigma) = \left( \frac{1}{2\pi\sigma^2} \right)^{n/2} \exp\left( -\frac{1}{2\sigma^2} \sum_{i=1}^{n} (y_i - (\beta_0 + \beta_1 x_i))^2 \right)
+\]
+
+Log-likelihood function
+\[
+l(y_1, \ldots, y_n | \beta_0, \beta_1, \sigma) = c - n \log \sigma - \frac{1}{2\sigma^2} \sum_{i=1}^{n} (y_i - (\beta_0 + \beta_1 x_i))^2
+\]
+
+
+% Equations
+\begin{align*}
+\frac{\partial l}{\partial \beta_0} &= \sum_{i=1}^{n} (y_i - (\beta_0 + \beta_1 x_i)) = 0 \\
+\frac{\partial l}{\partial \beta_1} &= \sum_{i=1}^{n} (y_i - (\beta_0 + \beta_1 x_i))x_i = 0  \\
+\frac{\partial l}{\partial \sigma} &= \frac{n}{\sigma} - \frac{1}{\sigma^3} \sum_{i=1}^{n} (y_i - (\beta_0 + \beta_1 x_i))^2 = 0 
+\end{align*}
+
+% Text
+Let the solutions of the above equations be denoted as $\hat{\beta}_0$, $\hat{\beta}_1$, $\hat{\sigma}^2$ for $\beta_0$, $\beta_1$, $\sigma^2$. If $\hat{y}_i = \hat{\beta}_0 + \hat{\beta}_1 x_i$, then...
+
+% Equations
+\begin{align*}
+\hat{\beta}_0  &= \bar{y} - \hat{\beta}_1 \bar{x}; \\
+\hat{\beta}_1 &= \frac{S_{xy}}{S_{xx}}; \\
+\hat{\sigma}^2 &= \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2 = \frac{1}{n} SSE.
+\end{align*}
+
+
+% Proposition and Proof
+\textbf{Proposition}
+\[
+\sum_{i=1}^{n} (y_i - \bar{y})^2 = \sum_{i=1}^{n} (\hat{y}_i - \bar{y})^2 + \sum_{i=1}^{n} (y_i - \hat{y}_i)^2
+\]
+
+% Proof (continued)
+\textit{Proof .} The vector $\textbf{y} - \textbf{$\hat{y}$}$ is perpendicular to $\textbf{$\hat{y}$} - \textbf{1 $\bar{y}$}$, thus the proposition is true by the Pythagorean theorem.
+
+
+% Proposition
+\textbf{Proposition 1.4.} The estimators $\hat{\beta}_0$, $\hat{\beta}_1$, $\frac{SSE}{n-2}$ are unbiased estimators of $\beta_0$, $\beta_1$, $\sigma^2$ respectively.
+
+% TODO
+\textit{Proof .} \textbf{TODO}
+
 
 
 	\clearpage
