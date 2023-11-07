@@ -144,7 +144,7 @@
 	%----------------------------------------------------------------------------------------
 	
 	\HRule \\[0.4cm]
-	{ \Large \bfseries Linear Regression taghrough Origin
+	{ \Large \bfseries Linear Regression through Origin
 		 }\\[0.4cm]
 	\HRule \\[1.5cm]
 	
@@ -199,10 +199,34 @@
 	  
 	\chapter{Introduction} 
 	
-	\begin{chapquote}{XY} % Quotation (optional)
-	''Bla-bla-bla''
+	\begin{chapquote}{Some funny guy} % Quotation (optional)
+	''Let epsilon be negative.''
 	\end{chapquote}
 
+
+	\section{Introduction}
+
+% Start your introduction with a general statement about linear regression through the origin
+Linear regression through the origin is a specialized form of linear regression where the regression line passes through the origin point (\(0, 0\)). In this variant, the relationship between the dependent variable \(y\) and the independent variable \(x\) is represented by the equation:
+\[ y = \beta x + \varepsilon \]
+where \(\beta\) is the slope of the line, and \(\varepsilon\) represents the error term.
+
+% Explain the importance and relevance of linear regression through the origin
+Linear regression through the origin is particularly useful in situations where it is essential to force the regression line to go through the origin, indicating a direct proportional relationship between the variables without any offset. This constraint simplifies the model and is valuable in various scientific and engineering applications.
+
+% State the objective of your thesis
+The objective of this thesis is to delve into the nuances of linear regression through the origin. We aim to explore the mathematical foundations of this regression variant, discuss methods for estimating the parameter \(\beta\), and analyze its implications on model interpretation and prediction. By conducting a comprehensive study and practical analysis, we intend to provide valuable insights into the application of linear regression through the origin in real-world contexts.
+
+% Provide a brief overview of the structure of the thesis
+In the following chapters, we will focus on the specific aspects of linear regression through the origin. We will derive the regression equation, explore methods for estimating the slope \(\beta\), and investigate techniques for evaluating the model's goodness of fit. Practical examples and numerical illustrations will be used to reinforce the concepts discussed. Additionally, we will compare the results obtained from regression through the origin with those of traditional linear regression models. Finally, we will draw conclusions based on our findings and propose directions for further research in this domain.
+
+% End the introduction section
+This introductory chapter sets the stage for the subsequent discussions and analyses. By examining linear regression through the origin with mathematical rigor, we aim to enhance the understanding of this specialized regression technique and its practical applications in scenarios demanding an origin-centered approach.
+
+% You can add more specific details or modify the content according to your research focus and preferences.
+
+	
+	
 
 	\chapter{Theoretical background} % ~10 pages (by Dec 31)
 	% Every chapter should start with a short summary
@@ -331,12 +355,36 @@ Let the solutions of the above equations be denoted as $\hat{\beta}_0$, $\hat{\b
 % TODO
 \textit{Proof .} \textbf{TODO}
 
+% Proof that the estimators are unbiased
+\textbf{Proof:}
+
+1. \textbf{Unbiasedness of $\hat{\beta}_0$:}
+\[
+\mathbb{E}(\hat{\beta}_0) = \mathbb{E}(\bar{y} - \hat{\beta}_1 \bar{x}) = \bar{y} - \bar{x} \mathbb{E}(\hat{\beta}_1) = \beta_0
+\]
+
+2. \textbf{Unbiasedness of $\hat{\beta}_1$:}
+\[
+\mathbb{E}(\hat{\beta}_1) = \frac{1}{S_{xx}} \mathbb{E}(S_{xy}) = \frac{1}{S_{xx}} (n \beta_1) = \beta_1
+\]
+
+3. \textbf{Unbiasedness of $\frac{SSE}{n-2}$ as an estimator of $\sigma^2$:}
+\[
+\mathbb{E}\left(\frac{SSE}{n-2}\right) = \frac{1}{n-2} (n - 2) \sigma^2 = \sigma^2
+\]
+
+
 
 
 	\clearpage
 
 	\section{Simple Linear Regression with no intercept term}
-	% State these theorems, the connection between them and their meanings, historical background
+
+In simple linear
+
+
+
+
 	
 	\clearpage
 
@@ -346,7 +394,7 @@ Let the solutions of the above equations be denoted as $\hat{\beta}_0$, $\hat{\b
 	\clearpage
 
 	
-	\chapter{Applications to Linear Regression through Origin} % (By Nov 31)
+	\chapter{Applications to Linear Regression through Origin}
 
 
 	\clearpage
@@ -371,7 +419,7 @@ Let the solutions of the above equations be denoted as $\hat{\beta}_0$, $\hat{\b
 
 
 		
-	\chapter{Summary and closing words}\label{ch:closing}
+	\chapter{Summary and closing words}
 	% 1 page
 	
 
@@ -385,6 +433,6 @@ Let the solutions of the above equations be denoted as $\hat{\beta}_0$, $\hat{\b
 	
 	\appendix
 	
-	\chapter{Program Codes}\label{ap:codes}
+	\chapter{Program Codes}
 	
 \end{document}
