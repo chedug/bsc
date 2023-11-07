@@ -1,0 +1,28 @@
+# Fdb version 4
+["bibtex nuraly"] 1699387063 "nuraly.aux" "nuraly.bbl" "nuraly" 1699387074 0
+  "./nuraly.bib" 1697399404 2 68b329da9893e34099c7d8ad5cb9c940 ""
+  "C:/Users/nural/AppData/Local/Programs/MiKTeX/bibtex/bst/bibtex/plain.bst" 1291864736 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
+  "nuraly.aux" 1697399404 3297 e2673860c0bb12408193bcb46d07a61b "pdflatex"
+  (generated)
+  "nuraly.bbl"
+  "nuraly.blg"
+  (rewritten before read)
+["pdflatex"] 1699387064 "c:/Users/nural/Documents/bsc/nuraly.tex" "nuraly.pdf" "nuraly" 1699387074 2
+  "C:/Users/nural/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1699387072 24212834 48f0120b1db0932b40790a496004e769 ""
+  "c:/Users/nural/Documents/bsc/nuraly.tex" 1698221800 16439 e04a8f39def7ac562decb0ce51bb5761 ""
+  "nuraly.aux" 1697399404 3297 e2673860c0bb12408193bcb46d07a61b "pdflatex"
+  "nuraly.bbl" 1697399404 52 0eba253fc001332e731e8aba3f23127b "bibtex nuraly"
+  "nuraly.lof" 1697399404 147 104a8a462b27a2267fd07b368245cdd0 "pdflatex"
+  "nuraly.lot" 1697399404 147 104a8a462b27a2267fd07b368245cdd0 "pdflatex"
+  "nuraly.out" 1697399404 2549 1a429dcf9140ea53591c4cf599d1252b "pdflatex"
+  "nuraly.tex" 1698221800 16439 e04a8f39def7ac562decb0ce51bb5761 ""
+  "nuraly.toc" 1697399404 1227 78a195e91c6644ada1eaf53bb81c39c5 "pdflatex"
+  (generated)
+  "nuraly.aux"
+  "nuraly.lof"
+  "nuraly.log"
+  "nuraly.lot"
+  "nuraly.out"
+  "nuraly.pdf"
+  "nuraly.toc"
+  (rewritten before read)
