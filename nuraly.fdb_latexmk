@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex nuraly"] 1699391329 "nuraly.aux" "nuraly.bbl" "nuraly" 1699393379 0
+["bibtex nuraly"] 0 "nuraly.aux" "nuraly.bbl" "nuraly" 1699416091 -1
   "./nuraly.bib" 1697399404 2 68b329da9893e34099c7d8ad5cb9c940 ""
   "C:/Users/nural/AppData/Local/Programs/MiKTeX/bibtex/bst/bibtex/plain.bst" 1291864736 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "nuraly.aux" 1699393378 2729 7be61bc3347969bca75846828a16e622 "pdflatex"
+  "nuraly.aux" 1699416091 2729 7be61bc3347969bca75846828a16e622 "pdflatex"
   (generated)
   "nuraly.bbl"
   "nuraly.blg"
   (rewritten before read)
-["pdflatex"] 1699393376 "c:/Users/nural/Documents/bsc/nuraly.tex" "nuraly.pdf" "nuraly" 1699393379 0
-  "C:/Users/nural/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1699386422 82507 a9eef8696c92627b87e9975edea03b2a ""
+["pdflatex"] 1699416089 "c:/Users/nural/Documents/bsc/nuraly.tex" "nuraly.pdf" "nuraly" 1699416091 0
+  "C:/Users/nural/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1699412270 82507 a9eef8696c92627b87e9975edea03b2a ""
   "C:/Users/nural/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs10.tfm" 1671691316 688 37338d6ab346c2f1466b29e195316aa4 ""
   "C:/Users/nural/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1699387979 24212834 9659ee4a39cd61d6f76a6ebd21ef3c91 ""
   "C:/Users/nural/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -39,6 +39,7 @@
   "C:/Users/nural/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1247596667 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
   "C:/Users/nural/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1247596667 35752 024fb6c41858982481f6968b5fc26508 ""
   "C:/Users/nural/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1247596667 32569 5e5ddc8df908dea60932f3c484a54c0d ""
+  "C:/Users/nural/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/latxfont/line10.pfb" 1247596653 11493 4f5ed183a47d3197cf8cd322325db6de ""
   "C:/Users/nural/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1247596673 34694 870c211f62cb72718a00e353f14f254d ""
   "C:/Users/nural/AppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs10.pfb" 893413860 16077 4737ac34f0fb5608550f3780a0202c22 ""
   "C:/Users/nural/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb" 1136849748 33709 b09d2e140b7e807d3a97058263ab6693 ""
@@ -138,6 +139,7 @@
   "C:/Users/nural/AppData/Local/Programs/MiKTeX/tex/latex/base/fontenc.sty" 1698826601 5119 50695b8f743569fbac71a83f7ef51fe2 ""
   "C:/Users/nural/AppData/Local/Programs/MiKTeX/tex/latex/base/inputenc.sty" 1698826601 5048 4a74b0804469fbfae7849704c4687a07 ""
   "C:/Users/nural/AppData/Local/Programs/MiKTeX/tex/latex/blindtext/blindtext.sty" 1623002099 47295 de48b7f8ebf4b54709a2f6b2c7106dd5 ""
+  "C:/Users/nural/AppData/Local/Programs/MiKTeX/tex/latex/cancel/cancel.sty" 1388370247 7592 dd751af313a16a0308545d5bfd7aaaa2 ""
   "C:/Users/nural/AppData/Local/Programs/MiKTeX/tex/latex/caption/caption.sty" 1696169587 56128 c2ccf1a29d78c33bc553880402e4fb9a ""
   "C:/Users/nural/AppData/Local/Programs/MiKTeX/tex/latex/caption/caption3.sty" 1696169587 72619 ee90b6612147680fd73c3b1406a74245 ""
   "C:/Users/nural/AppData/Local/Programs/MiKTeX/tex/latex/caption/subcaption.sty" 1696169587 12494 0c0cdb824278a4d51cefeb2e79901315 ""
@@ -200,15 +202,15 @@
   "C:/Users/nural/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/nural/AppData/Local/Programs/MiKTeX/tex/latex/varwidth/varwidth.sty" 1238469540 10894 d359a13923460b2a73d4312d613554c8 ""
   "C:/Users/nural/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1656236890 56148 51a9a8571c07b9921892ae11063ae853 ""
-  "c:/Users/nural/Documents/bsc/nuraly.tex" 1699393375 19562 8912a41b78f5ffde7daa485ec1d06725 ""
+  "c:/Users/nural/Documents/bsc/nuraly.tex" 1699416088 20354 5902a2895785e926ef7304c384a48580 ""
   "figures/bme_logo_nagy.eps" 1697399404 677966 450878d1014843f89053dd11f8ea294b ""
-  "nuraly.aux" 1699393378 2729 7be61bc3347969bca75846828a16e622 "pdflatex"
+  "nuraly.aux" 1699416091 2729 7be61bc3347969bca75846828a16e622 "pdflatex"
   "nuraly.bbl" 1697399404 52 0eba253fc001332e731e8aba3f23127b "bibtex nuraly"
-  "nuraly.lof" 1699393378 140 104a8a462b27a2267fd07b368245cdd0 "pdflatex"
-  "nuraly.lot" 1699393378 140 104a8a462b27a2267fd07b368245cdd0 "pdflatex"
-  "nuraly.out" 1699393378 2719 4e9c994e02210f27cf8278cd8b5c1409 "pdflatex"
-  "nuraly.tex" 1699393375 19562 8912a41b78f5ffde7daa485ec1d06725 ""
-  "nuraly.toc" 1699393378 1307 20f9833ab16e22b87cb6322f5bb23ca6 "pdflatex"
+  "nuraly.lof" 1699416091 140 104a8a462b27a2267fd07b368245cdd0 "pdflatex"
+  "nuraly.lot" 1699416091 140 104a8a462b27a2267fd07b368245cdd0 "pdflatex"
+  "nuraly.out" 1699416091 2719 4e9c994e02210f27cf8278cd8b5c1409 "pdflatex"
+  "nuraly.tex" 1699416088 20354 5902a2895785e926ef7304c384a48580 ""
+  "nuraly.toc" 1699416091 1307 20f9833ab16e22b87cb6322f5bb23ca6 "pdflatex"
   (generated)
   "nuraly.aux"
   "nuraly.lof"

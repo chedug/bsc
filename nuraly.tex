@@ -11,7 +11,7 @@
 \usepackage[utf8]{inputenc}
 
 \usepackage{amsmath,amssymb,amsthm}
-
+\usepackage{cancel}
 \usepackage{enumerate}
 \usepackage{graphicx}
 \usepackage{caption,subcaption}
@@ -352,21 +352,40 @@ Let the solutions of the above equations be denoted as $\hat{\beta}_0$, $\hat{\b
 % Proposition
 \textbf{Proposition 1.4.} The estimators $\hat{\beta}_0$, $\hat{\beta}_1$, $\frac{SSE}{n-2}$ are unbiased estimators of $\beta_0$, $\beta_1$, $\sigma^2$ respectively.
 
-% TODO
-\textit{Proof .} \textbf{TODO}
 
 % Proof that the estimators are unbiased
 \textbf{Proof:}
 
-1. \textbf{Unbiasedness of $\hat{\beta}_0$:}
+1. \textbf{Unbiasedness of $\hat{\beta}_1$:}
 \[
-\mathbb{E}(\hat{\beta}_0) = \mathbb{E}(\bar{y} - \hat{\beta}_1 \bar{x}) = \bar{y} - \bar{x} \mathbb{E}(\hat{\beta}_1) = \beta_0
+\mathbb{E} [ \hat{\beta _1} ] = \mathbb{E} [\frac{S_{xy}}{S_{xx}}] = \mathbb{E} [\frac{\Sigma (x_i - \bar{x})(y_i-\bar{y})}{\Sigma (x_i-\bar{x})^2}]=
 \]
 
-2. \textbf{Unbiasedness of $\hat{\beta}_1$:}
 \[
-\mathbb{E}(\hat{\beta}_1) = \frac{1}{S_{xx}} \mathbb{E}(S_{xy}) = \frac{1}{S_{xx}} (n \beta_1) = \beta_1
+	= \mathbb{E} [\frac{\Sigma (x_i - \bar{x})y_i}{\Sigma (x_i-\bar{x})^2}]=
+	\frac{\Sigma (x_i - \bar{x})\mathbb{E} [y_i]}{\Sigma (x_i-\bar{x})^2}=
 \]
+
+\[
+	= \frac{\Sigma (x_i - \bar{x})(\beta_0+\beta_1x_i)}{\Sigma (x_i-\bar{x})^2}=	
+	\frac{\Sigma (x_i \beta_0 - \bar{x}\beta_0+\beta_1x_i^2-\beta_1x_i\bar{x})}{\Sigma x_i^2-n\bar{x}^2}=
+\]
+
+\[
+	= \frac{\cancel{n\bar{x}\beta_0}-\cancel{n\bar{x}\beta_0}+\Sigma\beta_1x_i^2-n\beta_1\bar{x}^2}{\Sigma x_i^2-n\bar{x}^2}= \frac{(\Sigma x_i^2-n\bar{x}^2)\beta_1}{\Sigma x_i^2-n\bar{x}^2} = \beta_1
+\]
+
+
+2. \textbf{Unbiasedness of $\hat{\beta}_0$:}
+\[
+\mathbb{E}(\hat{\beta}_0) = \mathbb{E}(\bar{y} - \hat{\beta}_1 \bar{x}) = \bar{y} - \bar{x} \mathbb{E}(\hat{\beta}_1) = \frac{1}{n}\mathbb{E}[\Sigma y_i]-\beta_1 \bar{x} =
+\] 
+
+\[
+	= \frac{1}{n}\mathbb{E}[\Sigma (\beta_0+\beta_1x_i)]-\beta_1 \bar{x} 
+	= \frac{1}{n}n\beta_0+\frac{1}{n}n\beta_1\bar{x}-\bar{x}\beta_1=\beta_0	
+\]
+
 
 3. \textbf{Unbiasedness of $\frac{SSE}{n-2}$ as an estimator of $\sigma^2$:}
 \[
@@ -380,7 +399,7 @@ Let the solutions of the above equations be denoted as $\hat{\beta}_0$, $\hat{\b
 
 	\section{Simple Linear Regression with no intercept term}
 
-In simple linear
+In simple linear 
 
 
 
