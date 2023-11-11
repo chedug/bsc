@@ -26,6 +26,7 @@
 \usepackage{hyperref}
 \usepackage{refcheck}
 \usepackage{tikz}
+\usetikzlibrary{decorations.pathreplacing}
 
 % Theoremlike environment
 \newtheorem{theorem}{Theorem}[section]
@@ -199,8 +200,8 @@
 	  
 	\chapter{Introduction} 
 	
-	\begin{chapquote}{Some funny guy} % Quotation (optional)
-	''Let epsilon be negative.''
+	\begin{chapquote}{Name of the author} % Quotation (optional)
+	''A place for future inspirational quote.''
 	\end{chapquote}
 
 
@@ -215,7 +216,7 @@ where \(\beta\) is the slope of the line, and \(\varepsilon\) represents the err
 Linear regression through the origin is particularly useful in situations where it is essential to force the regression line to go through the origin, indicating a direct proportional relationship between the variables without any offset. This constraint simplifies the model and is valuable in various scientific and engineering applications.
 
 % State the objective of your thesis
-The objective of this thesis is to delve into the nuances of linear regression through the origin. We aim to explore the mathematical foundations of this regression variant, discuss methods for estimating the parameter \(\beta\), and analyze its implications on model interpretation and prediction. By conducting a comprehensive study and practical analysis, we intend to provide valuable insights into the application of linear regression through the origin in real-world contexts.
+The objective of this thesis is to delve into the nuances of linear regression through the origin. We aim to explore the mathematical foundations of this regression variant by starting from understanding the case of simple linear regression, discuss methods for estimating the parameter \(\beta\), and analyze its implications on model interpretation and prediction. By conducting a comprehensive study and practical analysis, we intend to provide valuable insights into the application of linear regression through the origin in real-world contexts.
 
 % Provide a brief overview of the structure of the thesis
 In the following chapters, we will focus on the specific aspects of linear regression through the origin. We will derive the regression equation, explore methods for estimating the slope \(\beta\), and investigate techniques for evaluating the model's goodness of fit. Practical examples and numerical illustrations will be used to reinforce the concepts discussed. Additionally, we will compare the results obtained from regression through the origin with those of traditional linear regression models. Finally, we will draw conclusions based on our findings and propose directions for further research in this domain.
@@ -237,7 +238,7 @@ This introductory chapter sets the stage for the subsequent discussions and anal
 
 \textbf{Definition (Data)} Let $(x_1, \ldots, x_n)$, where $x_i \in S$ for $i = 1, \ldots, n$. The set $S$ is typically $\mathbb{R}$, $\mathbb{R}^d$, or it can be any abstract set. However, for our purposes, $S$ (the sample space) will usually be $\mathbb{R}$.
 
-\textbf{Definition (Sample)} In statistics, our data are often modeled by a vector $\mathbf{X} = (X_1, X_2, \ldots, X_n)$ of i.i.d. (independent, identically distributed) random variables, called the sample (of which size is $n$), where the random variables $X_i$ take values in $\mathbb{Z}$ or $\mathbb{R}$. The common distribution of the $X_i$ is called the parent distribution, and we say that the sample is from that parent distribution.
+\textbf{Definition (Sample)} In statistics, our data are often modeled by a vector $\mathbf{X} = (X_1, X_2, \ldots, X_n)$ of i.i.d. (independent, identically distributed) random variables, called the sample (of which size is $n$), where the random variables $X_i$ take values in $\mathbb{Z}$ or $\mathbb{R}$. The common distribution of the $X_i$ is called the parent distribution, and we say that the sample is from that parent distribution.	
 
 \textbf{Definition (Model)} A statistical model is a family $\{P_{\theta} \,|\, \theta \in \Theta\}$ of distributions on the sample space. When $\Theta \subset \mathbb{R}^d$, we say that we have a parametric model, and we call $\Theta$ the parameter set (space).
 
@@ -282,6 +283,23 @@ and the inequality is strict unless $\hat{\theta}$ is a function of $T$ with pro
 	\section{Simple Linear Regression}
 	% Definitions of SLR
 
+In simple linear regression we have a random sample $((x_1,y_1),...,(x_n,y_n))$ of observed points. And our goal is to find a linear function $y=\beta_0 + \beta_1x$ that describes the relationship between two variables in our sample as accurately as possible. The accuracy in this paper will be measured using least squares method. Namely,
+
+If $x_i$ is a predictor variable from our sample, then we say that $\hat{y_i}=\beta_0+\beta_1x_i$ is a fitted  value for response variable $y_i$. We then can model the relationship between those two using the following formula:
+
+\[
+	y_i = \hat{y_i} + \epsilon_i 	
+\]
+
+Then the objective is to minimize the sum of squares of error terms $\epsilon_i$, $\ i=1,...,n$.
+
+
+and our job is to find a model that describes the relationship between two two variables $x$ and $y$
+ 
+
+
+
+
 Consider the model function:
 \[
 y = \beta_0 + \beta_1 x,
@@ -292,7 +310,7 @@ y_i = \beta_0 + \beta_1 x_i + \varepsilon_i.
 \]
 This relationship between the true (but unobserved) underlying parameters $\beta_0$ and $\beta_1$ and the data points is called a linear regression model.
 
-The goal is to find estimated values $\hat{\beta_0}$ and $\hat{\beta_1}$ for the parameters $\beta_0$ and $\beta_1$ which would provide the "best" fit in some sense for the data points. As mentioned in the introduction, in this article the "best" fit will be understood as in the least-squares approach: a line that minimizes the sum of squared residuals (see also Errors and residuals) $\hat{\varepsilon}_i$ (differences between actual and predicted values of the dependent variable $y$), each of which is given by, for any candidate parameter values $\beta_0$ and $\beta_1$:
+The goal is to find estimated values $\hat{\beta_0}$ and $\hat{\beta_1}$ for the parameters $\beta_0$ and $\beta_1$ which would provide the "best" fit in some sense for the data points. As mentioned in the introduction, in this paper the "best" fit will be understood as in the least-squares approach: a line that minimizes the sum of squared residuals $\hat{\varepsilon}_i$ (differences between actual and predicted values of the dependent variable $y$), each of which is given by, for any candidate parameter values $\beta_0$ and $\beta_1$:
 \[
 \hat{\varepsilon}_i = y_i - \beta_0 - \beta_1 x_i.
 \]

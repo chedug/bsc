@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex nuraly"] 0 "nuraly.aux" "nuraly.bbl" "nuraly" 1699416091 -1
+["bibtex nuraly"] 1699638805 "nuraly.aux" "nuraly.bbl" "nuraly" 1699638808 0
   "./nuraly.bib" 1697399404 2 68b329da9893e34099c7d8ad5cb9c940 ""
   "C:/Users/nural/AppData/Local/Programs/MiKTeX/bibtex/bst/bibtex/plain.bst" 1291864736 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "nuraly.aux" 1699416091 2729 7be61bc3347969bca75846828a16e622 "pdflatex"
+  "nuraly.aux" 1699638807 2729 7be61bc3347969bca75846828a16e622 "pdflatex"
   (generated)
   "nuraly.bbl"
   "nuraly.blg"
   (rewritten before read)
-["pdflatex"] 1699416089 "c:/Users/nural/Documents/bsc/nuraly.tex" "nuraly.pdf" "nuraly" 1699416091 0
-  "C:/Users/nural/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1699412270 82507 a9eef8696c92627b87e9975edea03b2a ""
+["pdflatex"] 1699638805 "c:/Users/nural/Documents/bsc/nuraly.tex" "nuraly.pdf" "nuraly" 1699638808 0
+  "C:/Users/nural/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1699637904 82507 a9eef8696c92627b87e9975edea03b2a ""
   "C:/Users/nural/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs10.tfm" 1671691316 688 37338d6ab346c2f1466b29e195316aa4 ""
   "C:/Users/nural/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1699387979 24212834 9659ee4a39cd61d6f76a6ebd21ef3c91 ""
   "C:/Users/nural/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -86,8 +86,11 @@
   "C:/Users/nural/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex" 1673775190 35249 abd4adf948f960299a4b3d27c5dddf46 ""
   "C:/Users/nural/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex" 1673775190 22012 81b34a0aa8fa1a6158cc6220b00e4f10 ""
   "C:/Users/nural/AppData/Local/Programs/MiKTeX/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex" 1673775190 8893 e851de2175338fdf7c17f3e091d94618 ""
+  "C:/Users/nural/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.code.tex" 1673775190 5628 dc0ee4ba7f3e40acae5600067ce833de ""
+  "C:/Users/nural/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathreplacing.code.tex" 1673775190 1319 0b2de5126c6cbc295f0eb77f7344b34d ""
   "C:/Users/nural/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex" 1673775190 11518 738408f795261b70ce8dd47459171309 ""
   "C:/Users/nural/AppData/Local/Programs/MiKTeX/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex" 1673775190 186782 af500404a9edec4d362912fe762ded92 ""
+  "C:/Users/nural/AppData/Local/Programs/MiKTeX/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathreplacing.code.tex" 1673775190 7474 f05a7223b140f230922562ac6a9fede5 ""
   "C:/Users/nural/AppData/Local/Programs/MiKTeX/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex" 1673775190 32995 ac577023e12c0e4bd8aa420b2e852d1a ""
   "C:/Users/nural/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfint.code.tex" 1673775190 3063 8c415c68a0f3394e45cfeca0b65f6ee6 ""
   "C:/Users/nural/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmath.code.tex" 1673775190 949 cea70942e7b7eddabfb3186befada2e6 ""
@@ -104,6 +107,7 @@
   "C:/Users/nural/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex" 1673775190 92405 f515f31275db273f97b9d8f52e1b0736 ""
   "C:/Users/nural/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathparser.code.tex" 1673775190 37466 97b0a1ba732e306a1a2034f5a73e239f ""
   "C:/Users/nural/AppData/Local/Programs/MiKTeX/tex/generic/pgf/math/pgfmathutil.code.tex" 1673775190 8471 c2883569d03f69e8e1cabfef4999cfd7 ""
+  "C:/Users/nural/AppData/Local/Programs/MiKTeX/tex/generic/pgf/modules/pgfmoduledecorations.code.tex" 1673775190 71742 3da44a8be6626eef1c400c68776c7a0f ""
   "C:/Users/nural/AppData/Local/Programs/MiKTeX/tex/generic/pgf/modules/pgfmodulematrix.code.tex" 1673775190 21211 1e73ec76bd73964d84197cc3d2685b01 ""
   "C:/Users/nural/AppData/Local/Programs/MiKTeX/tex/generic/pgf/modules/pgfmoduleplot.code.tex" 1673775190 16121 346f9013d34804439f7436ff6786cef7 ""
   "C:/Users/nural/AppData/Local/Programs/MiKTeX/tex/generic/pgf/modules/pgfmoduleshapes.code.tex" 1673775190 44792 271e2e1934f34c759f4dedb1e14a5015 ""
@@ -202,15 +206,15 @@
   "C:/Users/nural/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/nural/AppData/Local/Programs/MiKTeX/tex/latex/varwidth/varwidth.sty" 1238469540 10894 d359a13923460b2a73d4312d613554c8 ""
   "C:/Users/nural/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1656236890 56148 51a9a8571c07b9921892ae11063ae853 ""
-  "c:/Users/nural/Documents/bsc/nuraly.tex" 1699416088 20354 5902a2895785e926ef7304c384a48580 ""
+  "c:/Users/nural/Documents/bsc/nuraly.tex" 1699638800 21284 aa8e3f3011e21396a94b68c6c4e0e9a3 ""
   "figures/bme_logo_nagy.eps" 1697399404 677966 450878d1014843f89053dd11f8ea294b ""
-  "nuraly.aux" 1699416091 2729 7be61bc3347969bca75846828a16e622 "pdflatex"
+  "nuraly.aux" 1699638807 2729 7be61bc3347969bca75846828a16e622 "pdflatex"
   "nuraly.bbl" 1697399404 52 0eba253fc001332e731e8aba3f23127b "bibtex nuraly"
-  "nuraly.lof" 1699416091 140 104a8a462b27a2267fd07b368245cdd0 "pdflatex"
-  "nuraly.lot" 1699416091 140 104a8a462b27a2267fd07b368245cdd0 "pdflatex"
-  "nuraly.out" 1699416091 2719 4e9c994e02210f27cf8278cd8b5c1409 "pdflatex"
-  "nuraly.tex" 1699416088 20354 5902a2895785e926ef7304c384a48580 ""
-  "nuraly.toc" 1699416091 1307 20f9833ab16e22b87cb6322f5bb23ca6 "pdflatex"
+  "nuraly.lof" 1699638807 140 104a8a462b27a2267fd07b368245cdd0 "pdflatex"
+  "nuraly.lot" 1699638807 140 104a8a462b27a2267fd07b368245cdd0 "pdflatex"
+  "nuraly.out" 1699638807 2719 4e9c994e02210f27cf8278cd8b5c1409 "pdflatex"
+  "nuraly.tex" 1699638800 21284 aa8e3f3011e21396a94b68c6c4e0e9a3 ""
+  "nuraly.toc" 1699638807 1307 20f9833ab16e22b87cb6322f5bb23ca6 "pdflatex"
   (generated)
   "nuraly.aux"
   "nuraly.lof"
