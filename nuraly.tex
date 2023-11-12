@@ -216,7 +216,7 @@ where \(\beta\) is the slope of the line, and \(\varepsilon\) represents the err
 Linear regression through the origin is particularly useful in situations where it is essential to force the regression line to go through the origin, indicating a direct proportional relationship between the variables without any offset. This constraint simplifies the model and is valuable in various scientific and engineering applications.
 
 % State the objective of your thesis
-The objective of this thesis is to delve into the nuances of linear regression through the origin. We aim to explore the mathematical foundations of this regression variant by starting from understanding the case of simple linear regression, discuss methods for estimating the parameter \(\beta\), and analyze its implications on model interpretation and prediction. By conducting a comprehensive study and practical analysis, we intend to provide valuable insights into the application of linear regression through the origin in real-world contexts.
+The objective of this thesis is to delve into the nuances of linear regression through the origin. We aim to explore the mathematical foundations of this regression variant by starting from understanding the case of simple linear regression, discuss methods for estimating the parameter \(\beta\), and analyze its implications on model interpretation and prediction by analyzing the goodness of fit of the model and comparing it with regular simple linear regression (the full model). By conducting a comprehensive study and practical analysis, we intend to provide valuable insights into the application of linear regression through the origin in real-world contexts.
 
 % Provide a brief overview of the structure of the thesis
 In the following chapters, we will focus on the specific aspects of linear regression through the origin. We will derive the regression equation, explore methods for estimating the slope \(\beta\), and investigate techniques for evaluating the model's goodness of fit. Practical examples and numerical illustrations will be used to reinforce the concepts discussed. Additionally, we will compare the results obtained from regression through the origin with those of traditional linear regression models. Finally, we will draw conclusions based on our findings and propose directions for further research in this domain.
@@ -417,8 +417,75 @@ Let the solutions of the above equations be denoted as $\hat{\beta}_0$, $\hat{\b
 
 	\section{Simple Linear Regression with no intercept term}
 
-In simple linear 
 
+	\subsection{Introduction}
+	In certain statistical applications, the conventional assumption of a non-zero intercept term ($\beta_0$) in a simple linear regression model may not align with the nature of the data. This section explores the implications and applications of a simplified model where the intercept term is set to zero, investigating scenarios where such a model might be more appropriate.
+	
+	\subsection{Model Formulation}
+	The modified simple linear regression model without an intercept term is expressed as:
+	\[ Y = \beta X + \varepsilon \]
+	Here, $Y$ represents the dependent variable, $X$ is the independent variable, $\beta$ is the slope, and $\varepsilon$ denotes the error term. The intentional omission of the intercept term ($\beta_0$) signifies a direct relationship between the variables without an offset.
+	
+	\subsection{Assumptions}
+	While many assumptions from the standard simple linear regression model remain applicable, notable differences emerge. In this model, the absence of an intercept implies that the dependent variable is expected to be zero when the independent variable is zero. 
+
+	\[ Y_i \sim \mathcal{N}( \beta x_i, \sigma^2), \quad i = 1, \ldots, n \]
+	
+
+
+	\subsection{Estimation}
+	
+	Likelyhood function $L$ is:
+
+	\begin{align*}
+		L(y_1,...,y_n | \beta, \sigma) &= \prod \frac{1}{\sqrt{2 \pi \sigma^2}} \exp(-\frac{1}{2\sigma^2 (y_i-\beta x_i)^2}) \\
+		&= \frac{1}{(2\pi \sigma^2)^{n/2}}\exp(-\frac{1}{2\sigma^2} \sum (y_i-\beta x_i)^2)
+	\end{align*}
+
+	Log-likelihood $l$ is:
+
+\[
+	l(y_1,...,y_n | \beta, \sigma)=-\frac{n}{2}\log(2\pi \sigma^2)-\frac{1}{2 \sigma^2} \sum (y_i - \beta x_i)^2
+\]
+
+
+\begin{align*}
+	\frac{\partial l}{\partial \beta} = - \frac{1}{2 \sigma^2} & \sum 2(y_i-\beta x_i)(-x_i)=0 \\
+	\frac{1}{\sigma^2}& \sum (y_i x_i - \beta x_i ^2) = 0 \\
+	& \sum x_i y_i =  \sum  x_i^2 \beta \\
+	& \hat{\beta} = \frac{\sum x_i y_i}{\sum x_i^2}
+\end{align*}
+
+
+	\begin{proposition}
+		$\hat{\beta}$ is unbiased
+	\end{proposition}
+
+	\begin{proof}
+
+		\begin{align*}
+			\mathbb{E} [\hat{\beta}] &= \mathbb{E} [\frac{\sum x_i y_i}{\sum x_i^2}] = \sum \frac{1}{x_i^2} \mathbb{E}[\sum x_i y_i] = \\
+			&= \frac{\sum x_i\mathbb{E}[y_i]}{\sum x_i^2} = \frac{\sum x_i^2 \beta}{\sum x_i^2} = \beta 
+		\end{align*}
+		
+	\end{proof}
+
+
+
+
+	
+	\subsection{Interpretation of Results}
+	Interpreting the results of this model requires a nuanced understanding. The slope ($\beta$) now represents the change in the dependent variable for a one-unit change in the independent variable when it is zero. This interpretation contrasts with the conventional model, and careful consideration is required to convey meaningful insights.
+	
+	\subsection{Advantages and Limitations}
+	The simplicity of a model through the origin offers advantages in scenarios where the intercept is theoretically expected to be zero. However, it comes with limitations, especially when the true relationship includes a non-zero intercept. Understanding the trade-offs is essential for informed model selection.
+	
+	\subsection{Practical Considerations}
+	Researchers must carefully consider when to opt for this model. Practical applications may arise in situations where a non-zero intercept is implausible or irrelevant. However, caution is advised, as misapplication may lead to biased results. Guidelines for appropriate use and potential challenges are discussed in this section.
+	
+	\subsection{Relevant Literature}
+	Refer to seminal works and research studies that have explored or utilized the simple linear regression model without an intercept term. A brief review of the literature provides additional context and allows for a synthesis of existing knowledge in this specialized domain.
+	
 
 
 

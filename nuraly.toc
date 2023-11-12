@@ -4,13 +4,21 @@
 \contentsline {section}{\numberline {2.1}Statistics Basics}{3}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Simple Linear Regression}{5}{section.2.2}%
 \contentsline {section}{\numberline {2.3}Simple Linear Regression with no intercept term}{8}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Comparative Analysis}{9}{section.2.4}%
-\contentsline {chapter}{\numberline {3}Applications to Linear Regression through Origin}{10}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Something to add 1}{11}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Something to add 1}{11}{section.3.2}%
-\contentsline {chapter}{\numberline {4}Theoretical results}{12}{chapter.4}%
-\contentsline {section}{\numberline {4.1}A theoretical resilt}{12}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Towards some advanced topic}{12}{section.4.2}%
-\contentsline {chapter}{\numberline {5}Programming simulations}{13}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Summary and closing words}{14}{chapter.6}%
-\contentsline {chapter}{\numberline {A}Program Codes}{16}{appendix.A}%
+\contentsline {subsection}{\numberline {2.3.1}Introduction}{8}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Model Formulation}{8}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Assumptions}{8}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.4}Estimation}{8}{subsection.2.3.4}%
+\contentsline {subsection}{\numberline {2.3.5}Interpretation of Results}{9}{subsection.2.3.5}%
+\contentsline {subsection}{\numberline {2.3.6}Advantages and Limitations}{9}{subsection.2.3.6}%
+\contentsline {subsection}{\numberline {2.3.7}Practical Considerations}{10}{subsection.2.3.7}%
+\contentsline {subsection}{\numberline {2.3.8}Relevant Literature}{10}{subsection.2.3.8}%
+\contentsline {section}{\numberline {2.4}Comparative Analysis}{11}{section.2.4}%
+\contentsline {chapter}{\numberline {3}Applications to Linear Regression through Origin}{12}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Something to add 1}{13}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Something to add 1}{13}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Theoretical results}{14}{chapter.4}%
+\contentsline {section}{\numberline {4.1}A theoretical resilt}{14}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Towards some advanced topic}{14}{section.4.2}%
+\contentsline {chapter}{\numberline {5}Programming simulations}{15}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Summary and closing words}{16}{chapter.6}%
+\contentsline {chapter}{\numberline {A}Program Codes}{18}{appendix.A}%
