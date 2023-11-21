@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.11.7)  12 NOV 2023 07:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.11.7)  21 NOV 2023 01:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -277,11 +277,8 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 285.
 )
 \Hy@SectionHShift=\skip58
-) (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/latex/refcheck\refcheck.sty
-Package: refcheck 2013/02/14 v1.9.1
-\btoks=\toks33
 ) (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz.sty (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.sty (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-common.tex
-\pgfutil@everybye=\toks34
+\pgfutil@everybye=\toks33
 \pgfutil@tempdima=\dimen166
 \pgfutil@tempdimb=\dimen167
 ) (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-latex.def
@@ -293,10 +290,10 @@ Package: pgf 2023-01-15 v3.1.10 (3.1.10)
  (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgfcore.sty (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlayer\pgfsys.sty (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsys.code.tex
 Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
  (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks35
-\pgfkeys@temptoks=\toks36
+\pgfkeys@pathtoks=\toks34
+\pgfkeys@temptoks=\toks35
  (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeyslibraryfiltered.code.tex
-\pgfkeys@tmptoks=\toks37
+\pgfkeys@tmptoks=\toks36
 ))
 \pgf@x=\dimen168
 \pgf@y=\dimen169
@@ -314,9 +311,9 @@ Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
 \c@pgf@countb=\count290
 \c@pgf@countc=\count291
 \c@pgf@countd=\count292
-\t@pgf@toka=\toks38
-\t@pgf@tokb=\toks39
-\t@pgf@tokc=\toks40
+\t@pgf@toka=\toks37
+\t@pgf@tokb=\toks38
+\t@pgf@tokc=\toks39
 \pgf@sys@id@count=\count293
  (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.cfg
 File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
@@ -354,9 +351,9 @@ Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
 \pgfmath@dimen=\dimen178
 \pgfmath@count=\count296
 \pgfmath@box=\box56
-\pgfmath@toks=\toks41
-\pgfmath@stack@operand=\toks42
-\pgfmath@stack@operation=\toks43
+\pgfmath@toks=\toks40
+\pgfmath@stack@operand=\toks41
+\pgfmath@stack@operation=\toks42
 ) (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.code.tex) (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.basic.code.tex) (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.trigonometric.code.tex) (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.random.code.tex) (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.comparison.code.tex) (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.base.code.tex) (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.round.code.tex) (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.misc.code.tex) (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.integerarithmetics.code.tex) (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathcalc.code.tex) (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloat.code.tex
 \c@pgfmathroundto@lastzeros=\count297
 )) (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code.tex) (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepoints.code.tex
@@ -439,8 +436,8 @@ Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
 Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
 \pgffor@iter=\dimen261
 \pgffor@skip=\dimen262
-\pgffor@stack=\toks44
-\pgffor@toks=\toks45
+\pgffor@stack=\toks43
+\pgffor@toks=\toks44
 )) (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz\tikz.code.tex
 Package: tikz 2023-01-15 v3.1.10 (3.1.10)
  (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryplothandlers.code.tex
@@ -471,10 +468,10 @@ File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@matrix@numberofcolumns=\count308
 )
 \tikz@expandcount=\count309
-
-(C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarytopaths.code.tex
+ (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
-))) (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarydecorations.pathreplacing.code.tex (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarydecorations.code.tex (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmoduledecorations.code.tex
+)))
+(C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarydecorations.pathreplacing.code.tex (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarydecorations.code.tex (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmoduledecorations.code.tex
 \pgfdecoratedcompleteddistance=\dimen272
 \pgfdecoratedremainingdistance=\dimen273
 \pgfdecoratedinputsegmentcompleteddistance=\dimen274
@@ -485,8 +482,39 @@ File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgfdecorationsegmentlength=\dimen278
 )
 \tikz@lib@dec@box=\box66
-) (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/decorations\pgflibrarydecorations.pathreplacing.code.tex))
-\c@theorem=\count311
+) (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/decorations\pgflibrarydecorations.pathreplacing.code.tex)) (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/latex/todonotes\todonotes.sty
+Package: todonotes 2023/01/31 v1.1.6 Todonotes source and documentation.
+Package: todonotes 2023/01/31
+ (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+) (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/latex/xkeyval\xkeyval.sty
+Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
+ (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkeyval.tex (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkvutils.tex
+\XKV@toks=\toks45
+\XKV@tempa@toks=\toks46
+)
+\XKV@depth=\count311
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+)) (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
+Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count312
+\calc@Bcount=\count313
+\calc@Adimen=\dimen279
+\calc@Bdimen=\dimen280
+\calc@Askip=\skip59
+\calc@Bskip=\skip60
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count314
+\calc@Cskip=\skip61
+)
+\c@@todonotes@numberoftodonotes=\count315
+) (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/latex/setspace\setspace.sty
+Package: setspace 2022/12/04 v6.7b set line spacing
+)
+\c@theorem=\count316
  (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/latex/tools\indentfirst.sty
 Package: indentfirst 2023/07/02 v1.03 Indent first paragraph (DPC)
 ) (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
@@ -494,29 +522,29 @@ Package: geometry 2020/01/02 v5.9 Page Geometry
  (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count312
-\Gm@cntv=\count313
-\c@Gm@tempcnt=\count314
-\Gm@bindingoffset=\dimen279
-\Gm@wd@mp=\dimen280
-\Gm@odd@mp=\dimen281
-\Gm@even@mp=\dimen282
-\Gm@layoutwidth=\dimen283
-\Gm@layoutheight=\dimen284
-\Gm@layouthoffset=\dimen285
-\Gm@layoutvoffset=\dimen286
-\Gm@dimlist=\toks46
+\Gm@cnth=\count317
+\Gm@cntv=\count318
+\c@Gm@tempcnt=\count319
+\Gm@bindingoffset=\dimen281
+\Gm@wd@mp=\dimen282
+\Gm@odd@mp=\dimen283
+\Gm@even@mp=\dimen284
+\Gm@layoutwidth=\dimen285
+\Gm@layoutheight=\dimen286
+\Gm@layouthoffset=\dimen287
+\Gm@layoutvoffset=\dimen288
+\Gm@dimlist=\toks47
  (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg)) (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
 Package: fancyhdr 2022/11/09 v4.1 Extensive control of page headers and footers
-\f@nch@headwidth=\skip59
-\f@nch@O@elh=\skip60
-\f@nch@O@erh=\skip61
-\f@nch@O@olh=\skip62
-\f@nch@O@orh=\skip63
-\f@nch@O@elf=\skip64
-\f@nch@O@erf=\skip65
-\f@nch@O@olf=\skip66
-\f@nch@O@orf=\skip67
+\f@nch@headwidth=\skip62
+\f@nch@O@elh=\skip63
+\f@nch@O@erh=\skip64
+\f@nch@O@olh=\skip65
+\f@nch@O@orh=\skip66
+\f@nch@O@elf=\skip67
+\f@nch@O@erf=\skip68
+\f@nch@O@olf=\skip69
+\f@nch@O@orf=\skip70
 ) (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\mathptmx.sty
 Package: mathptmx 2020/03/25 PSNFSS-v9.3 Times w/ Math, improved (SPQR, WaS) 
 LaTeX Font Info:    Redeclaring symbol font `operators' on input line 28.
@@ -555,56 +583,56 @@ LaTeX Info: Redefining \hbar on input line 50.
 ) (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/latex/varwidth\varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@box=\box67
-\sift@deathcycles=\count315
-\@vwid@loff=\dimen287
-\@vwid@roff=\dimen288
+\sift@deathcycles=\count320
+\@vwid@loff=\dimen289
+\@vwid@roff=\dimen290
 ) (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty
 Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
-\multirow@colwidth=\skip68
-\multirow@cntb=\count316
-\multirow@dima=\skip69
-\bigstrutjot=\dimen289
+\multirow@colwidth=\skip71
+\multirow@cntb=\count321
+\multirow@dima=\skip72
+\bigstrutjot=\dimen291
 ) (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/latex/siunitx\siunitx.sty
 Package: siunitx 2023-10-07 v3.3.7 A comprehensive (SI) units package
-\l__siunitx_number_uncert_offset_int=\count317
-\l__siunitx_number_exponent_fixed_int=\count318
-\l__siunitx_number_min_decimal_int=\count319
-\l__siunitx_number_min_integer_int=\count320
-\l__siunitx_number_round_precision_int=\count321
-\l__siunitx_number_lower_threshold_int=\count322
-\l__siunitx_number_upper_threshold_int=\count323
-\l__siunitx_number_group_first_int=\count324
-\l__siunitx_number_group_size_int=\count325
-\l__siunitx_number_group_minimum_int=\count326
-\l__siunitx_angle_tmp_dim=\dimen290
+\l__siunitx_number_uncert_offset_int=\count322
+\l__siunitx_number_exponent_fixed_int=\count323
+\l__siunitx_number_min_decimal_int=\count324
+\l__siunitx_number_min_integer_int=\count325
+\l__siunitx_number_round_precision_int=\count326
+\l__siunitx_number_lower_threshold_int=\count327
+\l__siunitx_number_upper_threshold_int=\count328
+\l__siunitx_number_group_first_int=\count329
+\l__siunitx_number_group_size_int=\count330
+\l__siunitx_number_group_minimum_int=\count331
+\l__siunitx_angle_tmp_dim=\dimen292
 \l__siunitx_angle_marker_box=\box68
 \l__siunitx_angle_unit_box=\box69
-\l__siunitx_compound_count_int=\count327
+\l__siunitx_compound_count_int=\count332
  (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/latex/translations\translations.sty
 Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages (CN)
 )
 \l__siunitx_table_tmp_box=\box70
-\l__siunitx_table_tmp_dim=\dimen291
-\l__siunitx_table_column_width_dim=\dimen292
+\l__siunitx_table_tmp_dim=\dimen293
+\l__siunitx_table_column_width_dim=\dimen294
 \l__siunitx_table_integer_box=\box71
 \l__siunitx_table_decimal_box=\box72
 \l__siunitx_table_uncert_box=\box73
 \l__siunitx_table_before_box=\box74
 \l__siunitx_table_after_box=\box75
-\l__siunitx_table_before_dim=\dimen293
-\l__siunitx_table_carry_dim=\dimen294
-\l__siunitx_unit_tmp_int=\count328
-\l__siunitx_unit_position_int=\count329
-\l__siunitx_unit_total_int=\count330
+\l__siunitx_table_before_dim=\dimen295
+\l__siunitx_table_carry_dim=\dimen296
+\l__siunitx_unit_tmp_int=\count333
+\l__siunitx_unit_position_int=\count334
+\l__siunitx_unit_total_int=\count335
 ) (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.sty
 Package: csquotes 2022-09-14 v5.2n context-sensitive quotations (JAW)
-\csq@reset=\count331
-\csq@gtype=\count332
-\csq@glevel=\count333
-\csq@qlevel=\count334
-\csq@maxlvl=\count335
-\csq@tshold=\count336
-\csq@ltx@everypar=\toks47
+\csq@reset=\count336
+\csq@gtype=\count337
+\csq@glevel=\count338
+\csq@qlevel=\count339
+\csq@maxlvl=\count340
+\csq@tshold=\count341
+\csq@ltx@everypar=\toks48
  (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.def
 File: csquotes.def 2022-09-14 v5.2n csquotes generic definitions (JAW)
 )
@@ -615,82 +643,82 @@ File: csquotes.cfg
 )) (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/latex/titlesec\titlesec.sty
 Package: titlesec 2023/10/27 v2.16 Sectioning titles
 \ttl@box=\box76
-\beforetitleunit=\skip70
-\aftertitleunit=\skip71
-\ttl@plus=\dimen295
-\ttl@minus=\dimen296
-\ttl@toksa=\toks48
-\titlewidth=\dimen297
-\titlewidthlast=\dimen298
-\titlewidthfirst=\dimen299
+\beforetitleunit=\skip73
+\aftertitleunit=\skip74
+\ttl@plus=\dimen297
+\ttl@minus=\dimen298
+\ttl@toksa=\toks49
+\titlewidth=\dimen299
+\titlewidthlast=\dimen300
+\titlewidthfirst=\dimen301
 ) (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/latex/blindtext\blindtext.sty
 Package: blindtext 2012/01/06 V2.0 blindtext-Package
  (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/latex/tools\xspace.sty
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 )
-\c@blindtext=\count337
-\c@Blindtext=\count338
-\c@blind@countparstart=\count339
-\blind@countxx=\count340
-\blindtext@numBlindtext=\count341
-\blind@countyy=\count342
-\c@blindlist=\count343
-\c@blindlistlevel=\count344
-\c@blindlist@level=\count345
-\blind@listitem=\count346
-\c@blind@listcount=\count347
-\c@blind@levelcount=\count348
-\blind@mathformula=\count349
-\blind@Mathformula=\count350
-\c@blind@randomcount=\count351
-\c@blind@randommax=\count352
-\c@blind@pangramcount=\count353
-\c@blind@pangrammax=\count354
+\c@blindtext=\count342
+\c@Blindtext=\count343
+\c@blind@countparstart=\count344
+\blind@countxx=\count345
+\blindtext@numBlindtext=\count346
+\blind@countyy=\count347
+\c@blindlist=\count348
+\c@blindlistlevel=\count349
+\c@blindlist@level=\count350
+\blind@listitem=\count351
+\c@blind@listcount=\count352
+\c@blind@levelcount=\count353
+\blind@mathformula=\count354
+\blind@Mathformula=\count355
+\c@blind@randomcount=\count356
+\c@blind@randommax=\count357
+\c@blind@pangramcount=\count358
+\c@blind@pangrammax=\count359
 )
-Package translations Info: No language package found. I am going to use `english' as default language. on input line 127.
+Package translations Info: No language package found. I am going to use `english' as default language. on input line 131.
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... none found.
-LaTeX Font Info:    Trying to load font information for T1+ptm on input line 127.
+LaTeX Font Info:    Trying to load font information for T1+ptm on input line 131.
  (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 ) (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-10-23 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count355
+\l__color_backend_stack_int=\count360
 \l__pdf_internal_box=\box77
 ) (nuraly.aux)
 \openout1 = `nuraly.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 127.
-LaTeX Font Info:    ... okay on input line 127.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 127.
-LaTeX Font Info:    ... okay on input line 127.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 127.
-LaTeX Font Info:    ... okay on input line 127.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 127.
-LaTeX Font Info:    ... okay on input line 127.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 127.
-LaTeX Font Info:    ... okay on input line 127.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 127.
-LaTeX Font Info:    ... okay on input line 127.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 127.
-LaTeX Font Info:    ... okay on input line 127.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 127.
-LaTeX Font Info:    ... okay on input line 127.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 127.
-LaTeX Font Info:    ... okay on input line 127.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
  (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count356
-\scratchdimen=\dimen300
+\scratchcounter=\count361
+\scratchdimen=\dimen302
 \scratchbox=\box78
-\nofMPsegments=\count357
-\nofMParguments=\count358
-\everyMPshowfont=\toks49
-\MPscratchCnt=\count359
-\MPscratchDim=\dimen301
-\MPnumerator=\count360
-\makeMPintoPDFobject=\count361
-\everyMPtoPDFconversion=\toks50
+\nofMPsegments=\count362
+\nofMParguments=\count363
+\everyMPshowfont=\toks50
+\MPscratchCnt=\count364
+\MPscratchDim=\dimen303
+\MPnumerator=\count365
+\makeMPintoPDFobject=\count366
+\everyMPtoPDFconversion=\toks51
 ) (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -700,14 +728,12 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 127.
+Package hyperref Info: Link coloring OFF on input line 131.
  (nuraly.out) (nuraly.out)
 \@outlinefile=\write4
 \openout4 = `nuraly.out'.
 
 
-Package: `refcheck' v1.9.1 <2013/02/14>
-options: showrefs, showcites, msgs, chckunlbld
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -716,20 +742,20 @@ options: showrefs, showcites, msgs, chckunlbld
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(99.58464pt, 441.01773pt, 56.9055pt)
-* v-part:(T,H,B)=(85.35826pt, 658.28194pt, 101.40665pt)
+* h-part:(L,W,R)=(89.62709pt, 418.25368pt, 89.6271pt)
+* v-part:(T,H,B)=(101.40665pt, 591.5302pt, 152.11pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=441.01773pt
-* \textheight=658.28194pt
-* \oddsidemargin=27.31465pt
-* \evensidemargin=27.31465pt
-* \topmargin=-18.78552pt
+* \textwidth=418.25368pt
+* \textheight=591.5302pt
+* \oddsidemargin=17.3571pt
+* \evensidemargin=17.3571pt
+* \topmargin=-2.73714pt
 * \headheight=12.0pt
 * \headsep=19.8738pt
 * \topskip=12.0pt
 * \footskip=30.0pt
-* \marginparwidth=38.0pt
+* \marginparwidth=56.9055pt
 * \marginparsep=7.0pt
 * \columnsep=10.0pt
 * \skip\footins=10.8pt plus 4.0pt minus 2.0pt
@@ -745,33 +771,38 @@ options: showrefs, showcites, msgs, chckunlbld
 (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\translations-basic-dictionary-english.trsl
 File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 127.
-LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line 156.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 131.
+LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line 161.
  (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ztmcm.fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
-LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line 156.
+LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line 161.
  (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omlztmcm.fd
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
-LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line 156.
+LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line 161.
  (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omsztmcm.fd
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
-LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line 156.
+LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line 161.
  (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omxztmcm.fd
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
-LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 156.
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 161.
  (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 156.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 161.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 156.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 161.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 156.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 161.
+
+Overfull \hbox (4.08488pt too wide) in paragraph at lines 161--165
+ [][] 
+ []
+
 Package epstopdf Info: Source file: <./figures/bme_logo_nagy.eps>
 (epstopdf)                    date: 2023-10-15 21:50:04
 (epstopdf)                    size: 677966 bytes
@@ -779,40 +810,33 @@ Package epstopdf Info: Source file: <./figures/bme_logo_nagy.eps>
 (epstopdf)                    date: 2023-10-15 21:50:04
 (epstopdf)                    size: 47145 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=./figures/bme_logo_nagy-eps-converted-to.pdf ./figures/bme_logo_nagy.eps>
-(epstopdf)             \includegraphics on input line 166.
+(epstopdf)             \includegraphics on input line 171.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./figures/bme_logo_nagy-eps-converted-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<./figures/bme_logo_nagy-eps-converted-to.pdf, id=102, 709.65125pt x 199.74625pt>
+<./figures/bme_logo_nagy-eps-converted-to.pdf, id=66, 709.65125pt x 199.74625pt>
 File: ./figures/bme_logo_nagy-eps-converted-to.pdf Graphic file (type pdf)
 <use ./figures/bme_logo_nagy-eps-converted-to.pdf>
-Package pdftex.def Info: ./figures/bme_logo_nagy-eps-converted-to.pdf  used on input line 166.
-(pdftex.def)             Requested size: 220.50887pt x 62.06699pt.
+Package pdftex.def Info: ./figures/bme_logo_nagy-eps-converted-to.pdf  used on input line 171.
+(pdftex.def)             Requested size: 209.12683pt x 58.86366pt.
 [1
 
 
-{C:/Users/nural/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/nural/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc} <./figures/bme_logo_nagy-eps-converted-to.pdf>] (nuraly.toc [1
-
-
-])
+{C:/Users/nural/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/nural/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc} <./figures/bme_logo_nagy-eps-converted-to.pdf>] (nuraly.toc)
 \tf@toc=\write5
 \openout5 = `nuraly.toc'.
 
- [2] (nuraly.lot)
-\tf@lot=\write6
-\openout6 = `nuraly.lot'.
+ [1
 
- [3
-
-] (nuraly.lof)
-\tf@lof=\write7
-\openout7 = `nuraly.lof'.
-
- [4
 
 ]
  1.
+
+Overfull \hbox (39.29962pt too wide) in paragraph at lines 223--224
+[]\T1/ptm/m/n/12 In Sim-ple Lin-ear Re-gres-sion, we are given a ran-dom sam-ple of data points $\OT1/ztmcm/m/n/12 (\OML/ztmcm/m/it/12 x[]; y[]\OT1/ztmcm/m/n/12 )\OML/ztmcm/m/it/12 ; :::; \OT1/ztmcm/m/n/12 (\OML/ztmcm/m/it/12 x[]; y[]\OT1/ztmcm/m/n/12 )$
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 20.31995pt, for example:
@@ -824,11 +848,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.223 
-       [1
+l.232 \begin{equation}
+                      \label{eq:lin2} [1
 
 
 ]
+Package hyperref Info: bookmark level for unknown todo defaults to 0 on input line 237.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 20.31995pt, for example:
@@ -837,12 +863,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-8.31995pt}.
 
 [2]
- 2.
-
-Overfull \hbox (14.21822pt too wide) in paragraph at lines 241--242
-[]\T1/ptm/b/n/12 Definition (Sam-ple) \T1/ptm/m/n/12 In statis-tics, our data are of-ten mod-eled by a vec-tor $\OT1/ptm/b/n/12 X \OT1/ztmcm/m/n/12 = (\OML/ztmcm/m/it/12 X[]; X[]; [] ; X[]\OT1/ztmcm/m/n/12 )$
- []
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 20.31995pt, for example:
@@ -850,9 +870,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-8.31995pt}.
 
-[3
-
-]
+[3]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 20.31995pt, for example:
@@ -861,6 +879,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-8.31995pt}.
 
 [4]
+ 2.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 20.31995pt, for example:
@@ -869,6 +888,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-8.31995pt}.
 
 [5
+
 
 ]
 
@@ -897,46 +917,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [8
 
 ]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 20.31995pt, for example:
-(fancyhdr)                \setlength{\headheight}{20.31995pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-8.31995pt}.
-
-[9]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 20.31995pt, for example:
-(fancyhdr)                \setlength{\headheight}{20.31995pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-8.31995pt}.
-
-[10]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 20.31995pt, for example:
-(fancyhdr)                \setlength{\headheight}{20.31995pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-8.31995pt}.
-
-[11
-
-]
  3.
 
-Overfull \hbox (53.53743pt too wide) in paragraph at lines 501--501
- |[]\T1/ptm/b/n/24.88 Applications to Lin-ear Re-gres-sion through
- []
-
-
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 20.31995pt, for example:
 (fancyhdr)                \setlength{\headheight}{20.31995pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-8.31995pt}.
 
-[12
+[9
 
 
 ]
@@ -947,7 +936,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-8.31995pt}.
 
-[13
+[10
 
 ]
  4.
@@ -958,7 +947,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-8.31995pt}.
 
-[14
+[11
 
 ]
  5.
@@ -969,7 +958,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-8.31995pt}.
 
-[15
+[12
 
 ]
  6.
@@ -981,7 +970,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-8.31995pt}.
 
-[16
+[13
 
 ]
 
@@ -995,7 +984,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-8.31995pt}.
 
-[17
+[14
 
 ]
 Appendix A.
@@ -1006,7 +995,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-8.31995pt}.
 
-[18
+[15
 
 ] (nuraly.aux)
  ***********
@@ -1014,20 +1003,20 @@ LaTeX2e <2023-11-01>
 L3 programming layer <2023-11-01>
  ***********
 Package rerunfilecheck Info: File `nuraly.out' has not changed.
-(rerunfilecheck)             Checksum: F0A0E325E91EBB587EF4AFBCDD68FE7A;3956.
+(rerunfilecheck)             Checksum: A3021723CF3764B44E6DDC1E03197474;2720.
  ) 
 Here is how much of TeX's memory you used:
- 28391 strings out of 474592
- 577045 string characters out of 5745799
- 1941533 words of memory out of 5000000
- 50042 multiletter control sequences out of 15000+600000
- 637893 words of font info for 124 fonts, out of 8000000 for 9000
+ 29056 strings out of 474592
+ 591917 string characters out of 5745799
+ 1943533 words of memory out of 5000000
+ 50696 multiletter control sequences out of 15000+600000
+ 635863 words of font info for 124 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,13n,89p,729b,1027s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/nural/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/nural/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/nural/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/nural/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/nural/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/latxfont/line10.pfb><C:/Users/nural/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/nural/AppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs10.pfb><C:/Users/nural/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/nural/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/nural/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/nural/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/nural/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/nural/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on nuraly.pdf (23 pages, 217602 bytes).
+ 84i,13n,89p,883b,1116s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/nural/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/nural/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/nural/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/nural/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/nural/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/latxfont/line10.pfb><C:/Users/nural/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/nural/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/nural/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/nural/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/nural/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/nural/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
+Output written on nuraly.pdf (17 pages, 188771 bytes).
 PDF statistics:
- 314 PDF objects out of 1000 (max. 8388607)
- 52 named destinations out of 1000 (max. 500000)
- 216 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 245 PDF objects out of 1000 (max. 8388607)
+ 46 named destinations out of 1000 (max. 500000)
+ 144 words of extra memory for PDF output out of 10000 (max. 10000000)
 

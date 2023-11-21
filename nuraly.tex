@@ -22,11 +22,16 @@
 \newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 
-\usepackage{url}
+\usepackage{url  }
 \usepackage{hyperref}
-\usepackage{refcheck}
 \usepackage{tikz}
 \usetikzlibrary{decorations.pathreplacing}
+
+\setlength {\marginparwidth }{2cm}
+
+\usepackage{todonotes}
+
+\usepackage{setspace}
 
 % Theoremlike environment
 \newtheorem{theorem}{Theorem}[section]
@@ -53,7 +58,6 @@
 \newcommand{\X}{\mathcal{X}}
 \newcommand{\Y}{\mathcal{Y}}
 \newcommand{\M}{\mathcal{M}}
-
 \renewcommand{\P}{\mathbb{P}}
 \newcommand{\E}{\mathbb{E}}
 \newcommand{\D}{\mathbb{D}}
@@ -79,7 +83,7 @@
 \usepackage{indentfirst}
 %\usepackage{fullpage}
 \usepackage[a4paper]{geometry}
-\geometry{tmargin=3cm,lmargin=3.5cm,rmargin=2cm}
+% \geometry{tmargin=3cm,lmargin=3.5cm,rmargin=2cm}
 % manual page formatting
 %\setlength{\headsep}{25pt}
 \hyphenation{}
@@ -125,6 +129,7 @@
 
 
 \begin{document}
+\onehalfspacing
 
 \begin{titlepage}
 	
@@ -138,7 +143,7 @@
 	
 	\textsc{\LARGE Budapesti University of Technology and Economics}\\[1.5cm] % Name of your university/college
 	\textsc{\Large Institute of Mathematics}\\[0.5cm] % Major heading such as course name
-	\textsc{\large Faculty of Mathematics}\\[0.5cm] % Minor heading such as course title
+	\textsc{\large Bachelor Thesis}\\[0.5cm] % Minor heading such as course title
 	
 	%----------------------------------------------------------------------------------------
 	%	TITLE SECTION
@@ -176,8 +181,8 @@
 	%\chapter*{\centering Kivonat}
 	
 	\tableofcontents
-	\listoftables
-	\listoffigures
+	%\listoftables
+	%\listoffigures
 		
 	\mainmatter
 	
@@ -198,7 +203,7 @@
 	 
 	\titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter.\hsp}{0pt}{\Huge\bfseries} 
 	  
-	\chapter{Introduction} 
+	\chapter{Preliminaries} 
 	
 	\begin{chapquote}{Name of the author} % Quotation (optional)
 	''A place for future inspirational quote.''
@@ -208,124 +213,28 @@
 	\section{Introduction}
 
 % Start your introduction with a general statement about linear regression through the origin
-Linear regression through the origin is a specialized form of linear regression where the regression line passes through the origin point (\(0, 0\)). In this variant, the relationship between the dependent variable \(y\) and the independent variable \(x\) is represented by the equation:
-\[ y = \beta x + \varepsilon \]
-where \(\beta\) is the slope of the line, and \(\varepsilon\) represents the error term.
 
-% Explain the importance and relevance of linear regression through the origin
-Linear regression through the origin is particularly useful in situations where it is essential to force the regression line to go through the origin, indicating a direct proportional relationship between the variables without any offset. This constraint simplifies the model and is valuable in various scientific and engineering applications.
+In the world of regression analysis, choosing the right model is a constant challenge, balancing simplicity and accuracy. This thesis focuses on a specific aspect—linear regression through the origin (RTO) —examining its statistical properties when dealing with just one explanatory variable. Our goal is to identify situations where this approach might be more suitable than the commonly used simple linear regression. Through this study, we aim to shed light on the conditions that make regression through the origin a preferable choice, offering insights that bridge mathematical rigor with real-world applicability. Join us on this journey as we navigate the complexities of statistical modeling, striving to understand when and why regression through the origin might outperform its more conventional counterpart.
 
-% State the objective of your thesis
-The objective of this thesis is to delve into the nuances of linear regression through the origin. We aim to explore the mathematical foundations of this regression variant by starting from understanding the case of simple linear regression, discuss methods for estimating the parameter \(\beta\), and analyze its implications on model interpretation and prediction by analyzing the goodness of fit of the model and comparing it with regular simple linear regression (the full model). By conducting a comprehensive study and practical analysis, we intend to provide valuable insights into the application of linear regression through the origin in real-world contexts.
+	\subsection*{Simple Linear Regression}
 
-% Provide a brief overview of the structure of the thesis
-In the following chapters, we will focus on the specific aspects of linear regression through the origin. We will derive the regression equation, explore methods for estimating the slope \(\beta\), and investigate techniques for evaluating the model's goodness of fit. Practical examples and numerical illustrations will be used to reinforce the concepts discussed. Additionally, we will compare the results obtained from regression through the origin with those of traditional linear regression models. Finally, we will draw conclusions based on our findings and propose directions for further research in this domain.
+Before we start delving into RTO, it's best to get familiar with a more general case - Simple Linear Regression.
 
-% End the introduction section
-This introductory chapter sets the stage for the subsequent discussions and analyses. By examining linear regression through the origin with mathematical rigor, we aim to enhance the understanding of this specialized regression technique and its practical applications in scenarios demanding an origin-centered approach.
-
-% You can add more specific details or modify the content according to your research focus and preferences.
-
-	
-	
-
-	\chapter{Theoretical background} % ~10 pages (by Dec 31)
-	% Every chapter should start with a short summary
+In Simple Linear Regression, we are given a random sample of data points $(x_1,y_1),...,(x_n,y_n)$ from a population, and our goal is to find a linear function
 
 
-	\section{Statistics Basics}
-	% Give definitions of mean, variance, statistic, estimators, sufficiency, bias, MSE, and etc.
+\begin{equation}\label{eq:lin}
+	y = \beta_1 x + \beta_o
+\end{equation}
 
-\textbf{Definition (Data)} Let $(x_1, \ldots, x_n)$, where $x_i \in S$ for $i = 1, \ldots, n$. The set $S$ is typically $\mathbb{R}$, $\mathbb{R}^d$, or it can be any abstract set. However, for our purposes, $S$ (the sample space) will usually be $\mathbb{R}$.
+That describes the relationship between two variables $x$ and $y$ as good as possible. Since, sample is random, the equation \eqref{eq:lin} is not true in general, so we take into account the error term $\epsilon$:
 
-\textbf{Definition (Sample)} In statistics, our data are often modeled by a vector $\mathbf{X} = (X_1, X_2, \ldots, X_n)$ of i.i.d. (independent, identically distributed) random variables, called the sample (of which size is $n$), where the random variables $X_i$ take values in $\mathbb{Z}$ or $\mathbb{R}$. The common distribution of the $X_i$ is called the parent distribution, and we say that the sample is from that parent distribution.	
-
-\textbf{Definition (Model)} A statistical model is a family $\{P_{\theta} \,|\, \theta \in \Theta\}$ of distributions on the sample space. When $\Theta \subset \mathbb{R}^d$, we say that we have a parametric model, and we call $\Theta$ the parameter set (space).
-
-\textbf{Definition (p-th Quantile of Data)} If $p \in (0, 1)$, then a $p$-th quantile (or a $p$-th percentile) of the data $(x_1, \ldots, x_n)$ is a $p$-th quantile of the corresponding empirical distribution function $\hat{F}_n$.
-
-\textbf{Definition (Sample mean)} Let $(X_1, \ldots, X_n)$ be a sample. Then the random variable
-\[ \bar{X} = X = \frac{1}{n} \sum_{i=1}^{n} X_i \]
-is called the sample mean.
-
-\textbf{Definition (Estimator)} An estimator is a statistic (a function of the sample data) used to estimate an unknown parameter in a statistical model. An estimator for the parameter $\theta$, denoted as $\hat{\theta}$, is any measurable function of the random variables $X_1, X_2, \ldots, X_n$.
-
-\textbf{Definition (Unbiased Estimator)} If $\hat{\theta}$ is an estimator of $\theta$, then we can define the quantity \textit{Bias}($\hat{\theta}$) = $\mathbb{E}_{\theta}[\hat{\theta}] - \theta$. The estimator $\hat{\theta}$ is called unbiased if its bias is 0.
-
-\textbf{Definition (MSE of an Estimator)} Let us have the model $\{P_{\theta} \,|\, \theta \in \Theta\}$ and let us have the sample $(X_1, \ldots, X_n)$ from it. The mean square error (or the quadratic risk) of an estimator $\hat{\theta} = \hat{\theta}(X_1, \ldots, X_n)$ for the parameter $\theta$ is defined by
-\[ \text{MSE}_{\theta}(\hat{\theta}) = \mathbb{E}_{\theta}((\hat{\theta} - \theta)^2) \]
-when $\theta$ is the true parameter.
-
-\textbf{Steiner's identity:} $\mathbb{E}((X - a)^2) = \text{Var}(X) + (a - \mathbb{E}(X))^2$
-
-\textbf{Interpretation in the context of mean square error (MSE):}
-
-\[ \text{MSE}_{\theta}(\hat{\theta}) = \text{Var}_{\theta}(\hat{\theta}) + (\text{Bias}_{\theta}(\hat{\theta}))^2 \]
-
-\textbf{Definition (Sufficiency)} Let the model be $\{P_{\theta} \,|\, \theta \in \Theta\}$ and $\mathbf{X} = (X_1, \ldots, X_n)$ be a sample from it. The statistic $T$ is called \textit{sufficient} for the parameter $\theta$ (or, for the model $\{P_{\theta} \,|\, \theta \in \Theta\}$) if the conditional distribution $P_{\theta}(\mathbf{X} \in \cdot \,|\, T = t)$ does not depend on $\theta$.
-
-\textbf{Theorem (Neyman-Fisher Factorization Theorem)} If the model is $\{p(x|\theta) \,|\, \theta \in \Theta\}$ where $p(x|\theta)$ is a probability mass/density function and $\mathbf{X} = (X_1, \ldots, X_n)$ is a sample from it, then the statistic $T$ is \textit{sufficient} for the parameter $\theta$ if and only if we can find nonnegative functions $g$ and $h$ such that
-\[ p_{\mathbf{X}}(x | \theta) = g(T(x), \theta)h(x). \]
-
-\textbf{Definition (Likelihood)} Let $\{p(x, \theta), \theta \in \Theta\}$ be a model. If the observed value of $X$ is $x$, we say that $p(x | \theta)$ is the \textit{likelihood} of $\theta$: $L(\theta) = p(x | \theta)$. Thus, we are considering the mass/density as a function of $\theta$, for a fixed $x$. If $x = (x_1, \ldots, x_n)$ is a realization of the sample $\mathbf{X} = (X_1, \ldots, X_n)$, then $p(x | \theta)$ is the product of the marginals,
-\[ L(\theta) = p(x | \theta) = \prod_{i=1}^{n} p(x_i | \theta). \]
-
-\textbf{Theorem (Rao-Blackwell)} Let $\{P_{\theta} \,|\, \theta \in \Theta\}$ be a model and $(X_1, \ldots, X_n)$ be a sample. Let $\hat{\theta}$ be an estimator of $\theta$ with $\text{Var}_{\theta}(\hat{\theta})$ finite for each $\theta$. If $T$ is a sufficient statistic for $\theta$, then $\theta^* = \mathbb{E}_{\theta}(\hat{\theta} | T)$ is a statistic, and we have for all $\theta$ that
-\[ \text{MSE}_{\theta}(\theta^*) \leq \text{MSE}_{\theta}(\hat{\theta}) \quad (1) \]
-and the inequality is strict unless $\hat{\theta}$ is a function of $T$ with probability $1$.
+\begin{equation}\label{eq:lin2}
+	y = \beta_1 x + \beta_o + \epsilon
+\end{equation}
 
 
-
-
-
-	\clearpage
-	
-	\section{Simple Linear Regression}
-	% Definitions of SLR
-
-In simple linear regression we have a random sample $((x_1,y_1),...,(x_n,y_n))$ of observed points. And our goal is to find a linear function $y=\beta_0 + \beta_1x$ that describes the relationship between two variables in our sample as accurately as possible. The accuracy in this paper will be measured using least squares method. Namely,
-
-If $x_i$ is a predictor variable from our sample, then we say that $\hat{y_i}=\beta_0+\beta_1x_i$ is a fitted  value for response variable $y_i$. We then can model the relationship between those two using the following formula:
-
-\[
-	y_i = \hat{y_i} + \epsilon_i 	
-\]
-
-Then the objective is to minimize the sum of squares of error terms $\epsilon_i$, $\ i=1,...,n$.
-
-
-and our job is to find a model that describes the relationship between two two variables $x$ and $y$
- 
-
-
-
-
-Consider the model function:
-\[
-y = \beta_0 + \beta_1 x,
-\]
-which describes a line with slope $\beta_1$ and y-intercept $\beta_0$. In general, such a relationship may not hold exactly for the largely unobserved population of values of the independent and dependent variables; we call the unobserved deviations from the above equation the errors. Suppose we observe $n$ data pairs and call them $\{(x_i, y_i), i = 1, \ldots, n\}$. We can describe the underlying relationship between $y_i$ and $x_i$ involving this error term $\varepsilon_i$ by:
-\[
-y_i = \beta_0 + \beta_1 x_i + \varepsilon_i.
-\]
-This relationship between the true (but unobserved) underlying parameters $\beta_0$ and $\beta_1$ and the data points is called a linear regression model.
-
-The goal is to find estimated values $\hat{\beta_0}$ and $\hat{\beta_1}$ for the parameters $\beta_0$ and $\beta_1$ which would provide the "best" fit in some sense for the data points. As mentioned in the introduction, in this paper the "best" fit will be understood as in the least-squares approach: a line that minimizes the sum of squared residuals $\hat{\varepsilon}_i$ (differences between actual and predicted values of the dependent variable $y$), each of which is given by, for any candidate parameter values $\beta_0$ and $\beta_1$:
-\[
-\hat{\varepsilon}_i = y_i - \beta_0 - \beta_1 x_i.
-\]
-In other words, $\hat{\beta_0}$ and $\hat{\beta_1}$ solve the following minimization problem:
-\[
-\text{Find } \min_{\beta_0, \beta_1} Q(\beta_0, \beta_1), \quad \text{for } Q(\beta_0, \beta_1) = \sum_{i=1}^{n} \hat{\varepsilon}_i^2 = \sum_{i=1}^{n} (y_i - \beta_0 - \beta_1 x_i)^2.
-\]
-
-We assume that the response variable is normally distributed as follows: 
-
-\[ Y_i \sim \mathcal{N}(\beta_0 + \beta_1 x_i, \sigma^2), \quad i = 1, \ldots, n \]
-such that the \(Y_i\) are independent and \(\beta_0\), \(\beta_1\), and \(\sigma\) are unknown parameters.
-
-If $x = (x_1, \ldots, x_n)$, $y = (y_1, \ldots, y_n)$, and we let $S_{xy} = \sum_{i=1}^{n} x_i y_i - n\bar{x}\bar{y}$, then it is easy to see that
-\[ S_{xy} = \sum_{i=1}^{n} (x_i - \bar{x})(y_i - \bar{y}). \]
+The objective of simple linear regression is, under some \todo{List out the conditions} conditions*, to estimate the parameters $\beta_0$ and $\beta_1$, so that they will provide best fit. 
 
 
 Likelihood function
@@ -340,11 +249,12 @@ l(y_1, \ldots, y_n | \beta_0, \beta_1, \sigma) = c - n \log \sigma - \frac{1}{2\
 
 
 % Equations
-\begin{align*}
-\frac{\partial l}{\partial \beta_0} &= \sum_{i=1}^{n} (y_i - (\beta_0 + \beta_1 x_i)) = 0 \\
-\frac{\partial l}{\partial \beta_1} &= \sum_{i=1}^{n} (y_i - (\beta_0 + \beta_1 x_i))x_i = 0  \\
-\frac{\partial l}{\partial \sigma} &= \frac{n}{\sigma} - \frac{1}{\sigma^3} \sum_{i=1}^{n} (y_i - (\beta_0 + \beta_1 x_i))^2 = 0 
-\end{align*}
+\begin{align}
+	\frac{\partial l}{\partial \beta_0} &= \sum_{i=1}^{n} (y_i - (\beta_0 + \beta_1 x_i)) = 0 \label{eq:est_beta_0} \\
+	\frac{\partial l}{\partial \beta_1} &= \sum_{i=1}^{n} (y_i - (\beta_0 + \beta_1 x_i))x_i = 0 \label{eq:est_beta_1} \\
+	\frac{\partial l}{\partial \sigma} &= \frac{n}{\sigma} - \frac{1}{\sigma^3} \sum_{i=1}^{n} (y_i - (\beta_0 + \beta_1 x_i))^2 = 0 
+\end{align}
+	
 
 % Text
 Let the solutions of the above equations be denoted as $\hat{\beta}_0$, $\hat{\beta}_1$, $\hat{\sigma}^2$ for $\beta_0$, $\beta_1$, $\sigma^2$. If $\hat{y}_i = \hat{\beta}_0 + \hat{\beta}_1 x_i$, then...
@@ -356,6 +266,18 @@ Let the solutions of the above equations be denoted as $\hat{\beta}_0$, $\hat{\b
 \hat{\sigma}^2 &= \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2 = \frac{1}{n} SSE.
 \end{align*}
 
+So $\hat{\beta}_0, \hat{\beta}_1$ are Maximum Likelikelihood Estimators of the model.
+
+\begin{proposition}
+	Finding values of $\beta_0, \beta_1 $ that minimize MSE is same as finding MLE of $\beta_0 ,\beta_1 $
+\end{proposition}
+
+
+\begin{proof}
+	\todo{todo}
+\end{proof}
+
+
 
 % Proposition and Proof
 \textbf{Proposition}
@@ -364,11 +286,39 @@ Let the solutions of the above equations be denoted as $\hat{\beta}_0$, $\hat{\b
 \]
 
 % Proof (continued)
-\textit{Proof .} The vector $\textbf{y} - \textbf{$\hat{y}$}$ is perpendicular to $\textbf{$\hat{y}$} - \textbf{1 $\bar{y}$}$, thus the proposition is true by the Pythagorean theorem.
+\begin{proof}The vector $\textbf{y} - \textbf{$\hat{y}$}$ is perpendicular to $\textbf{$\hat{y}$} - \textbf{1 $\bar{y}$}$, thus the proposition is true by the Pythagorean theorem.
+
+Alternatively, it is enough to show that
+
+\[
+	\sum (\hat{y}_i-\bar{y})(y_i-\hat{y}_i) = 0	
+\],
+
+since then:
+
+\begin{align*}
+	\sum_{i=1}^{n} (y_i - \bar{y})^2 &= (\sum_{i=1}^{n} (\hat{y}_i - \bar{y}) + \sum_{i=1}^{n} (y_i - \hat{y}_i))^2 = \\
+	&= \sum_{i=1}^{n} (\hat{y}_i - \bar{y})^2 + 2\sum (\hat{y}_i-\bar{y})(y_i-\hat{y}_i)+ \sum_{i=1}^{n} (y_i - \hat{y}_i)^2 = \\
+	&= \sum_{i=1}^{n} (\hat{y}_i - \bar{y})^2 + \sum_{i=1}^{n} (y_i - \hat{y}_i)^2 \\
+\end{align*}
+
+From \ref{eq:est_beta_0} we know that $\sum (y_i=\bar{y}_i)=0$.
+From \ref{eq:est_beta_1} we know that $\sum (y_i-\hat{y}_i)x_i=0$,
+$\hat{y}_i = \beta_0 + \beta_1 x_i \Rightarrow x_i = \frac{1}{\beta_1}(\hat{y}_i-\beta_0) \Rightarrow \sum \hat{y}_i (y_i-\hat{y}_i)=0$
+
+Finally, 
+
+\[
+	\sum (\hat{y}_i-\bar{y})(y_i-\hat{y}_i) = \sum \hat{y}_i(y_i-\hat{y}_i)-\bar{y}\sum (y_i-\hat{y}_i)=0	
+\]
+
+
+\end{proof}
 
 
 % Proposition
 \textbf{Proposition 1.4.} The estimators $\hat{\beta}_0$, $\hat{\beta}_1$, $\frac{SSE}{n-2}$ are unbiased estimators of $\beta_0$, $\beta_1$, $\sigma^2$ respectively.
+
 
 
 % Proof that the estimators are unbiased
@@ -411,29 +361,138 @@ Let the solutions of the above equations be denoted as $\hat{\beta}_0$, $\hat{\b
 \]
 
 
+\begin{proposition}
+	$\mathbb{V}ar[\hat{\beta}_1] = \frac{\sigma^2}{S_{xx}}$
+\end{proposition}
+
+\begin{proof}
+	Assume, $Y_i \sim N(0, \sigma^2) $
+	\[
+		\mathbb{V}ar[\hat{\beta}_1] = \mathbb{V}ar (\frac{1}{S_{xx}}\sum (x_i-\bar{x})Y_i) = \frac{1}{S_{xx}^2}\sum \mathbb{V}ar Y_i = \frac{\sigma}{S_{xx}^2}
+	\]
+\end{proof}
+
+
+
+% You can add more specific details or modify the content according to your research focus and preferences.
+
+	
+	
+
+% 	\section{Theoretical background} % ~10 pages (by Dec 31)
+% 	% Every chapter should start with a short summary
+
+
+% 	\section{Statistics Basics}
+% 	% Give definitions of mean, variance, statistic, estimators, sufficiency, bias, MSE, and etc.
+
+
+% 	To understand subject of Linear Regression Through the Origin, it is better to revise some basic probability theory and statistic notions and theorems. This section also sets a commonground for the most of the mathemtical notation that is going to be used throughout the paper.
+
+% \textbf{Definition (Data)} Let $(x_1, \ldots, x_n)$, where $x_i \in S$ for $i = 1, \ldots, n$. The set $S$ is typically $\mathbb{R}$, $\mathbb{R}^d$, or it can be any abstract set. However, for our purposes, $S$ (the sample space) will usually be $\mathbb{R}$.
+
+% \textbf{Definition (Sample)} In statistics, our data are often modeled by a vector $\mathbf{X} = (X_1, X_2, \ldots, X_n)$ of i.i.d. (independent, identically distributed) random variables, called the sample (of which size is $n$), where the random variables $X_i$ take values in $\mathbb{Z}$ or $\mathbb{R}$. The common distribution of the $X_i$ is called the parent distribution, and we say that the sample is from that parent distribution.	
+
+% \textbf{Definition (Model)} A statistical model is a family $\{P_{\theta} \,|\, \theta \in \Theta\}$ of distributions on the sample space. When $\Theta \subset \mathbb{R}^d$, we say that we have a parametric model, and we call $\Theta$ the parameter set (space).
+
+% \textbf{Definition (p-th Quantile of Data)} If $p \in (0, 1)$, then a $p$-th quantile (or a $p$-th percentile) of the data $(x_1, \ldots, x_n)$ is a $p$-th quantile of the corresponding empirical distribution function $\hat{F}_n$.
+
+% \textbf{Definition (Sample mean)} Let $(X_1, \ldots, X_n)$ be a sample. Then the random variable
+% \[ \bar{X} = X = \frac{1}{n} \sum_{i=1}^{n} X_i \]
+% is called the sample mean.
+
+% \textbf{Definition (Estimator)} An estimator is a statistic (a function of the sample data) used to estimate an unknown parameter in a statistical model. An estimator for the parameter $\theta$, denoted as $\hat{\theta}$, is any measurable function of the random variables $X_1, X_2, \ldots, X_n$.
+
+% \textbf{Definition (Unbiased Estimator)} If $\hat{\theta}$ is an estimator of $\theta$, then we can define the quantity \textit{Bias}($\hat{\theta}$) = $\mathbb{E}_{\theta}[\hat{\theta}] - \theta$. The estimator $\hat{\theta}$ is called unbiased if its bias is 0.
+
+% \textbf{Definition (MSE of an Estimator)} Let us have the model $\{P_{\theta} \,|\, \theta \in \Theta\}$ and let us have the sample $(X_1, \ldots, X_n)$ from it. The mean square error (or the quadratic risk) of an estimator $\hat{\theta} = \hat{\theta}(X_1, \ldots, X_n)$ for the parameter $\theta$ is defined by
+% \[ \text{MSE}_{\theta}(\hat{\theta}) = \mathbb{E}_{\theta}((\hat{\theta} - \theta)^2) \]
+% when $\theta$ is the true parameter.
+
+% \textbf{Steiner's identity:} $\mathbb{E}((X - a)^2) = \text{Var}(X) + (a - \mathbb{E}(X))^2$
+
+% \textbf{Interpretation in the context of mean square error (MSE):}
+
+% \[ \text{MSE}_{\theta}(\hat{\theta}) = \text{Var}_{\theta}(\hat{\theta}) + (\text{Bias}_{\theta}(\hat{\theta}))^2 \]
+
+% \textbf{Definition (Sufficiency)} Let the model be $\{P_{\theta} \,|\, \theta \in \Theta\}$ and $\mathbf{X} = (X_1, \ldots, X_n)$ be a sample from it. The statistic $T$ is called \textit{sufficient} for the parameter $\theta$ (or, for the model $\{P_{\theta} \,|\, \theta \in \Theta\}$) if the conditional distribution $P_{\theta}(\mathbf{X} \in \cdot \,|\, T = t)$ does not depend on $\theta$.
+
+% \textbf{Theorem (Neyman-Fisher Factorization Theorem)} If the model is $\{p(x|\theta) \,|\, \theta \in \Theta\}$ where $p(x|\theta)$ is a probability mass/density function and $\mathbf{X} = (X_1, \ldots, X_n)$ is a sample from it, then the statistic $T$ is \textit{sufficient} for the parameter $\theta$ if and only if we can find nonnegative functions $g$ and $h$ such that
+% \[ p_{\mathbf{X}}(x | \theta) = g(T(x), \theta)h(x). \]
+
+% \textbf{Definition (Likelihood)} Let $\{p(x, \theta), \theta \in \Theta\}$ be a model. If the observed value of $X$ is $x$, we say that $p(x | \theta)$ is the \textit{likelihood} of $\theta$: $L(\theta) = p(x | \theta)$. Thus, we are considering the mass/density as a function of $\theta$, for a fixed $x$. If $x = (x_1, \ldots, x_n)$ is a realization of the sample $\mathbf{X} = (X_1, \ldots, X_n)$, then $p(x | \theta)$ is the product of the marginals,
+% \[ L(\theta) = p(x | \theta) = \prod_{i=1}^{n} p(x_i | \theta). \]
+
+% \textbf{Theorem (Rao-Blackwell)} Let $\{P_{\theta} \,|\, \theta \in \Theta\}$ be a model and $(X_1, \ldots, X_n)$ be a sample. Let $\hat{\theta}$ be an estimator of $\theta$ with $\text{Var}_{\theta}(\hat{\theta})$ finite for each $\theta$. If $T$ is a sufficient statistic for $\theta$, then $\theta^* = \mathbb{E}_{\theta}(\hat{\theta} | T)$ is a statistic, and we have for all $\theta$ that
+% \[ \text{MSE}_{\theta}(\theta^*) \leq \text{MSE}_{\theta}(\hat{\theta}) \quad (1) \]
+% and the inequality is strict unless $\hat{\theta}$ is a function of $T$ with probability $1$.
+
+
+
+
+
+% 	\clearpage
+	
+% 	\section{Simple Linear Regression}
+% 	% Definitions of SLR
+
+% In simple linear regression we have a random sample $((x_1,y_1),...,(x_n,y_n))$ of observed points. And our goal is to find a linear function $y=\beta_0 + \beta_1x$ that describes the relationship between two variables in our sample as accurately as possible. The accuracy in this paper will be measured using least squares method. Namely,
+
+% If $x_i$ is a predictor variable from our sample, then we say that $\hat{y_i}=\beta_0+\beta_1x_i$ is a fitted  value for response variable $y_i$. We then can model the relationship between those two using the following formula:
+
+% \[
+% 	y_i = \hat{y_i} + \epsilon_i 	
+% \]
+
+% Then the objective is to minimize the sum of squares of error terms $\epsilon_i$, $\ i=1,...,n$.
+
+
+% and our job is to find a model that describes the relationship between two two variables $x$ and $y$
+ 
+
+
+
+
+% Consider the model function:
+% \[
+% y = \beta_0 + \beta_1 x,
+% \]
+% which describes a line with slope $\beta_1$ and y-intercept $\beta_0$. In general, such a relationship may not hold exactly for the largely unobserved population of values of the independent and dependent variables; we call the unobserved deviations from the above equation the errors. Suppose we observe $n$ data pairs and call them $\{(x_i, y_i), i = 1, \ldots, n\}$. We can describe the underlying relationship between $y_i$ and $x_i$ involving this error term $\varepsilon_i$ by:
+% \[
+% y_i = \beta_0 + \beta_1 x_i + \varepsilon_i.
+% \]
+% This relationship between the true (but unobserved) underlying parameters $\beta_0$ and $\beta_1$ and the data points is called a linear regression model.
+
+% The goal is to find estimated values $\hat{\beta_0}$ and $\hat{\beta_1}$ for the parameters $\beta_0$ and $\beta_1$ which would provide the "best" fit in some sense for the data points. As mentioned in the introduction, in this paper the "best" fit will be understood as in the least-squares approach: a line that minimizes the sum of squared residuals $\hat{\varepsilon}_i$ (differences between actual and predicted values of the dependent variable $y$), each of which is given by, for any candidate parameter values $\beta_0$ and $\beta_1$:
+% \[
+% \hat{\varepsilon}_i = y_i - \beta_0 - \beta_1 x_i.
+% \]
+% In other words, $\hat{\beta_0}$ and $\hat{\beta_1}$ solve the following minimization problem:
+% \[
+% \text{Find } \min_{\beta_0, \beta_1} Q(\beta_0, \beta_1), \quad \text{for } Q(\beta_0, \beta_1) = \sum_{i=1}^{n} \hat{\varepsilon}_i^2 = \sum_{i=1}^{n} (y_i - \beta_0 - \beta_1 x_i)^2.
+% \]
+
+% We assume that the response variable is normally distributed as follows: 
+
+% \[ Y_i \sim \mathcal{N}(\beta_0 + \beta_1 x_i, \sigma^2), \quad i = 1, \ldots, n \]
+% such that the \(Y_i\) are independent and \(\beta_0\), \(\beta_1\), and \(\sigma\) are unknown parameters.
+
+% If $x = (x_1, \ldots, x_n)$, $y = (y_1, \ldots, y_n)$, and we let $S_{xy} = \sum_{i=1}^{n} x_i y_i - n\bar{x}\bar{y}$, then it is easy to see that
+% \[ S_{xy} = \sum_{i=1}^{n} (x_i - \bar{x})(y_i - \bar{y}). \]
+
+
+
 
 
 	\clearpage
 
+
+\chapter{Linear Regression Regression with no intercept term}
+
 	\section{Simple Linear Regression with no intercept term}
 
-
-	\subsection{Introduction}
-	In certain statistical applications, the conventional assumption of a non-zero intercept term ($\beta_0$) in a simple linear regression model may not align with the nature of the data. This section explores the implications and applications of a simplified model where the intercept term is set to zero, investigating scenarios where such a model might be more appropriate.
+	In certain statistical applications, the conventional assumption of a non-zero intercept term ($\beta_0$) in a simple linear regression model may not align with the nature of the data. For example, in economics the cost of production be assumed to be zero, when there is no production, or in physics, when we are describing the relationship between force and the displacement, forced is assumede to be zero, when there is no displacement.
 	
-	\subsection{Model Formulation}
-	The modified simple linear regression model without an intercept term is expressed as:
-	\[ Y = \beta X + \varepsilon \]
-	Here, $Y$ represents the dependent variable, $X$ is the independent variable, $\beta$ is the slope, and $\varepsilon$ denotes the error term. The intentional omission of the intercept term ($\beta_0$) signifies a direct relationship between the variables without an offset.
-	
-	\subsection{Assumptions}
-	While many assumptions from the standard simple linear regression model remain applicable, notable differences emerge. In this model, the absence of an intercept implies that the dependent variable is expected to be zero when the independent variable is zero. 
-
-	\[ Y_i \sim \mathcal{N}( \beta x_i, \sigma^2), \quad i = 1, \ldots, n \]
-	
-
-
-	\subsection{Estimation}
 	
 	Likelyhood function $L$ is:
 
@@ -471,29 +530,54 @@ Let the solutions of the above equations be denoted as $\hat{\beta}_0$, $\hat{\b
 	\end{proof}
 
 
+	\begin{proposition}
+		\[
+		\mathbb{V}ar[\hat{\beta}_1^0] = \frac{\sigma^2}{\sum x_i^2}
+		\]
+	\end{proposition}
 
 
+	\begin{proof}
+		\[
+		\mathbb{V}ar[\hat{\beta}_1^0] =  \mathbb{V}ar[\frac{\sum x_i y_i}{\sum x_i^2}] = \frac{1}{(\sum x_i^2)^2} \sum x_i^2 \mathbb{V}ar[Y_i] = \frac{\sigma^2}{\sum x_i^2}
+		\]
+	\end{proof}
+
+
+	\begin{proposition}
+		\[
+			\mathbb{V}ar[\hat{\beta}_1^0] < \mathbb{V}ar[\hat{\beta}_1]
+		\]
+	\end{proposition}
+
+	\begin{proof}
+		\begin{align*}
+			\sum x_i^2 &> \sum (x_i - \bar{x})^2  \\
+			\frac{1}{\sum x_i^2}  &< \frac{1}{\sum (x_i - \bar{x})^2}  \\
+			\frac{\sigma^2}{\sum x_i^2}  &< \frac{\sigma^2}{\sum (x_i - \bar{x})^2}  \\
+			\mathbb{V}ar[\hat{\beta}_1^0] &< \mathbb{V}ar[\hat{\beta}_1] 
+		\end{align*}
+	\end{proof}
+
+
+This might suggest that $\hat{\beta}_1^0$ might be more accurate estimator than $\hat{\beta}_1$ for the slope term, but it is not completely true, since these are estimators for different models. However, 	
+
 	
-	\subsection{Interpretation of Results}
-	Interpreting the results of this model requires a nuanced understanding. The slope ($\beta$) now represents the change in the dependent variable for a one-unit change in the independent variable when it is zero. This interpretation contrasts with the conventional model, and careful consideration is required to convey meaningful insights.
-	
-	\subsection{Advantages and Limitations}
-	The simplicity of a model through the origin offers advantages in scenarios where the intercept is theoretically expected to be zero. However, it comes with limitations, especially when the true relationship includes a non-zero intercept. Understanding the trade-offs is essential for informed model selection.
-	
-	\subsection{Practical Considerations}
-	Researchers must carefully consider when to opt for this model. Practical applications may arise in situations where a non-zero intercept is implausible or irrelevant. However, caution is advised, as misapplication may lead to biased results. Guidelines for appropriate use and potential challenges are discussed in this section.
-	
+
+
 	\subsection{Relevant Literature}
 	Refer to seminal works and research studies that have explored or utilized the simple linear regression model without an intercept term. A brief review of the literature provides additional context and allows for a synthesis of existing knowledge in this specialized domain.
+
+
+
 	
-
-
-
 	
 	\clearpage
 
 	\section{Comparative Analysis}	
-	% If applicable, compare Linear Regression through Origin with other regression techniques. Discuss why this particular method was chosen over others, highlighting its advantages and limitations in comparison to traditional linear regression models.
+	
+
+
 	
 	\clearpage
 
@@ -504,22 +588,19 @@ Let the solutions of the above equations be denoted as $\hat{\beta}_0$, $\hat{\b
 	\clearpage
 
 	\section{Something to add 1} 
-	% UNICORNS, Temporary Outlier Factor
-	% Outlier types (point, trend and contextual outliers)
+
 	
 	\section{Something to add 1} 
-	% Sugihara's algorithm (CCM) and the new entropy-based methods
 
-	\chapter{Theoretical results} % (By Feb 26)
+
+	\chapter{Theoretical results} 
 	
 	\section{A theoretical resilt}
 	
 	\section{Towards some advanced topic}
-	% Why is it desirable to establish such result? Do a short literature review. State a conjecture on the potential form of Taken's embedding theorem. Try to prove it (or at least test it) for autoregressive processes.
 
-	\chapter{Programming simulations} % (By March 31)
-	% Demonstrate the applicability of these algorithms on interesting data sets
-	% Implementation details, how to find optimal time lag, and embedding dimension
+
+	\chapter{Programming simulations} %
 
 
 		
@@ -531,7 +612,7 @@ Let the solutions of the above equations be denoted as $\hat{\beta}_0$, $\hat{\b
 
 	% All in all 26-30 pages
 	
-	% IRODALOMJEGYZÉK
+
 	\bibliography{nuraly}
 	\bibliographystyle{plain}
 	
