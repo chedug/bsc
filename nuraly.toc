@@ -2,7 +2,8 @@
 \contentsline {section}{\numberline {1.1}Introduction}{1}{section.1.1}%
 \contentsline {chapter}{\numberline {2}Linear Regression Regression with no intercept term}{5}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Simple Linear Regression with no intercept term}{5}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}Relevant Literature}{7}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.1}Experiment}{7}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Relevant Literature}{7}{subsection.2.1.2}%
 \contentsline {section}{\numberline {2.2}Comparative Analysis}{8}{section.2.2}%
 \contentsline {chapter}{\numberline {3}Applications to Linear Regression through Origin}{9}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Something to add 1}{10}{section.3.1}%

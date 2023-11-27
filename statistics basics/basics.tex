@@ -1,0 +1,239 @@
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                            %
+%    Dyussenov Nuraly BSc Thesis Work        %
+%                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt,a4paper,oneside]{book} % twoside,openany
+
+% Packages
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{cancel}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{caption,subcaption}
+\graphicspath{{./figures/}}
+
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\usepackage{url  }
+\usepackage{hyperref}
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathreplacing}
+
+\setlength {\marginparwidth }{2cm}
+
+\usepackage{todonotes}
+
+\usepackage{setspace}
+
+% Theoremlike environment
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{assumption}[theorem]{Assumption}
+
+% Ususal abbreviations
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+
+% Probability theory
+\newcommand{\A}{\mathcal{A}}
+\newcommand{\B}{\mathcal{B}}
+\newcommand{\C}{\mathcal{C}}
+\newcommand{\F}{\mathcal{F}}
+\newcommand{\G}{\mathcal{G}}
+\newcommand{\X}{\mathcal{X}}
+\newcommand{\Y}{\mathcal{Y}}
+\newcommand{\M}{\mathcal{M}}
+\renewcommand{\P}{\mathbb{P}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\D}{\mathbb{D}}
+\newcommand{\law}[1]{\text{Law}(#1)}
+
+\newcommand{\Pas}{\text{a.s.}}
+\newcommand{\ind}{\mathds{1}}
+
+% Analysis
+\newcommand{\eps}{\varepsilon}
+\newcommand{\la}{\lambda}
+\newcommand{\ga}{\gamma}
+\newcommand{\ka}{\kappa}
+\newcommand{\dtv}{d_{\text{TV}}}
+
+% Integration
+\newcommand{\dint}{\mathrm{d}} 
+
+\newcommand{\lfrf}[1]{\lfloor #1\rfloor}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55% Page layout
+\usepackage{indentfirst}
+%\usepackage{fullpage}
+\usepackage[a4paper]{geometry}
+% \geometry{tmargin=3cm,lmargin=3.5cm,rmargin=2cm}
+% manual page formatting
+%\setlength{\headsep}{25pt}
+\hyphenation{}
+
+% headers and footers
+\usepackage{fancyhdr}
+\usepackage{mathptmx}
+
+\newcommand\HRule{\rule{\textwidth}{1pt}}
+
+\usepackage{varwidth}
+
+%\usepackage{booktabs}
+\usepackage{multirow,array}
+\usepackage{siunitx}
+
+% Quotations
+\usepackage{csquotes}
+
+\makeatletter
+\renewcommand{\@chapapp}{}% Not necessary...
+\newenvironment{chapquote}[2][2em]
+{\setlength{\@tempdima}{#1}%
+	\def\chapquote@author{#2}%
+	\parshape 1 \@tempdima \dimexpr\textwidth-2\@tempdima\relax%
+	\itshape}
+{\par\normalfont\hfill--\ \chapquote@author\hspace*{\@tempdima}\par\bigskip}
+\makeatother
+
+
+\usepackage{titlesec, blindtext, color}
+\definecolor{gray75}{gray}{0.75}
+\newcommand{\hsp}{\hspace{20pt}}
+
+
+\newcommand{\stdwidth}{0.61\linewidth}
+
+% Space above chapter titles
+\usepackage{titlesec}
+
+\renewcommand{\baselinestretch}{1.5}
+
+
+
+\begin{document}
+
+
+
+
+	\section{APPENDIX} 
+
+
+
+	\section{Statistics Basics}
+
+
+
+	To understand subject of Linear Regression Through the Origin, it is better to revise some basic probability theory and statistic notions and theorems. This section also sets a commonground for the most of the mathemtical notation that is going to be used throughout the paper.
+
+\textbf{Definition (Data)} Let $(x_1, \ldots, x_n)$, where $x_i \in S$ for $i = 1, \ldots, n$. The set $S$ is typically $\mathbb{R}$, $\mathbb{R}^d$, or it can be any abstract set. However, for our purposes, $S$ (the sample space) will usually be $\mathbb{R}$.
+
+\textbf{Definition (Sample)} In statistics, our data are often modeled by a vector $\mathbf{X} = (X_1, X_2, \ldots, X_n)$ of i.i.d. (independent, identically distributed) random variables, called the sample (of which size is $n$), where the random variables $X_i$ take values in $\mathbb{Z}$ or $\mathbb{R}$. The common distribution of the $X_i$ is called the parent distribution, and we say that the sample is from that parent distribution.	
+
+\textbf{Definition (Model)} A statistical model is a family $\{P_{\theta} \,|\, \theta \in \Theta\}$ of distributions on the sample space. When $\Theta \subset \mathbb{R}^d$, we say that we have a parametric model, and we call $\Theta$ the parameter set (space).
+
+\textbf{Definition (p-th Quantile of Data)} If $p \in (0, 1)$, then a $p$-th quantile (or a $p$-th percentile) of the data $(x_1, \ldots, x_n)$ is a $p$-th quantile of the corresponding empirical distribution function $\hat{F}_n$.
+
+\textbf{Definition (Sample mean)} Let $(X_1, \ldots, X_n)$ be a sample. Then the random variable
+\[ \bar{X} = X = \frac{1}{n} \sum_{i=1}^{n} X_i \]
+is called the sample mean.
+
+\textbf{Definition (Estimator)} An estimator is a statistic (a function of the sample data) used to estimate an unknown parameter in a statistical model. An estimator for the parameter $\theta$, denoted as $\hat{\theta}$, is any measurable function of the random variables $X_1, X_2, \ldots, X_n$.
+
+\textbf{Definition (Unbiased Estimator)} If $\hat{\theta}$ is an estimator of $\theta$, then we can define the quantity \textit{Bias}($\hat{\theta}$) = $\mathbb{E}_{\theta}[\hat{\theta}] - \theta$. The estimator $\hat{\theta}$ is called unbiased if its bias is 0.
+
+\textbf{Definition (MSE of an Estimator)} Let us have the model $\{P_{\theta} \,|\, \theta \in \Theta\}$ and let us have the sample $(X_1, \ldots, X_n)$ from it. The mean square error (or the quadratic risk) of an estimator $\hat{\theta} = \hat{\theta}(X_1, \ldots, X_n)$ for the parameter $\theta$ is defined by
+\[ \text{MSE}_{\theta}(\hat{\theta}) = \mathbb{E}_{\theta}((\hat{\theta} - \theta)^2) \]
+when $\theta$ is the true parameter.
+
+\textbf{Steiner's identity:} $\mathbb{E}((X - a)^2) = \text{Var}(X) + (a - \mathbb{E}(X))^2$
+
+\textbf{Interpretation in the context of mean square error (MSE):}
+
+\[ \text{MSE}_{\theta}(\hat{\theta}) = \text{Var}_{\theta}(\hat{\theta}) + (\text{Bias}_{\theta}(\hat{\theta}))^2 \]
+
+\textbf{Definition (Sufficiency)} Let the model be $\{P_{\theta} \,|\, \theta \in \Theta\}$ and $\mathbf{X} = (X_1, \ldots, X_n)$ be a sample from it. The statistic $T$ is called \textit{sufficient} for the parameter $\theta$ (or, for the model $\{P_{\theta} \,|\, \theta \in \Theta\}$) if the conditional distribution $P_{\theta}(\mathbf{X} \in \cdot \,|\, T = t)$ does not depend on $\theta$.
+
+\textbf{Theorem (Neyman-Fisher Factorization Theorem)} If the model is $\{p(x|\theta) \,|\, \theta \in \Theta\}$ where $p(x|\theta)$ is a probability mass/density function and $\mathbf{X} = (X_1, \ldots, X_n)$ is a sample from it, then the statistic $T$ is \textit{sufficient} for the parameter $\theta$ if and only if we can find nonnegative functions $g$ and $h$ such that
+\[ p_{\mathbf{X}}(x | \theta) = g(T(x), \theta)h(x). \]
+
+\textbf{Definition (Likelihood)} Let $\{p(x, \theta), \theta \in \Theta\}$ be a model. If the observed value of $X$ is $x$, we say that $p(x | \theta)$ is the \textit{likelihood} of $\theta$: $L(\theta) = p(x | \theta)$. Thus, we are considering the mass/density as a function of $\theta$, for a fixed $x$. If $x = (x_1, \ldots, x_n)$ is a realization of the sample $\mathbf{X} = (X_1, \ldots, X_n)$, then $p(x | \theta)$ is the product of the marginals,
+\[ L(\theta) = p(x | \theta) = \prod_{i=1}^{n} p(x_i | \theta). \]
+
+\textbf{Theorem (Rao-Blackwell)} Let $\{P_{\theta} \,|\, \theta \in \Theta\}$ be a model and $(X_1, \ldots, X_n)$ be a sample. Let $\hat{\theta}$ be an estimator of $\theta$ with $\text{Var}_{\theta}(\hat{\theta})$ finite for each $\theta$. If $T$ is a sufficient statistic for $\theta$, then $\theta^* = \mathbb{E}_{\theta}(\hat{\theta} | T)$ is a statistic, and we have for all $\theta$ that
+\[ \text{MSE}_{\theta}(\theta^*) \leq \text{MSE}_{\theta}(\hat{\theta}) \quad (1) \]
+and the inequality is strict unless $\hat{\theta}$ is a function of $T$ with probability $1$.
+
+
+
+
+
+	\clearpage
+	
+	\section{Simple Linear Regression}
+
+In simple linear regression we have a random sample $((x_1,y_1),...,(x_n,y_n))$ of observed points. And our goal is to find a linear function $y=\beta_0 + \beta_1x$ that describes the relationship between two variables in our sample as accurately as possible. The accuracy in this paper will be measured using least squares method. Namely,
+
+If $x_i$ is a predictor variable from our sample, then we say that $\hat{y_i}=\beta_0+\beta_1x_i$ is a fitted  value for response variable $y_i$. We then can model the relationship between those two using the following formula:
+
+\[
+	y_i = \hat{y_i} + \epsilon_i 	
+\]
+
+Then the objective is to minimize the sum of squares of error terms $\epsilon_i$, $\ i=1,...,n$.
+
+
+and our job is to find a model that describes the relationship between two two variables $x$ and $y$
+ 
+
+
+
+
+Consider the model function:
+\[
+y = \beta_0 + \beta_1 x,
+\]
+which describes a line with slope $\beta_1$ and y-intercept $\beta_0$. In general, such a relationship may not hold exactly for the largely unobserved population of values of the independent and dependent variables; we call the unobserved deviations from the above equation the errors. Suppose we observe $n$ data pairs and call them $\{(x_i, y_i), i = 1, \ldots, n\}$. We can describe the underlying relationship between $y_i$ and $x_i$ involving this error term $\varepsilon_i$ by:
+\[
+y_i = \beta_0 + \beta_1 x_i + \varepsilon_i.
+\]
+This relationship between the true (but unobserved) underlying parameters $\beta_0$ and $\beta_1$ and the data points is called a linear regression model.
+
+The goal is to find estimated values $\hat{\beta_0}$ and $\hat{\beta_1}$ for the parameters $\beta_0$ and $\beta_1$ which would provide the "best" fit in some sense for the data points. As mentioned in the introduction, in this paper the "best" fit will be understood as in the least-squares approach: a line that minimizes the sum of squared residuals $\hat{\varepsilon}_i$ (differences between actual and predicted values of the dependent variable $y$), each of which is given by, for any candidate parameter values $\beta_0$ and $\beta_1$:
+\[
+\hat{\varepsilon}_i = y_i - \beta_0 - \beta_1 x_i.
+\]
+In other words, $\hat{\beta_0}$ and $\hat{\beta_1}$ solve the following minimization problem:
+\[
+\text{Find } \min_{\beta_0, \beta_1} Q(\beta_0, \beta_1), \quad \text{for } Q(\beta_0, \beta_1) = \sum_{i=1}^{n} \hat{\varepsilon}_i^2 = \sum_{i=1}^{n} (y_i - \beta_0 - \beta_1 x_i)^2.
+\]
+
+We assume that the response variable is normally distributed as follows: 
+
+\[ Y_i \sim \mathcal{N}(\beta_0 + \beta_1 x_i, \sigma^2), \quad i = 1, \ldots, n \]
+such that the \(Y_i\) are independent and \(\beta_0\), \(\beta_1\), and \(\sigma\) are unknown parameters.
+
+If $x = (x_1, \ldots, x_n)$, $y = (y_1, \ldots, y_n)$, and we let $S_{xy} = \sum_{i=1}^{n} x_i y_i - n\bar{x}\bar{y}$, then it is easy to see that
+\[ S_{xy} = \sum_{i=1}^{n} (x_i - \bar{x})(y_i - \bar{y}). \]
+
+
+\end{document}
