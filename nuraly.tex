@@ -468,11 +468,55 @@ It would be convenient for us to find confidence interval for $\beta_1^0 - \beta
 \end{proposition}
 
 \begin{proof}
-	
+	\begin{align*}
+		\Cov (\hat{\beta_1^0},\hat{\beta_1^0}-\hat{\beta_1}) &=
+		\Cov (\frac{\sum xy}{\sum x^2},\frac{\sum xy}{\sum x^2}-\frac{\sum (x-\bar{x})y}{\sum (x-\bar{x})^2})  \\
+		&= \frac{\sum x^2}{(\sum x^2)^2} \Var\  y - \frac{\sum x(x-\bar{x})}{\sum x^2 \sum (x-\bar{x})^2} \Var \ y \\
+		&=\sigma^2(\frac{1}{\sum x^2} - \frac{\sum x^2 - \bar{x}\sum x}{\sum x^2 \sum(x^2-2x\bar{x}+\bar{x}^2)}) \\
+		&= \sigma^2 (\frac{1}{\sum x^2}-\frac{\sum x^2 - n \bar{x}^2}{\sum x^2(\sum x^2 - 2n\bar{x}^2+n\bar{x}^2)}) \\
+		&=\sigma^2 (\frac{1}{\sum x^2}-\frac{\sum x^2 - n \bar{x}^2}{\sum x^2(\sum x^2 -n\bar{x}^2)}) \\
+		&= \sigma^2(\frac{1}{\sum x^2}-\frac{1}{\sum x^2})=0
+	\end{align*}
 \end{proof}
 
+\begin{proposition}
+	$\E [\hat{\beta_1^0}-\hat{\beta_1}]=\beta_1^0-\beta_1$
+\end{proposition}
 
+\begin{proof}
+	By linearity of expected value, $\E [\hat{\beta_1^0}-\hat{\beta_1}]= \E[\hat{\beta_1^0}] - \E[\hat{\beta_1}]= \beta_1^0-\beta_1 $
+\end{proof}
+	
+	Now we are ready to prove proposition \ref{prop:normally}
+\begin{proof}[Proof of prop. \ref{prop:normally}]
+	$\hat{\beta_1^0}-\hat{\beta_1}$ is a linear combination of mutually independent normally distributed r.v.-s $\Rightarrow$ it is normally distributed.
+	\todo{you can show that}
+	
+	\begin{align*}
+		\Var (\hat{\beta_1^0}-\hat{\beta_1})&=\Var(\hat{\beta_1^0}) + \Var(\hat{\beta_1}) - 2 \Cov (\hat{\beta_1^0},\hat{\beta_1}) =\frac{\sigma^2}{S_{xx}^0}+\frac{\sigma^2}{S_{xx}}-2 \Cov (\hat{\beta_1^0},\hat{\beta_1^0}-\hat{\beta_1})-2 \Cov (\hat{\beta_1^0},\hat{\beta_1^0}) \\
+		&= \frac{\sigma^2}{S_{xx}^0}+\frac{\sigma^2}{S_{xx}} - 0 -2 \Var \ \hat{\beta_1^0}=\frac{\sigma^2}{S_{xx}}-\frac{\sigma^2}{S_{xx}^0}
+	\end{align*}
+\end{proof}
+	
+Using proposition \ref{prop:normally}, we can now construct confidence interval for $\beta_1^0-\beta_1$:
 
+\[
+			\hat{\beta_1^0}-\hat{\beta_1} \sim N(\beta_1^0-\beta_1, \sigma^2(\frac{1}{S_{xx}}-\frac{1}{S_{xx}^0}))
+\]
+
+\[
+	Z := \frac{\hat{\beta_1^0}-\hat{\beta_1}-\E [\hat{\beta_1^0}-\hat{\beta_1}]}{\Var (\hat{\beta_1^0}-\hat{\beta_1})}= \frac{\hat{\beta_1^0}-\hat{\beta_1}-(\beta_1^0-\beta_1)}{\sigma^2(\frac{1}{S_{xx}}-\frac{1}{S_{xx}^0})})}
+\]
+
+\[
+	\beta_1^0-\beta_1= \hat{\beta_1^0}-\hat{\beta_1} - \sigma^2 Z(\frac{1}{S_{xx}}-\frac{1}{S_{xx}^0})
+\]
+
+CI is:
+
+\[
+\hat{\beta_1^0}-\hat{\beta_1} - \sigma^2 Z_{\alpha}(\frac{1}{S_{xx}}-\frac{1}{S_{xx}^0}) \leq \beta_1^0-\beta_1 \leq \hat{\beta_1^0}-\hat{\beta_1} + \sigma^2 Z_{\alpha}(\frac{1}{S_{xx}}-\frac{1}{S_{xx}^0}) 
+\]
 
 
 

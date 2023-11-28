@@ -2,15 +2,15 @@
 \contentsline {section}{\numberline {1.1}Introduction}{1}{section.1.1}%
 \contentsline {chapter}{\numberline {2}Linear Regression Regression with no intercept term}{5}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Simple Linear Regression with no intercept term}{5}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}Experiment}{7}{subsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.1.2}Relevant Literature}{7}{subsection.2.1.2}%
-\contentsline {section}{\numberline {2.2}Comparative Analysis}{8}{section.2.2}%
-\contentsline {chapter}{\numberline {3}Applications to Linear Regression through Origin}{9}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Something to add 1}{10}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Something to add 1}{10}{section.3.2}%
-\contentsline {chapter}{\numberline {4}Theoretical results}{11}{chapter.4}%
-\contentsline {section}{\numberline {4.1}A theoretical resilt}{11}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Towards some advanced topic}{11}{section.4.2}%
-\contentsline {chapter}{\numberline {5}Programming simulations}{12}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Summary and closing words}{13}{chapter.6}%
-\contentsline {chapter}{\numberline {A}Program Codes}{15}{appendix.A}%
+\contentsline {subsection}{\numberline {2.1.1}Experiment}{8}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Relevant Literature}{8}{subsection.2.1.2}%
+\contentsline {section}{\numberline {2.2}Comparative Analysis}{10}{section.2.2}%
+\contentsline {chapter}{\numberline {3}Applications to Linear Regression through Origin}{11}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Something to add 1}{12}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Something to add 1}{12}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Theoretical results}{13}{chapter.4}%
+\contentsline {section}{\numberline {4.1}A theoretical resilt}{13}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Towards some advanced topic}{13}{section.4.2}%
+\contentsline {chapter}{\numberline {5}Programming simulations}{14}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Summary and closing words}{15}{chapter.6}%
+\contentsline {chapter}{\numberline {A}Program Codes}{17}{appendix.A}%
