@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.11.7)  28 NOV 2023 01:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.11.7)  29 NOV 2023 11:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -891,11 +891,11 @@ Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 \c@blind@pangrammax=\count359
 )
 Package translations Info: No language package found. I am going to use `englis
-h' as default language. on input line 135.
+h' as default language. on input line 139.
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... none found.
 LaTeX Font Info:    Trying to load font information for T1+ptm on input line 13
-5.
+9.
 
 (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
@@ -908,24 +908,24 @@ File: l3backend-pdftex.def 2023-10-23 L3 backend support: PDF output (pdfTeX)
 ) (nuraly.aux)
 \openout1 = `nuraly.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 139.
+LaTeX Font Info:    ... okay on input line 139.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 139.
+LaTeX Font Info:    ... okay on input line 139.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 139.
+LaTeX Font Info:    ... okay on input line 139.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 139.
+LaTeX Font Info:    ... okay on input line 139.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 139.
+LaTeX Font Info:    ... okay on input line 139.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 139.
+LaTeX Font Info:    ... okay on input line 139.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 139.
+LaTeX Font Info:    ... okay on input line 139.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 139.
+LaTeX Font Info:    ... okay on input line 139.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 139.
+LaTeX Font Info:    ... okay on input line 139.
 
 (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
@@ -955,7 +955,7 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 135.
+Package hyperref Info: Link coloring OFF on input line 139.
  (nuraly.out) (nuraly.out)
 \@outlinefile=\write4
 \openout4 = `nuraly.out'.
@@ -1002,45 +1002,45 @@ File: translations-basic-dictionary-english.trsl (english translation file `tra
 nslations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `english'. on input line 135.
+or `english'. on input line 139.
 LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line
- 165.
+ 169.
 
 (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ztmcm.fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line
- 165.
+ 169.
 
 (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omlztmcm.fd
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line
- 165.
+ 169.
 
 (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omsztmcm.fd
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line
- 165.
+ 169.
 
 (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omxztmcm.fd
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 1
-65.
+69.
 
 (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 165.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 169.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 165.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 169.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 165.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 169.
 
-Overfull \hbox (4.08488pt too wide) in paragraph at lines 165--169
+Overfull \hbox (4.08488pt too wide) in paragraph at lines 169--173
  [][] 
  []
 
@@ -1053,7 +1053,7 @@ df>
 (epstopdf)                    size: 47145 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=./figures/bme_logo_n
 agy-eps-converted-to.pdf ./figures/bme_logo_nagy.eps>
-(epstopdf)             \includegraphics on input line 175.
+(epstopdf)             \includegraphics on input line 179.
 Package epstopdf Info: Output file is already uptodate.
 
 
@@ -1064,7 +1064,7 @@ pdfTeX warning: pdflatex.exe (file ./figures/bme_logo_nagy-eps-converted-to.pdf
 File: ./figures/bme_logo_nagy-eps-converted-to.pdf Graphic file (type pdf)
 <use ./figures/bme_logo_nagy-eps-converted-to.pdf>
 Package pdftex.def Info: ./figures/bme_logo_nagy-eps-converted-to.pdf  used on 
-input line 175.
+input line 179.
 (pdftex.def)             Requested size: 209.12683pt x 58.86366pt.
 [1
 
@@ -1081,7 +1081,7 @@ o_nagy-eps-converted-to.pdf>] (nuraly.toc)
 ]
  1.
 
-Overfull \hbox (39.29962pt too wide) in paragraph at lines 227--228
+Overfull \hbox (39.29962pt too wide) in paragraph at lines 231--232
 []\T1/ptm/m/n/12 In Sim-ple Lin-ear Re-gres-sion, we are given a ran-dom sam-pl
 e of data points $\OT1/ztmcm/m/n/12 (\OML/ztmcm/m/it/12 x[]; y[]\OT1/ztmcm/m/n/
 12 )\OML/ztmcm/m/it/12 ; :::; \OT1/ztmcm/m/n/12 (\OML/ztmcm/m/it/12 x[]; y[]\OT
@@ -1101,13 +1101,13 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.236 \begin{equation}
+l.240 \begin{equation}
                       \label{eq:lin2} [1
 
 
 ]
 Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 241.
+ine 245.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1158,7 +1158,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-8.31995pt}.
 
 [6]
-Overfull \hbox (68.6329pt too wide) detected at line 498
+Overfull \hbox (68.6329pt too wide) detected at line 502
 []
  []
 
@@ -1171,15 +1171,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-8.31995pt}.
 
 [7]
-! Extra }, or forgotten $.
-l.508 ...2(\frac{1}{S_{xx}}-\frac{1}{S_{xx}^0})})}
-                                                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 20.31995pt, for example:
@@ -1189,6 +1180,21 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-8.31995pt}.
 
 [8]
+<./figures/simulation.png, id=170, 371.3875pt x 249.93375pt>
+File: ./figures/simulation.png Graphic file (type png)
+<use ./figures/simulation.png>
+Package pdftex.def Info: ./figures/simulation.png  used on input line 549.
+(pdftex.def)             Requested size: 209.12683pt x 140.73993pt.
+<./figures/threemodels.png, id=172, 381.425pt x 248.93pt>
+File: ./figures/threemodels.png Graphic file (type png)
+<use ./figures/threemodels.png>
+Package pdftex.def Info: ./figures/threemodels.png  used on input line 555.
+(pdftex.def)             Requested size: 209.12683pt x 136.4827pt.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 5
+63.
+ (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
+File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+)
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 20.31995pt, for example:
@@ -1197,7 +1203,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-8.31995pt}.
 
-[9]
+[9 <./figures/simulation.png> <./figures/threemodels.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 20.31995pt, for example:
@@ -1302,31 +1308,32 @@ LaTeX2e <2023-11-01>
 L3 programming layer <2023-11-01>
  ***********
 Package rerunfilecheck Info: File `nuraly.out' has not changed.
-(rerunfilecheck)             Checksum: FA7DB0C04E722F53F492B866E6D507E9;2832.
+(rerunfilecheck)             Checksum: 32CF1E442B54122AC9B6260C3A3F138A;2885.
  ) 
 Here is how much of TeX's memory you used:
- 29078 strings out of 474592
- 592201 string characters out of 5745799
+ 29150 strings out of 474592
+ 593977 string characters out of 5745799
  1948533 words of memory out of 5000000
- 50710 multiletter control sequences out of 15000+600000
- 636641 words of font info for 127 fonts, out of 8000000 for 9000
+ 50776 multiletter control sequences out of 15000+600000
+ 636954 words of font info for 128 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,13n,89p,856b,1116s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/nural/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
-cmex10.pfb><C:/Users/nural/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
-fonts/cm/cmmi10.pfb><C:/Users/nural/AppData/Local/Programs/MiKTeX/fonts/type1/p
-ublic/amsfonts/cm/cmr10.pfb><C:/Users/nural/AppData/Local/Programs/MiKTeX/fonts
-/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/nural/AppData/Local/Programs/MiK
-TeX/fonts/type1/public/amsfonts/latxfont/line10.pfb><C:/Users/nural/AppData/Loc
-al/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/nur
-al/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/nura
-l/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users/nural
-/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/nural
-/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/nural
-/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on nuraly.pdf (19 pages, 198144 bytes).
+ <C:\Users\nural\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt
+1200.pk><C:/Users/nural/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
+ts/cm/cmex10.pfb><C:/Users/nural/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/amsfonts/cm/cmmi10.pfb><C:/Users/nural/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/amsfonts/cm/cmr10.pfb><C:/Users/nural/AppData/Local/Programs/MiKTeX
+/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/nural/AppData/Local/Progra
+ms/MiKTeX/fonts/type1/public/amsfonts/latxfont/line10.pfb><C:/Users/nural/AppDa
+ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Use
+rs/nural/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/User
+s/nural/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/usyr.pfb><C:/Users
+/nural/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users
+/nural/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users
+/nural/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
+Output written on nuraly.pdf (19 pages, 223445 bytes).
 PDF statistics:
- 268 PDF objects out of 1000 (max. 8388607)
- 53 named destinations out of 1000 (max. 500000)
- 152 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 295 PDF objects out of 1000 (max. 8388607)
+ 55 named destinations out of 1000 (max. 500000)
+ 162 words of extra memory for PDF output out of 10000 (max. 10000000)
 

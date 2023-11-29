@@ -118,6 +118,10 @@
 \makeatother
 
 
+
+\newcommand{\code}[1]{\texttt{#1}}
+
+
 \usepackage{titlesec, blindtext, color}
 \definecolor{gray75}{gray}{0.75}
 \newcommand{\hsp}{\hspace{20pt}}
@@ -505,7 +509,7 @@ Using proposition \ref{prop:normally}, we can now construct confidence interval 
 \]
 
 \[
-	Z := \frac{\hat{\beta_1^0}-\hat{\beta_1}-\E [\hat{\beta_1^0}-\hat{\beta_1}]}{\Var (\hat{\beta_1^0}-\hat{\beta_1})}= \frac{\hat{\beta_1^0}-\hat{\beta_1}-(\beta_1^0-\beta_1)}{\sigma^2(\frac{1}{S_{xx}}-\frac{1}{S_{xx}^0})})}
+	Z := \frac{\hat{\beta_1^0}-\hat{\beta_1}-\E [\hat{\beta_1^0}-\hat{\beta_1}]}{\Var (\hat{\beta_1^0}-\hat{\beta_1})}= \frac{\hat{\beta_1^0}-\hat{\beta_1}-(\beta_1^0-\beta_1)}{\sigma^2(\frac{1}{S_{xx}}-\frac{1}{S_{xx}^0})})
 \]
 
 \[
@@ -514,30 +518,78 @@ Using proposition \ref{prop:normally}, we can now construct confidence interval 
 
 CI is:
 
+\begin{equation}
+\hat{\beta_1^0}-\hat{\beta_1} - \sigma^2 Z_{\alpha}(\frac{1}{S_{xx}}-\frac{1}{S_{xx}^0}) \leq \beta_1^0-\beta_1 \leq \hat{\beta_1^0}-\hat{\beta_1} + \sigma^2 Z_{\alpha}(\frac{1}{S_{xx}}-\frac{1}{S_{xx}^0})
+\end{equation}
+
+
+
+
+
+
+	\subsection{Motivational example}
+
+Even though RTO might be worse than performing full linear regression model in terms of SSE (since full model always gives unbiased estimators, they are also MLE estimators, so SSE is minimized), there are other statistical parameters that are better in RTO when intercept term is small enough.
+
+Given that the true model is known, $\dot{y_i} = \beta_1 x_i + \alpha$, one might simulate the data points by adding normally-distributed error terms:
+
 \[
-\hat{\beta_1^0}-\hat{\beta_1} - \sigma^2 Z_{\alpha}(\frac{1}{S_{xx}}-\frac{1}{S_{xx}^0}) \leq \beta_1^0-\beta_1 \leq \hat{\beta_1^0}-\hat{\beta_1} + \sigma^2 Z_{\alpha}(\frac{1}{S_{xx}}-\frac{1}{S_{xx}^0}) 
+	y_i =  \beta_1 x_i + \alpha + \epsilon_i
 \]
 
+One might be interested now in comparing sum of squared deviations (SSD) of fitted points $\sum (\dot{y_i}-\hat{y_i})^2 $.
+
+Let's start by generating a sample of 100 points, and assume that parameters are known as $\beta = 1, \alpha = 0.05$ (see fig. \ref{fig:simulation}):
+
+
+
+\begin{figure}
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{simulation.png}
+		\caption{Plot of simulated points}
+		\label{fig:simulation}
+	\end{subfigure}%
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{threemodels.png}
+		\caption{Plot of three models}
+		\label{fig:threemodels}
+	\end{subfigure}
+	\caption{Overall caption for the figure}
+\end{figure}
+
+
+Now, let's fit two models: no-intercept model, and full model. For that purposes we will use LinearRegression function from \code{sklearn.linear\_model} package. On fig. \ref{fig:threemodels} you can see the two models as well as the true model plotted up close.
+
+Now let's compare two statistics for these two models: BIC (Bayesian Information Criterion) and SSD.
+
+The results are as follows:
+
+\begin{align*}
+	BIC_{no} &= 386.1685814527955 \\
+	BIC &= 391.09782858386046 \\
+	SSD_{no} &= 1.2267420929010404 \\
+	SSD &= 4.150248687009578	
+\end{align*}
+
+
+It is clearly seen that no-intercept model provides better fit in terms of these parameters.
 
 
 
 
-	\subsection{Experiment}
 
-Even though RTO might be worse then performing full linear regression model in terms of SSE, there are other statistical parameters that are better in RTO when intercept term is small enough.
 
-This result was shown in 
+
 	
 
+\clearpage
 
 	\subsection{Relevant Literature}
 	Refer to seminal works and research studies that have explored or utilized the simple linear regression model without an intercept term. A brief review of the literature provides additional context and allows for a synthesis of existing knowledge in this specialized domain.
 
 
-
-	
-	
-	\clearpage
 
 	\section{Comparative Analysis}	
 	
