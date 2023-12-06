@@ -958,6 +958,8 @@ return np.sum((y-y_fit)**2)
 	
 	\section{Script 1}
 	
+The following script plots generates data from given true linear function by adding normally distributed error terms. The result is plotted 
+	
 \begin{mdframed}[linecolor=black, topline=true, bottomline=true,
 	leftline=false, rightline=false, backgroundcolor=yellow!20!white]
 \begin{minted}[mathescape, linenos, fontsize=\small]{python}
@@ -979,10 +981,12 @@ y = beta * X + noise + beta_0
 
 
 plt.plot(
-X, beta * X, color='red', linewidth=1, label='True Linear Relationship'
+X, beta * X, color='red', 
+linewidth=1, label='True Linear Relationship'
 )
 plt.scatter(
-X, y, color='white', edgecolor='black', marker='o', label='Generated Data Points'
+X, y, color='white', edgecolor='black', 
+marker='o', label='Generated Data Points'
 )
 plt.legend()
 
@@ -996,13 +1000,132 @@ plt.show()
 \end{mdframed}
 
 
+\section{Script 2}
+
+The following code performs both OLS and RTO linear regression models, plots the data, and computes the values of SSD
+
+\begin{mdframed}[linecolor=black, topline=true, bottomline=true,
+	leftline=false, rightline=false, backgroundcolor=yellow!20!white]
+	\begin{minted}[mathescape, linenos, fontsize=\small]{python}
+mean_x = np.average(X)
+mean_y = np.average(y)
+
+Sxx = np.sum((X-mean_x)**2)
+Sxy = np.sum((X-mean_x)*y)
+
+
+beta_1_hat = Sxy/Sxx
+beta_0_hat = mean_y - beta_1_hat * mean_x
+
+beta_hat = np.sum(X*y)/np.sum(X**2) 
+
+
+plt.scatter(X, y, color='white', edgecolor='black', marker='o')
+
+plt.axhline(0, color='green', linewidth=1, linestyle='--')
+plt.axvline(0, color='green', linewidth=1, linestyle='--')
+
+
+plt.plot(X, beta_1_hat * X + beta_0_hat, color='blue', linewidth=0.5, label='with intercept')
+plt.plot(X, beta * X + beta_0, color='green', linewidth=0.5, label='true model')
+plt.plot(X, beta_hat * X, color='red', linewidth=0.5, label='no-intercept')
+
+plt.legend()
+
+y_hat = beta_1_hat * X + beta_0_hat  # intercept model response variable
+y_hat_hat = beta_hat * X  # no-intercept response variable
+
+
+y = beta * X + beta_0
+
+SS_dev_intercept = np.sum((y-y_hat)**2)
+SS_dev_no_intercept = np.sum((y-y_hat_hat)**2)
+
+
+	\end{minted}
+\end{mdframed}
+	
+	
+	
+
+\section{Script 3}
+	
+	This script is used to generate fig. \ref{fig:ssd_to_intercept}
+	
+	
+\begin{mdframed}[linecolor=black, topline=true, bottomline=true,
+	leftline=false, rightline=false, backgroundcolor=yellow!20!white]
+	\begin{minted}[mathescape, linenos, fontsize=\small]{python}
+delta_SSD = np.zeros(1000)
+alphas = np.zeros(1000)
+
+np.random.seed(42)
+
+for increment in range(1000):
+SS_dev_intercept_mean = 0
+SS_dev_no_intercept_mean = 0
+num_samples = 100 
+for i in range(100):
+
+beta =  1  # true slope
+beta_0 = 0 + increment/5000
+noise = np.random.normal(0, 1, num_samples)  # standard normal noise term
+X = np.random.rand(num_samples) * 2 - 1
+y = beta * X + noise + beta_0
+
+mean_x = np.average(X)
+mean_y = np.average(y)
+
+Sxx = np.sum((X-mean_x)**2)
+Sxy = np.sum((X-mean_x)*(y))
+
+
+beta_1_hat = Sxy/Sxx
+beta_0_hat = mean_y - beta_1_hat * mean_x
+
+beta_hat = np.sum(X*y)/np.sum(X**2)
+
+# y_hat = linear_regression(X, y)
+# y_hat_hat = linear_regression(X,y, False)
+
+y_hat = beta_1_hat * X + beta_0_hat  # intercept model response variable
+y_hat_hat = beta_hat * X  # no-intercept response variable
+
+y_true = beta * X + beta_0
+
+SS_dev_intercept = np.sum((y_true-y_hat)**2)
+SS_dev_no_intercept = np.sum((y_true-y_hat_hat)**2)
+
+SS_dev_intercept_mean += SS_dev_intercept
+SS_dev_no_intercept_mean += SS_dev_no_intercept
+
+SS_dev_intercept_mean /= 100
+SS_dev_no_intercept_mean /= 100
+
+delta_SSD[increment] = SS_dev_no_intercept_mean - SS_dev_intercept_mean
+alphas[increment] = beta_0
+
+zeros = np.zeros_like(alphas)
+
+plt.plot(alphas, zeros, '--', linewidth=0.5)
+plt.plot(alphas, delta_SSD, color='blue', linewidth=0.5)
+
+plt.xlabel(r"$\beta_0$")
+plt.ylabel(r"$\Delta SSD$")
+plt.show()
+
+		\end{minted}
+\end{mdframed}
+	
+	
+	
+	
 %\begin{mdframed}[linecolor=black, topline=true, bottomline=true,
 %	leftline=false, rightline=false, backgroundcolor=yellow!20!white]
 %	\begin{minted}[mathescape, linenos, fontsize=\small]{python}
-%	
-%	\end{minted}
+	%	
+	%	\end{minted}
 %\end{mdframed
-	
 \end{document}
 
 

@@ -18,3 +18,5 @@
 \contentsline {chapter}{\numberline {A}Program Codes}{24}{appendix.A}%
 \contentsline {section}{\numberline {A.1}linear\_regression.py module}{24}{section.A.1}%
 \contentsline {section}{\numberline {A.2}Script 1}{25}{section.A.2}%
+\contentsline {section}{\numberline {A.3}Script 2}{26}{section.A.3}%
+\contentsline {section}{\numberline {A.4}Script 3}{27}{section.A.4}%

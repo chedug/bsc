@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.11.7)  6 DEC 2023 12:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.11.7)  6 DEC 2023 13:09
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1326,7 +1326,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex.exe (file ./figures/bme_logo_nagy-eps-converted-to.pdf
 ): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<./figures/bme_logo_nagy-eps-converted-to.pdf, id=82, 709.65125pt x 199.74625pt
+<./figures/bme_logo_nagy-eps-converted-to.pdf, id=86, 709.65125pt x 199.74625pt
 >
 File: ./figures/bme_logo_nagy-eps-converted-to.pdf Graphic file (type pdf)
 <use ./figures/bme_logo_nagy-eps-converted-to.pdf>
@@ -1450,7 +1450,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-8.31995pt}.
 
 [7]
-<./figures/projection.png, id=200, 1399.2275pt x 897.3525pt>
+<./figures/projection.png, id=205, 1399.2275pt x 897.3525pt>
 File: ./figures/projection.png Graphic file (type png)
 <use ./figures/projection.png>
 Package pdftex.def Info: ./figures/projection.png  used on input line 455.
@@ -1536,12 +1536,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-8.31995pt}.
 
 [15]
-<./figures/simulation.png, id=265, 371.3875pt x 249.93375pt>
+<./figures/simulation.png, id=270, 371.3875pt x 249.93375pt>
 File: ./figures/simulation.png Graphic file (type png)
 <use ./figures/simulation.png>
 Package pdftex.def Info: ./figures/simulation.png  used on input line 742.
 (pdftex.def)             Requested size: 209.12683pt x 140.73993pt.
-<./figures/threemodels.png, id=267, 381.425pt x 248.93pt>
+<./figures/threemodels.png, id=272, 381.425pt x 248.93pt>
 File: ./figures/threemodels.png Graphic file (type png)
 <use ./figures/threemodels.png>
 Package pdftex.def Info: ./figures/threemodels.png  used on input line 748.
@@ -1560,7 +1560,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-8.31995pt}.
 
 [16]
-<./figures/delta_ssd_to_intercept.png, id=278, 387.4475pt x 266.9975pt>
+<./figures/delta_ssd_to_intercept.png, id=283, 387.4475pt x 266.9975pt>
 File: ./figures/delta_ssd_to_intercept.png Graphic file (type png)
 <use ./figures/delta_ssd_to_intercept.png>
 Package pdftex.def Info: ./figures/delta_ssd_to_intercept.png  used on input li
@@ -1679,11 +1679,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 ]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 962.
+(mdframed)              on input line 964.
 \openout4 = `nuraly.pyg'.
 
 
-(_minted-nuraly/589EEC41A3EC38268E8FB720CFB2F270717280B041151C472385934BA8735FB
+(_minted-nuraly/469CE4CC09E730317FB4CBCA161CBC71717280B041151C472385934BA8735FB
 E.pygtex
 LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 
 20.
@@ -1700,6 +1700,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-8.31995pt}.
 
 [25]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1008.
+\openout4 = `nuraly.pyg'.
+
+
+(_minted-nuraly/64E0B3EA36CD66BD018FCE8CA1DB3118717280B041151C472385934BA8735FB
+E.pygtex)
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 20.31995pt, for example:
@@ -1708,55 +1716,79 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-8.31995pt}.
 
-[26] (nuraly.aux)
+[26]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1057.
+\openout4 = `nuraly.pyg'.
+
+
+(_minted-nuraly/7A1B3ED226EBEF9E8C340DE7620099EF717280B041151C472385934BA8735FB
+E.pygtex)
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 20.31995pt, for example:
+(fancyhdr)                \setlength{\headheight}{20.31995pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-8.31995pt}.
+
+[27]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 20.31995pt, for example:
+(fancyhdr)                \setlength{\headheight}{20.31995pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-8.31995pt}.
+
+[28]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 20.31995pt, for example:
+(fancyhdr)                \setlength{\headheight}{20.31995pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-8.31995pt}.
+
+[29] (nuraly.aux)
  ***********
 LaTeX2e <2023-11-01>
 L3 programming layer <2023-11-01>
  ***********
-
-
-Package rerunfilecheck Warning: File `nuraly.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `nuraly.out':
-(rerunfilecheck)             Before: F853F4059203D9826CA345E2CB42B8EE;2910
-(rerunfilecheck)             After:  C222B3064258500DE7C621DB1CAE5841;2711.
+Package rerunfilecheck Info: File `nuraly.out' has not changed.
+(rerunfilecheck)             Checksum: 6EFC10389F02F6929ABCAC68AABDD284;2909.
 runsystem(del nuraly.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 34202 strings out of 474592
- 706470 string characters out of 5745799
+ 34221 strings out of 474592
+ 707781 string characters out of 5745799
  1953533 words of memory out of 5000000
- 55645 multiletter control sequences out of 15000+600000
+ 55654 multiletter control sequences out of 15000+600000
  659775 words of font info for 175 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,19n,93p,1080b,1134s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-pdfTeX warning (dest): name{section.5.2} has been referenced but does not exist
-, replaced by a fixed one
-
- <C:\Users\nural\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tctt10
-95.pk> <C:\Users\nural\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\
-ecit1095.pk> <C:\Users\nural\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/d
-pi600\ectt1095.pk> <C:\Users\nural\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappe
-n/ec/dpi600\ectt1200.pk><C:/Users/nural/AppData/Local/Programs/MiKTeX/fonts/typ
-e1/public/amsfonts/cm/cmex10.pfb><C:/Users/nural/AppData/Local/Programs/MiKTeX/
-fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/nural/AppData/Local/Program
-s/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/nural/AppData/Local
-/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/nural/AppD
-ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/latxfont/line10.pfb><C:/U
-sers/nural/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/ms
-bm10.pfb><C:/Users/nural/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/u
-syr.pfb><C:/Users/nural/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/us
-yr.pfb><C:/Users/nural/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb
-8a.pfb><C:/Users/nural/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr
-8a.pfb><C:/Users/nural/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr
-i8a.pfb>
-Output written on nuraly.pdf (29 pages, 407053 bytes).
+ <C:\Users\nural\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tctt
+1095.pk> <C:\Users\nural\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
+0\ecit1095.pk> <C:\Users\nural\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
+/dpi600\ectt1095.pk> <C:\Users\nural\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
+pen/ec/dpi600\ectt1200.pk><C:/Users/nural/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/amsfonts/cm/cmex10.pfb><C:/Users/nural/AppData/Local/Programs/MiKTe
+X/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/nural/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/nural/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/nural/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/latxfont/line10.pfb><C:
+/Users/nural/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/
+msbm10.pfb><C:/Users/nural/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol
+/usyr.pfb><C:/Users/nural/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/
+usyr.pfb><C:/Users/nural/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/ut
+mb8a.pfb><C:/Users/nural/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/ut
+mr8a.pfb><C:/Users/nural/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/ut
+mri8a.pfb>
+Output written on nuraly.pdf (32 pages, 415682 bytes).
 PDF statistics:
- 548 PDF objects out of 1000 (max. 8388607)
- 104 named destinations out of 1000 (max. 500000)
- 196 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 575 PDF objects out of 1000 (max. 8388607)
+ 108 named destinations out of 1000 (max. 500000)
+ 204 words of extra memory for PDF output out of 10000 (max. 10000000)
 
