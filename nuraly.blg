@@ -5,44 +5,44 @@ Reallocating 'name_of_file' (item size: 1) to 7 items.
 Reallocating 'name_of_file' (item size: 1) to 6 items.
 The style file: plain.bst
 Database file #1: nuraly.bib
-You've used 2 entries,
+You've used 5 entries,
             2118 wiz_defined-function locations,
-            506 strings with 4188 characters,
-and the built_in function-call counts, 517 in all, are:
-= -- 43
-> -- 25
+            530 strings with 4646 characters,
+and the built_in function-call counts, 1354 in all, are:
+= -- 133
+> -- 46
 < -- 0
-+ -- 10
-- -- 8
-* -- 27
-:= -- 97
-add.period$ -- 6
-call.type$ -- 2
-change.case$ -- 8
++ -- 19
+- -- 14
+* -- 87
+:= -- 238
+add.period$ -- 15
+call.type$ -- 5
+change.case$ -- 20
 chr.to.int$ -- 0
-cite$ -- 2
-duplicate$ -- 24
-empty$ -- 45
-format.name$ -- 8
-if$ -- 105
+cite$ -- 5
+duplicate$ -- 57
+empty$ -- 120
+format.name$ -- 14
+if$ -- 276
 int.to.chr$ -- 0
-int.to.str$ -- 2
-missing$ -- 4
-newline$ -- 13
-num.names$ -- 4
-pop$ -- 18
+int.to.str$ -- 5
+missing$ -- 7
+newline$ -- 28
+num.names$ -- 10
+pop$ -- 24
 preamble$ -- 1
-purify$ -- 8
+purify$ -- 17
 quote$ -- 0
-skip$ -- 12
+skip$ -- 33
 stack$ -- 0
-substring$ -- 10
-swap$ -- 2
+substring$ -- 82
+swap$ -- 5
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 4
+type$ -- 16
 warning$ -- 0
-while$ -- 4
-width$ -- 3
-write$ -- 22
+while$ -- 16
+width$ -- 6
+write$ -- 55

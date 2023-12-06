@@ -27,6 +27,8 @@
 \usepackage{hyperref}
 \usepackage{tikz}
 \usetikzlibrary{decorations.pathreplacing}
+\usepackage{tikz-3dplot}
+\usetikzlibrary{calc}
 
 \setlength {\marginparwidth }{2cm}
 
@@ -226,12 +228,32 @@
 	\section{Background}
 	In the world of regression analysis, choosing the right model is a constant challenge, balancing simplicity and accuracy. This thesis focuses on a specific aspect—linear regression through the origin (RTO) —examining its statistical properties when dealing with just one explanatory variable. Our goal is to identify situations where this approach might be more suitable than the commonly used simple linear regression. Through this study, we aim to shed light on the conditions that make regression through the origin a preferable choice, offering insights that bridge mathematical rigor with real-world applicability. Join us on this journey as we navigate the complexities of statistical modeling, striving to understand when and why regression through the origin might outperform its more conventional counterpart.
 	\section{Literature review}
+
+	Gerald J. Hahn \cite{hahn1977fitting} published an article on fitting models with no intercept term. In their paper, they focused on appropriateness of no-intercept linear regression model in different scenarios. For example, while physical nature of sample data might advocate for the use of no-intercept model, it would often happen that true nature of the data is not linear, and extrapolation of the data to the region that falls outside of the range of the sample makes it clear that other models should be used. They also provide a procedure for checking the significance of the intercept: one must fit the intercept model and then construct a confidence interval that contains true intercept, and then check, whether 0 is included in the interval. If it is included, then there is no evidence that the intercept model provides significantly better fit to the data than no intercept model. Hahn also raised an issue that was related the coefficient of determination that was erroneously computed in popular computing packages of that time.
+	
+	Gordon \cite{gordon1981errors} has also contributed to the dispute of computation of $R^2$ and suggested that this parameter has to be computed for both models by the same formula 
+	
+	\begin{equation} \label{eq:coefficient_of_determination}
+		R^2 = 1 - \frac{\sum_i \epsilon_i ^2}{\sum_i (y_i-\bar{y})^2}
+	\end{equation}
+
+	
+	However, as Eisenhauer \cite{eisenhauer2003regression} noted, the equation \ref{eq:coefficient_of_determination} might be inconsistent for no-intercept model and provide uninterpretable negative result, so a different formula for no-intercept model is commonly used, 
+	\begin{equation}
+		R^2 = \frac{\sum \hat{y_i}^2}{\sum y_i^2}
+	\end{equation}
+	
+	This new formula becomes not consistent with the prior one, thus  $R^2$ calculated for intercept and no-intercept models are incomparable. 
+	
+	
 	
 	\section{Research question}
 	
+	The main goal of this paper is to familiarize reader with linear regression through the origin, derive properties of its estimators, and determine when RTO might be a better model than linear regression with intercept.
+	
 	\section{Outline}
 
-
+		
 	\chapter{Preliminaries}
 
 
@@ -273,6 +295,9 @@ We will call estimator $\hat{\theta}$ a Maximum Likelihood Estimator of $\theta$
 
 
 	\chapter{Simple Linear Regression}
+	
+	
+\section{Simple linear regression}
 
 Before we start delving into RTO, it's best to get familiar with a more general case - Simple Linear Regression.
 
@@ -319,7 +344,8 @@ Since, sample is random, the equation \eqref{eq:lin} is not true in general, so 
 \end{equation}
 
 
-The objective of simple linear regression is, under some assumption \cite[p.4-12]{hayashi2011econometrics}, to estimate the parameters $\beta_0$ and $\beta_1$, so that they will provide best fit. The assumptions are important since they serve as a foundation for later theory, so we will take some to analyze them:
+\section{Assumptions}
+The objective of simple linear regression is, under some assumption \cite[p.4-12]{hayashi2011econometrics}, to estimate the parameters $\beta_0$ and $\beta_1$, so that they will provide best fit. The assumptions are important since they serve as a foundation for later theory, so it is crucial to know them.
 
 \begin{assumption}[\textbf{linearity}]
 	$y_i = \beta_1 x_i+\beta_0 +\epsilon_i$
@@ -348,8 +374,8 @@ The cross moments are orthogonal to all observations:
 
 \begin{proof}
 	\begin{align*}
-		\E (x_i \epsilon_j) &= \E (\E(x_i \epsilon_j| x_j))\tag*{(by law of total expectation)} \\
-		& =\E (x_i\E( \epsilon_j| x_j)) \tag*{(by linearity of expectation)} \\
+		\E (x_i \epsilon_j) &= \E (\E(x_i \epsilon_j| x_i))\tag*{(by law of total expectation)} \\
+		& =\E (x_i\E( \epsilon_j| x_i)) \tag*{(by linearity of expectation)} \\
 		&= \E (x_i 0) 	= 0
 	\end{align*}
 \end{proof}
@@ -372,10 +398,11 @@ The more general variant of this assumption, in the case when we have classical 
 
 This is equivalent to saying that covariance of error terms is zero, since means are zero.
 
-\textbf{Remark:} \todo{ask professor} Although in the assumptions we treat regressors as random variables, in reality, $x_1, ..., x_n$ are realizations of random variables, so it is generally accepted to tream them as fixed 
+\textbf{Remark:} \todo{ask professor} Although in the assumptions we treat regressors as random, conditioned on their observed values, in reality, $x_1, ..., x_n$ are realizations of random variables, so it is generally accepted to treat them as fixed. Although this might be bad technically, it allows us to shorten the notation, and make it more readable, while still being concise.
 
 For the purposes of this paper, we will also assume that error terms in eq. \ref{eq:linear regression}  are normally distributed with mean 0 and variance $\sigma^2$.
 
+\section{Properties}
 
 To compute likelihood function, we can notice that $y_i$ is a normally distributed random variable with mean $\E [y_i] = \beta_1 x_i + \beta_0$ and variance $\Var \ y = \sigma^2$. Then, likelihood $L$ can be computed as a product of marginal distributions:
 
@@ -421,7 +448,15 @@ So $\hat{\beta}_0, \hat{\beta}_1$ are Maximum Likelikelihood Estimators of the m
 	From equations \ref{eq:est_beta_0} and \ref{eq:est_beta_1} we can see that $y-\hat{y}$ is perpendicular to both $\mathbf{1}$ and $\mathbf{x}$, and we know that $\hat{y}=\hat{\beta_1}x+\hat{\beta_0}$, i.e. $\hat{y}$ lies in $\spn \{ \mathbf{1}, \mathbf{x} \}$.
 	Notice that $y-\hat{y}=\epsilon$, so since $\hat{y}$ is perpendicular to $\epsilon$, MLE from \ref{est:intercept} and \ref{est:slope} are indedd MSE estimators too.
 \end{proof}
-\todo{include figure}
+
+
+\begin{figure}
+	\centering
+	\includegraphics[width=\linewidth]{projection.png}
+	\caption{Orthogonal projection of y to }
+	\label{fig:projection}
+\end{figure}%
+
 
 
 
@@ -435,10 +470,10 @@ Where $\mathbf{b}$ is $2 \times 1 $ vector of the regression MLE coefficients $(
 
 
 % Proposition and Proof
-\textbf{Proposition}
-\[
-\sum_{i=1}^{n} (y_i - \bar{y})^2 = \sum_{i=1}^{n} (\hat{y}_i - \bar{y})^2 + \sum_{i=1}^{n} (y_i - \hat{y}_i)^2
-\]
+\begin{proposition} \label{prop:sst_equation}
+	$\underbrace{\sum_{i=1}^{n} (y_i - \bar{y})^2}_{SST} = \underbrace{\sum_{i=1}^{n} (\hat{y}_i - \bar{y})^2}_{SSR} + \underbrace{\sum_{i=1}^{n} (y_i - \hat{y}_i)^2}_{SSE}$
+\end{proposition}
+
 
 % Proof (continued)
 \begin{proof}The vector $\textbf{y} - \textbf{$\hat{y}$}$ is perpendicular to $\textbf{$\hat{y}$} - \textbf{1 $\bar{y}$}$, thus the proposition is true by the Pythagorean theorem.
@@ -446,10 +481,8 @@ Where $\mathbf{b}$ is $2 \times 1 $ vector of the regression MLE coefficients $(
 Alternatively, it is enough to show that
 
 \[
-	\sum (\hat{y}_i-\bar{y})(y_i-\hat{y}_i) = 0	
-\],
-
-since then:
+	\sum (\hat{y}_i-\bar{y})(y_i-\hat{y}_i) = 0	,
+\] since then:
 
 \begin{align*}
 	\sum_{i=1}^{n} (y_i - \bar{y})^2 &= (\sum_{i=1}^{n} (\hat{y}_i - \bar{y}) + \sum_{i=1}^{n} (y_i - \hat{y}_i))^2 = \\
@@ -540,7 +573,7 @@ Finally,
 
 	\section{Simple Linear Regression with no intercept term}
 
-	In certain statistical applications, the conventional assumption of a non-zero intercept term ($\beta_0$) in a simple linear regression model may not align with the nature of the data. For example, in economics the cost of production be assumed to be zero, when there is no production, or in physics, when we are describing the relationship between force and the displacement, forced is assumede to be zero, when there is no displacement.
+	In certain statistical applications, the conventional assumption of a non-zero intercept term ($\beta_0$) in a simple linear regression model may not align with the nature of the data. For example, in economics the cost of production be assumed to be zero, when there is no production, or in physics, when we are describing the relationship between force and the displacement, forced is assumed to be zero, when there is no displacement. In other words, physical nature of our data often bears information about the nature of the true model. 
 	
 	
 	In linear regression through the origin, regression equation takes the form:
@@ -613,13 +646,13 @@ Thus we can compute the maximum likelihood estimator of $\beta_1^o$ by taking pa
 		\end{align*}
 	\end{proof}
 
-
+This tells us that when the true intercept is zero, no-intercept model provides better fit, as the two estimators ($\hat{\beta_1}, \hat{\beta_1^o}$) are unbiased, but the latter has smaller variance. 
 This might suggest that $\hat{\beta}_1^0$ might be more accurate estimator than $\hat{\beta}_1$ for the slope term. This gives us some motivation to compare the two estimators more closely.
 
 It would be convenient for us to find confidence interval for $\beta_1^0 - \beta_1$, since if 0 lies in the CI, then we can statistically infer that two estimators are very close.
 
 \begin{proposition} \label{prop:normally}
-	The difference of the two estimators is normally distributed as follows: \todo{rm}
+	The difference of the two estimators is normally distributed as follows: 
 	\[
 		\hat{\beta_1^0}-\hat{\beta_1} \sim N(\beta_1^0-\beta_1, \sigma^2(\frac{1}{S_{xx}}-\frac{1}{S_{xx}^0}))
 	\]
@@ -644,17 +677,19 @@ It would be convenient for us to find confidence interval for $\beta_1^0 - \beta
 \end{proof}
 
 \begin{proposition}
-	$\E [\hat{\beta_1^0}-\hat{\beta_1}]=\beta_1^0-\beta_1$ \todo{not true in general}
+	$\E [\hat{\beta_1^0}-\hat{\beta_1}]=\beta_1^0-\beta_1$ 
 \end{proposition}
 
 \begin{proof}
 	By linearity of expected value, $\E [\hat{\beta_1^0}-\hat{\beta_1}]= \E[\hat{\beta_1^0}] - \E[\hat{\beta_1}]= \beta_1^0-\beta_1 $
 \end{proof}
+
+\textbf{Remark:} This is only true when true intercept is equal to one, and both of the estimators are MLE.
 	
 	Now we are ready to prove proposition \ref{prop:normally}
 \begin{proof}[Proof of prop. \ref{prop:normally}]
 	$\hat{\beta_1^0}-\hat{\beta_1}$ is a linear combination of mutually independent normally distributed r.v.-s $\Rightarrow$ it is normally distributed.
-	\todo{you can show that}
+	
 	
 	\begin{align*}
 		\Var (\hat{\beta_1^0}-\hat{\beta_1})&=\Var(\hat{\beta_1^0}) + \Var(\hat{\beta_1}) - 2 \Cov (\hat{\beta_1^0},\hat{\beta_1}) =\frac{\sigma^2}{S_{xx}^0}+\frac{\sigma^2}{S_{xx}}-2 \Cov (\hat{\beta_1^0},\hat{\beta_1^0}-\hat{\beta_1})-2 \Cov (\hat{\beta_1^0},\hat{\beta_1^0}) \\
@@ -681,8 +716,6 @@ CI is:
 \begin{equation}
 \hat{\beta_1^0}-\hat{\beta_1} - \sigma^2 Z_{\alpha}(\frac{1}{S_{xx}}-\frac{1}{S_{xx}^0}) \leq \beta_1^0-\beta_1 \leq \hat{\beta_1^0}-\hat{\beta_1} + \sigma^2 Z_{\alpha}(\frac{1}{S_{xx}}-\frac{1}{S_{xx}^0})
 \end{equation}
-
-
 
 
 
@@ -842,49 +875,32 @@ Before we begin the proof of proposition \ref{prop:ssd_full_model} let us change
 		\intertext{($\E [\hat{y}] = \E [\hat{\beta_1}]x + \E [\hat{\beta_0}] = \beta_1 x + \beta_0=\dot{y}$)}
 		\intertext{$\E[\dot{y}^2]=\Var[\hat{\beta_0}]+\E[\hat{\beta_0}]+x^2(\Var [\hat{\beta_1}+\E [\hat{\beta_1}]^2])+2x\E[\hat{\beta_0}\hat{\beta_1}]$}
 		\intertext{and $\E[\hat{\beta_0}\hat{\beta_1}]= \Cov (\hat{\beta_0},\hat{\beta_1})+\E[\hat{\beta_0}]\E[\hat{\beta_0}]$, so substituting prop \ref{prop:covariance_slope_intercept} we get}
-		(\ast) &= n \beta_0^2+2\beta_0 \beta_1 n \bar{x} + \beta_1^2 S_{xx}^o - \sum 2(\beta_1x+\beta_0)^2+\frac{\sigma^2}{}
+		(\ast) &= n \beta_0^2+2\beta_0 \beta_1 n \bar{x} + \beta_1^2 S_{xx}^o - \sum 2(\beta_1x+\beta_0)^2+\frac{\sigma^2 S_{xx}^o}{S_{xx}}+n\beta_0^2+ \frac{\sigma^2 S_{xx}^o}{S_{xx}} + \\
+		& \quad +\beta_1^2 S_{xx}^o-\frac{2n\bar{x}^2\sigma^2}{S_{xx}}+2\beta_0\beta_1x \\
+		&= n \beta_0^2+2\beta_0 \beta_1 n \bar{x} + \beta_1^2 S_{xx}^o -2\beta_1^2 S_{xx}^o-4\beta_0\beta_1n\bar{x} -2n\beta_0^2+\frac{\sigma^2 S_{xx}^o}{S_{xx}}+n\beta_0^2+ \frac{\sigma^2 S_{xx}^o}{S_{xx}} + \\
+		& \quad +\beta_1^2 S_{xx}^o-\frac{2n\bar{x}^2\sigma^2}{S_{xx}}+2\beta_0\beta_1x \\
+		&= \frac{2\sigma^2}{S_{xx}}(S_{xx}^o-n\bar{x}^2)
 	\end{align*}
 \end{proof}
 
+Looking at the expected value of SSD for both models we see that expected SSD for full model is only explained by variance of the error terms, whereas no-intercept model's SSD also depends on the value of true intercept. Therefore for small values of intercept no-intercept model performs better in terms of sum of squared deviations of fitted values from true values.
+
+
 \clearpage
 
-	\subsection{Relevant Literature}
-	Refer to seminal works and research studies that have explored or utilized the simple linear regression model without an intercept term. A brief review of the literature provides additional context and allows for a synthesis of existing knowledge in this specialized domain.
-
-
-
-	\section{Comparative Analysis}	
-	
-
-
-	
-	\clearpage
-
-	
-	\chapter{Applications to Linear Regression through Origin}
-
-
-	\clearpage
-
-	\section{Something to add 1} 
-
-	
-	\section{Something to add 1} 
-
-
-	\chapter{Theoretical results} 
-	
-	\section{A theoretical resilt}
-	
-	\section{Towards some advanced topic}
-
-
-	\chapter{Programming simulations} %
 
 
 		
 	\chapter{Summary and closing words}
-	% 1 page
+	
+	\section{Conclusion}
+	
+	In this thesis, we have compared several properties of RTO and OLS models, found variances of estimators of slope, created confidence interval for difference of two slope estimators, and found found average values of sum of squared deviations of fitted values from true values, showing that on average, for small intercept values, linear regression through the origin provides better fit.
+	
+	
+	
+	
+	
 	
 
 

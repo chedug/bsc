@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.11.7)  6 DEC 2023 07:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.11.7)  6 DEC 2023 12:54
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -672,10 +672,31 @@ decorations.code.tex
 )
 (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/decorat
 ions\pgflibrarydecorations.pathreplacing.code.tex))
+(C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/latex/tikz-3dplot\tikz-3dplot
+.sty (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+)
+(C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrary3d.code.tex
+File: tikzlibrary3d.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibraryarrows.code.tex
+File: tikzlibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+aryarrows.code.tex
+File: pgflibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\arrowsize=\dimen279
+)))
 (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/latex/accents\accents.sty
 Package: accents 2006/05/12 v1.4 Math Accent Tools
-\cc@skew=\dimen279
-\cc@wd=\dimen280
+\cc@skew=\dimen280
+\cc@wd=\dimen281
 \cc@code=\count311
 \cc@group=\count312
 \cc@skewchar=\count313
@@ -683,9 +704,6 @@ Package: accents 2006/05/12 v1.4 Math Accent Tools
 (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/latex/todonotes\todonotes.sty
 Package: todonotes 2023/01/31 v1.1.6 Todonotes source and documentation.
 Package: todonotes 2023/01/31
-(C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
-Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
-)
 (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/latex/xkeyval\xkeyval.sty
 Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
 
@@ -705,8 +723,8 @@ File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
 Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count315
 \calc@Bcount=\count316
-\calc@Adimen=\dimen281
-\calc@Bdimen=\dimen282
+\calc@Adimen=\dimen282
+\calc@Bdimen=\dimen283
 \calc@Askip=\skip59
 \calc@Bskip=\skip60
 LaTeX Info: Redefining \setlength on input line 80.
@@ -747,16 +765,16 @@ Package: lineno 2023/05/20 line numbers on paragraphs v5.3
 \linenopenalty=\count322
 \output=\toks47
 \linenoprevgraf=\count323
-\linenumbersep=\dimen283
-\linenumberwidth=\dimen284
+\linenumbersep=\dimen284
+\linenumberwidth=\dimen285
 \c@linenumber=\count324
 \c@pagewiselinenumber=\count325
 \c@LN@truepage=\count326
 \c@internallinenumber=\count327
 \c@internallinenumbers=\count328
-\quotelinenumbersep=\dimen285
-\bframerule=\dimen286
-\bframesep=\dimen287
+\quotelinenumbersep=\dimen286
+\bframerule=\dimen287
+\bframesep=\dimen288
 \bframebox=\box68
 \linenoamsmath@ams@eqpen=\count329
 LaTeX Info: Redefining \\ on input line 3180.
@@ -774,21 +792,21 @@ LaTeX Info: Redefining \\ on input line 3180.
 \c@FV@HighlightLinesStop=\count338
 \FV@LoopCount=\count339
 \FV@NCharsBox=\box70
-\FV@BreakIndent=\dimen288
+\FV@BreakIndent=\dimen289
 \FV@BreakIndentNChars=\count340
-\FV@BreakSymbolSepLeft=\dimen289
+\FV@BreakSymbolSepLeft=\dimen290
 \FV@BreakSymbolSepLeftNChars=\count341
-\FV@BreakSymbolSepRight=\dimen290
+\FV@BreakSymbolSepRight=\dimen291
 \FV@BreakSymbolSepRightNChars=\count342
-\FV@BreakSymbolIndentLeft=\dimen291
+\FV@BreakSymbolIndentLeft=\dimen292
 \FV@BreakSymbolIndentLeftNChars=\count343
-\FV@BreakSymbolIndentRight=\dimen292
+\FV@BreakSymbolIndentRight=\dimen293
 \FV@BreakSymbolIndentRightNChars=\count344
 \c@FancyVerbLineBreakLast=\count345
 \FV@LineBox=\box71
 \FV@LineIndentBox=\box72
 \c@FV@BreakBufferDepth=\count346
-\FV@LineWidth=\dimen293
+\FV@LineWidth=\dimen294
 )
 (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/latex/tools\shellesc.sty
 Package: shellesc 2023/07/08 v1.0d unified shell escape interface for LaTeX
@@ -815,10 +833,10 @@ Package: xstring 2023/08/22 v1.86 String manipulations (CT)
 ) (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/latex/framed\framed.sty
 Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \OuterFrameSep=\skip63
-\fb@frw=\dimen294
-\fb@frh=\dimen295
-\FrameRule=\dimen296
-\FrameSep=\dimen297
+\fb@frw=\dimen295
+\fb@frh=\dimen296
+\FrameRule=\dimen297
+\FrameSep=\dimen298
 )
 (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
@@ -973,14 +991,14 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@cnth=\count362
 \Gm@cntv=\count363
 \c@Gm@tempcnt=\count364
-\Gm@bindingoffset=\dimen298
-\Gm@wd@mp=\dimen299
-\Gm@odd@mp=\dimen300
-\Gm@even@mp=\dimen301
-\Gm@layoutwidth=\dimen302
-\Gm@layoutheight=\dimen303
-\Gm@layouthoffset=\dimen304
-\Gm@layoutvoffset=\dimen305
+\Gm@bindingoffset=\dimen299
+\Gm@wd@mp=\dimen300
+\Gm@odd@mp=\dimen301
+\Gm@even@mp=\dimen302
+\Gm@layoutwidth=\dimen303
+\Gm@layoutheight=\dimen304
+\Gm@layouthoffset=\dimen305
+\Gm@layoutvoffset=\dimen306
 \Gm@dimlist=\toks51
 
 (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
@@ -1037,15 +1055,15 @@ LaTeX Info: Redefining \hbar on input line 50.
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@box=\box82
 \sift@deathcycles=\count365
-\@vwid@loff=\dimen306
-\@vwid@roff=\dimen307
+\@vwid@loff=\dimen307
+\@vwid@roff=\dimen308
 )
 (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty
 Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
 \multirow@colwidth=\skip140
 \multirow@cntb=\count366
 \multirow@dima=\skip141
-\bigstrutjot=\dimen308
+\bigstrutjot=\dimen309
 )
 (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/latex/siunitx\siunitx.sty
 Package: siunitx 2023-10-07 v3.3.7 A comprehensive (SI) units package
@@ -1059,7 +1077,7 @@ Package: siunitx 2023-10-07 v3.3.7 A comprehensive (SI) units package
 \l__siunitx_number_group_first_int=\count374
 \l__siunitx_number_group_size_int=\count375
 \l__siunitx_number_group_minimum_int=\count376
-\l__siunitx_angle_tmp_dim=\dimen309
+\l__siunitx_angle_tmp_dim=\dimen310
 \l__siunitx_angle_marker_box=\box83
 \l__siunitx_angle_unit_box=\box84
 \l__siunitx_compound_count_int=\count377
@@ -1070,15 +1088,15 @@ Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages
  (CN)
 )
 \l__siunitx_table_tmp_box=\box85
-\l__siunitx_table_tmp_dim=\dimen310
-\l__siunitx_table_column_width_dim=\dimen311
+\l__siunitx_table_tmp_dim=\dimen311
+\l__siunitx_table_column_width_dim=\dimen312
 \l__siunitx_table_integer_box=\box86
 \l__siunitx_table_decimal_box=\box87
 \l__siunitx_table_uncert_box=\box88
 \l__siunitx_table_before_box=\box89
 \l__siunitx_table_after_box=\box90
-\l__siunitx_table_before_dim=\dimen312
-\l__siunitx_table_carry_dim=\dimen313
+\l__siunitx_table_before_dim=\dimen313
+\l__siunitx_table_carry_dim=\dimen314
 \l__siunitx_unit_tmp_int=\count378
 \l__siunitx_unit_position_int=\count379
 \l__siunitx_unit_total_int=\count380
@@ -1107,12 +1125,12 @@ Package: titlesec 2023/10/27 v2.16 Sectioning titles
 \ttl@box=\box91
 \beforetitleunit=\skip142
 \aftertitleunit=\skip143
-\ttl@plus=\dimen314
-\ttl@minus=\dimen315
+\ttl@plus=\dimen315
+\ttl@minus=\dimen316
 \ttl@toksa=\toks53
-\titlewidth=\dimen316
-\titlewidthlast=\dimen317
-\titlewidthfirst=\dimen318
+\titlewidth=\dimen317
+\titlewidthlast=\dimen318
+\titlewidthfirst=\dimen319
 )
 (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/latex/blindtext\blindtext.sty
 Package: blindtext 2012/01/06 V2.0 blindtext-Package
@@ -1144,11 +1162,11 @@ raly.aex <nul: /p x=^%~$PATH:i>> nuraly.aex)...executed.
 runsystem(del nuraly.aex)...executed.
 
 Package translations Info: No language package found. I am going to use `englis
-h' as default language. on input line 147.
+h' as default language. on input line 149.
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... none found.
 LaTeX Font Info:    Trying to load font information for T1+ptm on input line 14
-7.
+9.
 
 (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
@@ -1156,36 +1174,36 @@ File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 (nuraly.aux)
 \openout1 = `nuraly.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 147.
-LaTeX Font Info:    ... okay on input line 147.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 147.
-LaTeX Font Info:    ... okay on input line 147.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 147.
-LaTeX Font Info:    ... okay on input line 147.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 147.
-LaTeX Font Info:    ... okay on input line 147.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 147.
-LaTeX Font Info:    ... okay on input line 147.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 147.
-LaTeX Font Info:    ... okay on input line 147.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 147.
-LaTeX Font Info:    ... okay on input line 147.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 147.
-LaTeX Font Info:    ... okay on input line 147.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 147.
-LaTeX Font Info:    ... okay on input line 147.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 149.
+LaTeX Font Info:    ... okay on input line 149.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 149.
+LaTeX Font Info:    ... okay on input line 149.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 149.
+LaTeX Font Info:    ... okay on input line 149.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 149.
+LaTeX Font Info:    ... okay on input line 149.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 149.
+LaTeX Font Info:    ... okay on input line 149.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 149.
+LaTeX Font Info:    ... okay on input line 149.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 149.
+LaTeX Font Info:    ... okay on input line 149.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 149.
+LaTeX Font Info:    ... okay on input line 149.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 149.
+LaTeX Font Info:    ... okay on input line 149.
 
 (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count405
-\scratchdimen=\dimen319
+\scratchdimen=\dimen320
 \scratchbox=\box92
 \nofMPsegments=\count406
 \nofMParguments=\count407
 \everyMPshowfont=\toks54
 \MPscratchCnt=\count408
-\MPscratchDim=\dimen320
+\MPscratchDim=\dimen321
 \MPnumerator=\count409
 \makeMPintoPDFobject=\count410
 \everyMPtoPDFconversion=\toks55
@@ -1204,7 +1222,7 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 147.
+Package hyperref Info: Link coloring OFF on input line 149.
  (nuraly.out) (nuraly.out)
 \@outlinefile=\write6
 \openout6 = `nuraly.out'.
@@ -1251,45 +1269,45 @@ File: translations-basic-dictionary-english.trsl (english translation file `tra
 nslations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `english'. on input line 147.
+or `english'. on input line 149.
 LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line
- 177.
+ 179.
 
 (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ztmcm.fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line
- 177.
+ 179.
 
 (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omlztmcm.fd
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line
- 177.
+ 179.
 
 (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omsztmcm.fd
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line
- 177.
+ 179.
 
 (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omxztmcm.fd
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 1
-77.
+79.
 
 (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 177.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 179.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 177.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 179.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 177.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 179.
 
-Overfull \hbox (4.08488pt too wide) in paragraph at lines 177--181
+Overfull \hbox (4.08488pt too wide) in paragraph at lines 179--183
  [][] 
  []
 
@@ -1302,36 +1320,36 @@ df>
 (epstopdf)                    size: 47145 bytes
 (epstopdf)             Command: <miktex-epstopdf-unrestricted --outfile=./figur
 es/bme_logo_nagy-eps-converted-to.pdf ./figures/bme_logo_nagy.eps>
-(epstopdf)             \includegraphics on input line 187.
+(epstopdf)             \includegraphics on input line 189.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex.exe (file ./figures/bme_logo_nagy-eps-converted-to.pdf
 ): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<./figures/bme_logo_nagy-eps-converted-to.pdf, id=94, 709.65125pt x 199.74625pt
+<./figures/bme_logo_nagy-eps-converted-to.pdf, id=82, 709.65125pt x 199.74625pt
 >
 File: ./figures/bme_logo_nagy-eps-converted-to.pdf Graphic file (type pdf)
 <use ./figures/bme_logo_nagy-eps-converted-to.pdf>
 Package pdftex.def Info: ./figures/bme_logo_nagy-eps-converted-to.pdf  used on 
-input line 187.
+input line 189.
 (pdftex.def)             Requested size: 209.12683pt x 58.86366pt.
 [1
 
 
 {C:/Users/nural/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/nura
 l/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc} <./figures/bme_log
-o_nagy-eps-converted-to.pdf>] (nuraly.toc [1
-
-
-])
+o_nagy-eps-converted-to.pdf>] (nuraly.toc)
 \tf@toc=\write7
 \openout7 = `nuraly.toc'.
 
- [2] (nuraly.lof)
+ [1
+
+
+] (nuraly.lof)
 \tf@lof=\write8
 \openout8 = `nuraly.lof'.
 
- [3
+ [2
 
 ]
  1.
@@ -1348,14 +1366,24 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.235 	\chapter
-               {Preliminaries} [1
+l.234 	G
+        ordon \cite{gordon1981errors} has also contributed to the dispute of...
+[1
 
 
 ]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 20.31995pt, for example:
+(fancyhdr)                \setlength{\headheight}{20.31995pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-8.31995pt}.
+
+[2]
  2.
 
-Overfull \hbox (0.1541pt too wide) in paragraph at lines 256--257
+Overfull \hbox (0.1541pt too wide) in paragraph at lines 278--279
 \T1/ptm/m/n/12 tor for the pa-ram-e-ter $\OML/ztmcm/m/it/12 ^^R$ \T1/ptm/m/n/12
  is any mea-sur-able func-tion of the ran-dom vari-ables $\OML/ztmcm/m/it/12 X[
 ]; X[]; [] ; X[]$\T1/ptm/m/n/12 . 
@@ -1369,7 +1397,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-8.31995pt}.
 
-[2
+[3
 
 ]
 
@@ -1380,10 +1408,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-8.31995pt}.
 
-[3]
+[4]
  3.
 
-Overfull \hbox (39.29962pt too wide) in paragraph at lines 279--280
+Overfull \hbox (39.29962pt too wide) in paragraph at lines 304--305
 []\T1/ptm/m/n/12 In Sim-ple Lin-ear Re-gres-sion, we are given a ran-dom sam-pl
 e of data points $\OT1/ztmcm/m/n/12 (\OML/ztmcm/m/it/12 x[]; y[]\OT1/ztmcm/m/n/
 12 )\OML/ztmcm/m/it/12 ; :::; \OT1/ztmcm/m/n/12 (\OML/ztmcm/m/it/12 x[]; y[]\OT
@@ -1398,21 +1426,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-8.31995pt}.
 
-[4
+[5
 
 ]
-Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 375.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 20.31995pt, for example:
-(fancyhdr)                \setlength{\headheight}{20.31995pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-8.31995pt}.
-
-[5]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 20.31995pt, for example:
@@ -1422,6 +1438,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-8.31995pt}.
 
 [6]
+Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
+ine 401.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 20.31995pt, for example:
@@ -1431,6 +1450,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-8.31995pt}.
 
 [7]
+<./figures/projection.png, id=200, 1399.2275pt x 897.3525pt>
+File: ./figures/projection.png Graphic file (type png)
+<use ./figures/projection.png>
+Package pdftex.def Info: ./figures/projection.png  used on input line 455.
+(pdftex.def)             Requested size: 418.25368pt x 268.22195pt.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 20.31995pt, for example:
@@ -1448,7 +1473,25 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-8.31995pt}.
 
-[9]
+[9 <./figures/projection.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 20.31995pt, for example:
+(fancyhdr)                \setlength{\headheight}{20.31995pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-8.31995pt}.
+
+[10]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 20.31995pt, for example:
+(fancyhdr)                \setlength{\headheight}{20.31995pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-8.31995pt}.
+
+[11]
  4.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1458,7 +1501,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-8.31995pt}.
 
-[10
+[12
 
 
 ]
@@ -1470,8 +1513,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-8.31995pt}.
 
-[11]
-Overfull \hbox (68.6329pt too wide) detected at line 662
+[13]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 20.31995pt, for example:
+(fancyhdr)                \setlength{\headheight}{20.31995pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-8.31995pt}.
+
+[14]
+Overfull \hbox (68.6329pt too wide) detected at line 697
 []
  []
 
@@ -1483,28 +1535,19 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-8.31995pt}.
 
-[12]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 20.31995pt, for example:
-(fancyhdr)                \setlength{\headheight}{20.31995pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-8.31995pt}.
-
-[13]
-<./figures/simulation.png, id=270, 371.3875pt x 249.93375pt>
+[15]
+<./figures/simulation.png, id=265, 371.3875pt x 249.93375pt>
 File: ./figures/simulation.png Graphic file (type png)
 <use ./figures/simulation.png>
-Package pdftex.def Info: ./figures/simulation.png  used on input line 709.
+Package pdftex.def Info: ./figures/simulation.png  used on input line 742.
 (pdftex.def)             Requested size: 209.12683pt x 140.73993pt.
-<./figures/threemodels.png, id=272, 381.425pt x 248.93pt>
+<./figures/threemodels.png, id=267, 381.425pt x 248.93pt>
 File: ./figures/threemodels.png Graphic file (type png)
 <use ./figures/threemodels.png>
-Package pdftex.def Info: ./figures/threemodels.png  used on input line 715.
+Package pdftex.def Info: ./figures/threemodels.png  used on input line 748.
 (pdftex.def)             Requested size: 209.12683pt x 136.4827pt.
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 7
-23.
+56.
  (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
@@ -1516,19 +1559,19 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-8.31995pt}.
 
-[14 <./figures/simulation.png> <./figures/threemodels.png>]
-<./figures/delta_ssd_to_intercept.png, id=282, 387.4475pt x 266.9975pt>
+[16]
+<./figures/delta_ssd_to_intercept.png, id=278, 387.4475pt x 266.9975pt>
 File: ./figures/delta_ssd_to_intercept.png Graphic file (type png)
 <use ./figures/delta_ssd_to_intercept.png>
 Package pdftex.def Info: ./figures/delta_ssd_to_intercept.png  used on input li
-ne 743.
+ne 776.
 (pdftex.def)             Requested size: 418.25368pt x 288.23076pt.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 748.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 781.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 748.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 781.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 748.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 781.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1538,11 +1581,20 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-8.31995pt}.
 
-[15 <./figures/delta_ssd_to_intercept.png>]
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 799.
+[17 <./figures/simulation.png> <./figures/threemodels.png>]
 
-Overfull \hbox (76.80194pt too wide) detected at line 799
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 20.31995pt, for example:
+(fancyhdr)                \setlength{\headheight}{20.31995pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-8.31995pt}.
+
+[18 <./figures/delta_ssd_to_intercept.png>]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 832.
+
+Overfull \hbox (76.80194pt too wide) detected at line 832
 []
  []
 
@@ -1554,7 +1606,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-8.31995pt}.
 
-[16]
+[19]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 20.31995pt, for example:
@@ -1563,7 +1615,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-8.31995pt}.
 
-[17]
+[20]
+Overfull \hbox (8.93375pt too wide) detected at line 883
+[]
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 20.31995pt, for example:
@@ -1572,43 +1628,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-8.31995pt}.
 
-[18]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 20.31995pt, for example:
-(fancyhdr)                \setlength{\headheight}{20.31995pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-8.31995pt}.
-
-[19
-
-]
+[21]
  5.
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 20.31995pt, for example:
-(fancyhdr)                \setlength{\headheight}{20.31995pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-8.31995pt}.
-
-[20
-
-
-]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 20.31995pt, for example:
-(fancyhdr)                \setlength{\headheight}{20.31995pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-8.31995pt}.
-
-[21
-
-]
- 6.
+(nuraly.bbl
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 20.31995pt, for example:
@@ -1619,8 +1641,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [22
 
-]
- 7.
+
+])
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 20.31995pt, for example:
@@ -1632,34 +1654,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [23
 
 ]
- 8.
-(nuraly.bbl
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 20.31995pt, for example:
-(fancyhdr)                \setlength{\headheight}{20.31995pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-8.31995pt}.
-
-[24
-
-])
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 20.31995pt, for example:
-(fancyhdr)                \setlength{\headheight}{20.31995pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-8.31995pt}.
-
-[25
-
-]
 Appendix A.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 906.
+(mdframed)              on input line 922.
 \openout4 = `nuraly.pyg'.
 
 (_minted-nuraly/default.pygstyle)
@@ -1676,12 +1674,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-8.31995pt}.
 
-[26
+[24
 
 ]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 946.
+(mdframed)              on input line 962.
 \openout4 = `nuraly.pyg'.
 
 
@@ -1701,7 +1699,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-8.31995pt}.
 
-[27]
+[25]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 20.31995pt, for example:
@@ -1710,45 +1708,55 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-8.31995pt}.
 
-[28] (nuraly.aux)
+[26] (nuraly.aux)
  ***********
 LaTeX2e <2023-11-01>
 L3 programming layer <2023-11-01>
  ***********
-Package rerunfilecheck Info: File `nuraly.out' has not changed.
-(rerunfilecheck)             Checksum: 5C9B405F9414862C2BF804896BBD3BA6;3639.
+
+
+Package rerunfilecheck Warning: File `nuraly.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `nuraly.out':
+(rerunfilecheck)             Before: F853F4059203D9826CA345E2CB42B8EE;2910
+(rerunfilecheck)             After:  C222B3064258500DE7C621DB1CAE5841;2711.
 runsystem(del nuraly.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 33413 strings out of 474592
- 687057 string characters out of 5745799
- 1957533 words of memory out of 5000000
- 54866 multiletter control sequences out of 15000+600000
- 662562 words of font info for 177 fonts, out of 8000000 for 9000
+ 34202 strings out of 474592
+ 706470 string characters out of 5745799
+ 1953533 words of memory out of 5000000
+ 55645 multiletter control sequences out of 15000+600000
+ 659775 words of font info for 175 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,19n,93p,857b,1134s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\nural\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tctt
-1095.pk> <C:\Users\nural\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
-0\ecit1095.pk> <C:\Users\nural\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
-/dpi600\ectt1095.pk> <C:\Users\nural\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
-pen/ec/dpi600\ectt1200.pk><C:/Users/nural/AppData/Local/Programs/MiKTeX/fonts/t
-ype1/public/amsfonts/cm/cmex10.pfb><C:/Users/nural/AppData/Local/Programs/MiKTe
-X/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/nural/AppData/Local/Progr
-ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/nural/AppData/Loc
-al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/nural/Ap
-pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/latxfont/line10.pfb><C:
-/Users/nural/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/
-msbm10.pfb><C:/Users/nural/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol
-/usyr.pfb><C:/Users/nural/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/
-usyr.pfb><C:/Users/nural/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/ut
-mb8a.pfb><C:/Users/nural/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/ut
-mr8a.pfb><C:/Users/nural/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/ut
-mr8a.pfb><C:/Users/nural/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/ut
-mri8a.pfb>
-Output written on nuraly.pdf (32 pages, 329158 bytes).
+ 84i,19n,93p,1080b,1134s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+pdfTeX warning (dest): name{section.5.2} has been referenced but does not exist
+, replaced by a fixed one
+
+ <C:\Users\nural\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tctt10
+95.pk> <C:\Users\nural\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\
+ecit1095.pk> <C:\Users\nural\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/d
+pi600\ectt1095.pk> <C:\Users\nural\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappe
+n/ec/dpi600\ectt1200.pk><C:/Users/nural/AppData/Local/Programs/MiKTeX/fonts/typ
+e1/public/amsfonts/cm/cmex10.pfb><C:/Users/nural/AppData/Local/Programs/MiKTeX/
+fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/nural/AppData/Local/Program
+s/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/nural/AppData/Local
+/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/nural/AppD
+ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/latxfont/line10.pfb><C:/U
+sers/nural/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/ms
+bm10.pfb><C:/Users/nural/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/u
+syr.pfb><C:/Users/nural/AppData/Local/Programs/MiKTeX/fonts/type1/urw/symbol/us
+yr.pfb><C:/Users/nural/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb
+8a.pfb><C:/Users/nural/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr
+8a.pfb><C:/Users/nural/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr
+i8a.pfb>
+Output written on nuraly.pdf (29 pages, 407053 bytes).
 PDF statistics:
- 573 PDF objects out of 1000 (max. 8388607)
- 108 named destinations out of 1000 (max. 500000)
- 215 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 548 PDF objects out of 1000 (max. 8388607)
+ 104 named destinations out of 1000 (max. 500000)
+ 196 words of extra memory for PDF output out of 10000 (max. 10000000)
 
