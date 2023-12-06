@@ -1,3 +1,13 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{1}
+
+\bibitem{hayashi2011econometrics}
+Fumio Hayashi.
+\newblock {\em Econometrics}.
+\newblock Princeton University Press, 2011.
+
+\bibitem{neter1983applied}
+John Neter, William Wasserman, and Michael~H Kutner.
+\newblock {\em Applied linear regression models}.
+\newblock Richard D. Irwin, 1983.
 
 \end{thebibliography}

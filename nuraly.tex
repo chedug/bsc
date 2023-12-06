@@ -11,6 +11,7 @@
 \usepackage[utf8]{inputenc}
 
 \usepackage{amsmath,amssymb,amsthm}
+\DeclareMathOperator{\spn}{span}
 \usepackage{cancel}
 \usepackage{enumerate}
 \usepackage{graphicx}
@@ -29,9 +30,16 @@
 
 \setlength {\marginparwidth }{2cm}
 
+\usepackage{accents}
+
 \usepackage{todonotes}
 
 \usepackage{setspace}
+
+% code snippets
+\usepackage{minted}  
+\usepackage{mdframed}
+
 
 % Theoremlike environment
 \newtheorem{theorem}{Theorem}[section]
@@ -188,9 +196,10 @@
 	\frontmatter
 	%\chapter*{\centering Kivonat}
 	
+	\setcounter{tocdepth}{1}
 	\tableofcontents
 	%\listoftables
-	%\listoffigures
+	\listoffigures
 		
 	\mainmatter
 	
@@ -211,50 +220,177 @@
 	 
 	\titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter.\hsp}{0pt}{\Huge\bfseries} 
 	  
-	\chapter{Preliminaries} 
+	\chapter{Introduction}
 	
-	\begin{chapquote}{Name of the author} % Quotation (optional)
-	''A place for future inspirational quote.''
-	\end{chapquote}
+	
+	\section{Background}
+	In the world of regression analysis, choosing the right model is a constant challenge, balancing simplicity and accuracy. This thesis focuses on a specific aspect—linear regression through the origin (RTO) —examining its statistical properties when dealing with just one explanatory variable. Our goal is to identify situations where this approach might be more suitable than the commonly used simple linear regression. Through this study, we aim to shed light on the conditions that make regression through the origin a preferable choice, offering insights that bridge mathematical rigor with real-world applicability. Join us on this journey as we navigate the complexities of statistical modeling, striving to understand when and why regression through the origin might outperform its more conventional counterpart.
+	\section{Literature review}
+	
+	\section{Research question}
+	
+	\section{Outline}
 
 
-	\section{Introduction}
+	\chapter{Preliminaries}
 
-% Start your introduction with a general statement about linear regression through the origin
 
-In the world of regression analysis, choosing the right model is a constant challenge, balancing simplicity and accuracy. This thesis focuses on a specific aspect—linear regression through the origin (RTO) —examining its statistical properties when dealing with just one explanatory variable. Our goal is to identify situations where this approach might be more suitable than the commonly used simple linear regression. Through this study, we aim to shed light on the conditions that make regression through the origin a preferable choice, offering insights that bridge mathematical rigor with real-world applicability. Join us on this journey as we navigate the complexities of statistical modeling, striving to understand when and why regression through the origin might outperform its more conventional counterpart.
+	\section{Statistics Basics}
+	
+	In this part we will cover most of the statistics that we are going to need later and also some of the notations that we are going to use.
+	
+	
 
-	\subsection*{Simple Linear Regression}
+\textbf{Definition (Data):} Let $(x_1, \ldots, x_n)$, where $x_i \in S$ for $i = 1, \ldots, n$. The set $S$ is typically $\mathbb{R}$, $\mathbb{R}^d$, or any abstract set. However, for our purposes, $S$ (the sample space) is usually taken as $\mathbb{R}$.
+
+\textbf{Definition (Sample):} In statistics, our data are often represented by a vector $\mathbf{X} = (X_1, X_2, \ldots, X_n)$ of i.i.d. (independent, identically distributed) random variables, denoted as the sample (of size $n$). The random variables $X_i$ take values in $\mathbb{Z}$ or $\mathbb{R}$. The common distribution of the $X_i$ is referred to as the parent distribution, and the sample is said to be drawn from that parent distribution.
+
+\textbf{Definition (Model):} A statistical model is a family $\{P_{\theta} \,|\, \theta \in \Theta\}$ of distributions on the sample space. In the case where $\Theta \subset \mathbb{R}^d$, it is a parametric model, with $\Theta$ being the parameter set (space).
+
+\textbf{Definition (Statistic):} A statistic $T=T(x_1,...,x_n )$ is any function of the sample data, often used to summarize or draw inferences about the underlying population.
+
+\textbf{Definition (Sample mean):} Let $(X_1, \ldots, X_n)$ be a sample. Then, the random variable
+\[ \bar{X} = X = \frac{1}{n} \sum_{i=1}^{n} X_i \]
+is referred to as the sample mean.
+
+\textbf{Definition (Estimator):} An estimator is a statistic (a function of the sample data) used to estimate an unknown parameter in a statistical model. Denoted as $\hat{\theta}$, an estimator for the parameter $\theta$ is any measurable function of the random variables $X_1, X_2, \ldots, X_n$.
+
+\textbf{Definition (Unbiased Estimator):} If $\hat{\theta}$ is an estimator of $\theta$, we can define the quantity \textit{Bias}($\hat{\theta}$) = $\mathbb{E}_{\theta}[\hat{\theta}] - \theta$. The estimator $\hat{\theta}$ is termed unbiased if its bias is 0.
+
+\textbf{Definition (MSE of an Estimator):} Consider the model $\{P_{\theta} \,|\, \theta \in \Theta\}$ and the sample $(X_1, \ldots, X_n)$ from it. The mean square error (or quadratic risk) of an estimator $\hat{\theta} = \hat{\theta}(X_1, \ldots, X_n)$ for the parameter $\theta$ is defined as
+\[ \text{MSE}_{\theta}(\hat{\theta}) = \mathbb{E}_{\theta}((\hat{\theta} - \theta)^2) \]
+when $\theta$ is the true parameter.
+
+\textbf{Definition (Likelihood):} We say that $L(\theta)$ is a likelihood of an estimator $\theta$ if $L(\theta)=p(x|\theta)$, where $x$ is a realization $(x_1,...,x_n)$ of a sample $X$. Thus, likelihood can be obtained by taking the product of marginal probability mass functions for fixed $x$, and expressing the result as a function of $\theta$.
+
+\begin{equation} \label{eq:likelihood}
+	p(x|\theta) = \Pi^n_{i=1} p(x_i| \theta)
+\end{equation}
+
+
+We will call estimator $\hat{\theta}$ a Maximum Likelihood Estimator of $\theta$ if it maximizes \ref{eq:likelihood}. One common approach to find this estimator is to take partial derivative with respect to $\theta$ of log-likelihood function $l(\theta)=\log L(\theta)$. Since logarithm is a monotonically increasing function, the maximum of $l(\theta)$ will be the same as maximum of $L(\theta)$
+
+
+
+	\chapter{Simple Linear Regression}
 
 Before we start delving into RTO, it's best to get familiar with a more general case - Simple Linear Regression.
 
-In Simple Linear Regression, we are given a random sample of data points $(x_1,y_1),...,(x_n,y_n)$ from a population, and our goal is to find a linear function
+In Simple Linear Regression, we are given a random sample of data points $(x_1,y_1),...,(x_n,y_n)$ from a population, and our goal is to find a linear function that describes the relationship between $x$ (often called, explanatory variable, regressor) and $y$ (often called dependent variable, regressand) as good as possible: 
 
 
 \begin{equation}\label{eq:lin}
-	y = \beta_1 x + \beta_o
+	y_i = \beta_1 x_i + \beta_0 \quad (i= 1,2,...,n)
 \end{equation}
 
-That describes the relationship between two variables $x$ and $y$ as good as possible. Since, sample is random, the equation \eqref{eq:lin} is not true in general, so we take into account the error term $\epsilon$:
+or in matrix notation 
+\begin{equation*}
+	\mathbf{Y} = \mathbf{\beta} \mathbf{X}
+\end{equation*}
 
-\begin{equation}\label{eq:lin2}
-	y = \beta_1 x + \beta_o + \epsilon
+
+where  $\mathbf{Y} = 
+\begin{bmatrix}
+	y_1\\
+	y_2 \\
+	\vdots \\
+	y_n
+\end{bmatrix},
+\quad
+\mathbf{X} = 
+\begin{bmatrix}
+	1 & x_1 \\
+	1 & x_2 \\
+	\vdots & \vdots \\
+	1 & x_n
+\end{bmatrix}, \quad
+\mathbf{\beta} =
+\begin{bmatrix}
+	\beta_0 & \beta_1
+\end{bmatrix}
+$
+
+
+
+Since, sample is random, the equation \eqref{eq:lin} is not true in general, so we take into account error term $\epsilon = (\epsilon_1, \epsilon_2, ... , \epsilon_n)^T$, where $\epsilon_1, \epsilon_2, ... , \epsilon_n$ are i.i.d random variables:
+
+\begin{equation}\label{eq:linear regression} 
+	\mathbf{Y} = \mathbf{\beta} \mathbf{X} + \epsilon
 \end{equation}
 
 
-The objective of simple linear regression is, under some \todo{List out the conditions} conditions*, to estimate the parameters $\beta_0$ and $\beta_1$, so that they will provide best fit. 
+The objective of simple linear regression is, under some assumption \cite[p.4-12]{hayashi2011econometrics}, to estimate the parameters $\beta_0$ and $\beta_1$, so that they will provide best fit. The assumptions are important since they serve as a foundation for later theory, so we will take some to analyze them:
+
+\begin{assumption}[\textbf{linearity}]
+	$y_i = \beta_1 x_i+\beta_0 +\epsilon_i$
+\end{assumption}
+
+Linearity means that the underlying relationship between regressand and regressor is linear. 
+
+\begin{assumption}[\textbf{strict exogeneity}]
+	$\E (\epsilon_i | \mathbf{X})=0 \quad (i=1,2,...,n)$ 
+\end{assumption}
+
+From this assumption it follows that:
+
+\begin{equation}
+\E (\epsilon_i ) =0 \quad (i=1,2,...,n)
+\end{equation}
+
+\begin{proof}
+	From law of total expectation it also follows that $\E (\epsilon_i ) = \E (\E (\epsilon_i | \mathbf{X}))=0$
+\end{proof}
+
+The cross moments are orthogonal to all observations:
+\begin{equation}
+	\E (x_i \epsilon_j)=0  \quad (i,j = 1, 2, ..., n) 
+\end{equation}
+
+\begin{proof}
+	\begin{align*}
+		\E (x_i \epsilon_j) &= \E (\E(x_i \epsilon_j| x_j))\tag*{(by law of total expectation)} \\
+		& =\E (x_i\E( \epsilon_j| x_j)) \tag*{(by linearity of expectation)} \\
+		&= \E (x_i 0) 	= 0
+	\end{align*}
+\end{proof}
+
+Because the mean of error terms is zero, the orthogonality condition, implies that error terms have zero correlation with observations.
+
+\begin{assumption}[\textbf{no multicollinearity}]
+	Data vector $\mathbf{X}$ has no duplicates with probability 1.
+\end{assumption}
+
+The more general variant of this assumption, in the case when we have classical linear regression with multiple regressors, the multicollinearity would mean that the rank of the $n \times K$ data matrix $\mathbf{X}$ is exactly $K$ with probability 1. In other words, columns of the data matrix have to be linearly independent with probability 1.
+
+\begin{assumption}[\textbf{homoskedasticity}]
+	$\E(\epsilon_i^2| \mathbf{X}) = \sigma^2 > 0 \quad (i=1,2,...,n)$
+\end{assumption}
+
+\begin{assumption}[no correlation between observatoins]
+	\[\E (\epsilon_i \epsilon_j) = 0 \quad (i,j = 1, 2, ..., n; i \neq j) \]
+\end{assumption}
+
+This is equivalent to saying that covariance of error terms is zero, since means are zero.
+
+\textbf{Remark:} \todo{ask professor} Although in the assumptions we treat regressors as random variables, in reality, $x_1, ..., x_n$ are realizations of random variables, so it is generally accepted to tream them as fixed 
+
+For the purposes of this paper, we will also assume that error terms in eq. \ref{eq:linear regression}  are normally distributed with mean 0 and variance $\sigma^2$.
 
 
-Likelihood function
-\[
-L(y_1, \ldots, y_n | \beta_0, \beta_1, \sigma) = \left( \frac{1}{2\pi\sigma^2} \right)^{n/2} \exp\left( -\frac{1}{2\sigma^2} \sum_{i=1}^{n} (y_i - (\beta_0 + \beta_1 x_i))^2 \right)
-\]
+To compute likelihood function, we can notice that $y_i$ is a normally distributed random variable with mean $\E [y_i] = \beta_1 x_i + \beta_0$ and variance $\Var \ y = \sigma^2$. Then, likelihood $L$ can be computed as a product of marginal distributions:
+
+\begin{align}
+	L(y_1, \ldots, y_n | \beta_0, \beta_1, \sigma) &= \prod \frac{1}{\sqrt{2 \pi \sigma^2}} \exp (-\frac{1}{2\sigma^2}(y_i-(\beta_1 x_i + \beta_0)^2))\\
+	&= \left( \frac{1}{2\pi\sigma^2} \right)^{n/2} \exp\left( -\frac{1}{2\sigma^2} \sum_{i=1}^{n} (y_i - (\beta_0 + \beta_1 x_i))^2 \right)
+\end{align}
+
 
 Log-likelihood function
-\[
-l(y_1, \ldots, y_n | \beta_0, \beta_1, \sigma) = c - n \log \sigma - \frac{1}{2\sigma^2} \sum_{i=1}^{n} (y_i - (\beta_0 + \beta_1 x_i))^2
-\]
+\begin{equation} \label{eq:loglikelihood}
+	l(y_1, \ldots, y_n | \beta_0, \beta_1, \sigma) = -\frac{n}{2} \log (2 \pi) - n \log \sigma - \frac{1}{2\sigma^2} \sum_{i=1}^{n} (y_i - (\beta_0 + \beta_1 x_i))^2
+\end{equation}
 
+By taking partial derivatives with respect to our parameters, we can find that estimates of $\beta_0, \beta_1$ and $\sigma$ that maximize the likelihood:
 
 % Equations
 \begin{align}
@@ -268,11 +404,11 @@ l(y_1, \ldots, y_n | \beta_0, \beta_1, \sigma) = c - n \log \sigma - \frac{1}{2\
 Let the solutions of the above equations be denoted as $\hat{\beta}_0$, $\hat{\beta}_1$, $\hat{\sigma}^2$ for $\beta_0$, $\beta_1$, $\sigma^2$. If $\hat{y}_i = \hat{\beta}_0 + \hat{\beta}_1 x_i$, then...
 
 % Equations
-\begin{align*}
-\hat{\beta}_0  &= \bar{y} - \hat{\beta}_1 \bar{x}; \\
-\hat{\beta}_1 &= \frac{S_{xy}}{S_{xx}}; \\
+\begin{align}
+\hat{\beta}_0  &= \bar{y} - \hat{\beta}_1 \bar{x}; \label{est:intercept} \\
+\hat{\beta}_1 &= \frac{S_{xy}}{S_{xx}}; \label{est:slope}\\
 \hat{\sigma}^2 &= \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2 = \frac{1}{n} SSE.
-\end{align*}
+\end{align}
 
 So $\hat{\beta}_0, \hat{\beta}_1$ are Maximum Likelikelihood Estimators of the model.
 
@@ -282,9 +418,20 @@ So $\hat{\beta}_0, \hat{\beta}_1$ are Maximum Likelikelihood Estimators of the m
 
 
 \begin{proof}
-	\todo{todo}
+	From equations \ref{eq:est_beta_0} and \ref{eq:est_beta_1} we can see that $y-\hat{y}$ is perpendicular to both $\mathbf{1}$ and $\mathbf{x}$, and we know that $\hat{y}=\hat{\beta_1}x+\hat{\beta_0}$, i.e. $\hat{y}$ lies in $\spn \{ \mathbf{1}, \mathbf{x} \}$.
+	Notice that $y-\hat{y}=\epsilon$, so since $\hat{y}$ is perpendicular to $\epsilon$, MLE from \ref{est:intercept} and \ref{est:slope} are indedd MSE estimators too.
 \end{proof}
+\todo{include figure}
 
+
+
+\textbf{Remark:} Equations \ref{eq:est_beta_0} and \ref{eq:est_beta_1} are called normal equations \cite{neter1983applied} (from the fact that $\mathbf{y-\hat{y}}$ are orthogonal to \textbf{1} and $\mathbf{x}$) and in matrix form it could be written as:
+
+\begin{equation} \label{eq:matrix_form_ols}
+	\mathbf{X^TXb = X^TY}
+\end{equation}
+
+Where $\mathbf{b}$ is $2 \times 1 $ vector of the regression MLE coefficients $(\hat{\beta_0}, \hat{\beta_1})^T$ 
 
 
 % Proposition and Proof
@@ -310,7 +457,7 @@ since then:
 	&= \sum_{i=1}^{n} (\hat{y}_i - \bar{y})^2 + \sum_{i=1}^{n} (y_i - \hat{y}_i)^2 \\
 \end{align*}
 
-From \ref{eq:est_beta_0} we know that $\sum (y_i=\bar{y}_i)=0$.
+From \ref{eq:est_beta_0} we know that $\sum (y_i-\hat{y}_i)=0$.
 From \ref{eq:est_beta_1} we know that $\sum (y_i-\hat{y}_i)x_i=0$,
 $\hat{y}_i = \beta_0 + \beta_1 x_i \Rightarrow x_i = \frac{1}{\beta_1}(\hat{y}_i-\beta_0) \Rightarrow \sum \hat{y}_i (y_i-\hat{y}_i)=0$
 
@@ -333,23 +480,16 @@ Finally,
 \textbf{Proof:}
 
 1. \textbf{Unbiasedness of $\hat{\beta}_1$:}
-\[
-\mathbb{E} [ \hat{\beta _1} ] = \mathbb{E} [\frac{S_{xy}}{S_{xx}}] = \mathbb{E} [\frac{\Sigma (x_i - \bar{x})(y_i-\bar{y})}{\Sigma (x_i-\bar{x})^2}]=
-\]
 
-\[
-	= \mathbb{E} [\frac{\Sigma (x_i - \bar{x})y_i}{\Sigma (x_i-\bar{x})^2}]=
-	\frac{\Sigma (x_i - \bar{x})\mathbb{E} [y_i]}{\Sigma (x_i-\bar{x})^2}=
-\]
 
-\[
-	= \frac{\Sigma (x_i - \bar{x})(\beta_0+\beta_1x_i)}{\Sigma (x_i-\bar{x})^2}=	
-	\frac{\Sigma (x_i \beta_0 - \bar{x}\beta_0+\beta_1x_i^2-\beta_1x_i\bar{x})}{\Sigma x_i^2-n\bar{x}^2}=
-\]
-
-\[
-	= \frac{\cancel{n\bar{x}\beta_0}-\cancel{n\bar{x}\beta_0}+\Sigma\beta_1x_i^2-n\beta_1\bar{x}^2}{\Sigma x_i^2-n\bar{x}^2}= \frac{(\Sigma x_i^2-n\bar{x}^2)\beta_1}{\Sigma x_i^2-n\bar{x}^2} = \beta_1
-\]
+\begin{align*}
+	\mathbb{E} [ \hat{\beta _1} ] &= \mathbb{E} [\frac{S_{xy}}{S_{xx}}] = \mathbb{E} [\frac{\Sigma (x_i - \bar{x})(y_i-\bar{y})}{\Sigma (x_i-\bar{x})^2}] \\
+		&= \mathbb{E} [\frac{\Sigma (x_i - \bar{x})y_i}{\Sigma (x_i-\bar{x})^2}]=
+	\frac{\Sigma (x_i - \bar{x})\mathbb{E} [y_i]}{\Sigma (x_i-\bar{x})^2}\\
+		&= \frac{\Sigma (x_i - \bar{x})(\beta_0+\beta_1x_i)}{\Sigma (x_i-\bar{x})^2}=	
+	\frac{\Sigma (x_i \beta_0 - \bar{x}\beta_0+\beta_1x_i^2-\beta_1x_i\bar{x})}{\Sigma x_i^2-n\bar{x}^2}\\
+		&= \frac{\cancel{n\bar{x}\beta_0}-\cancel{n\bar{x}\beta_0}+\Sigma\beta_1x_i^2-n\beta_1\bar{x}^2}{\Sigma x_i^2-n\bar{x}^2}= \frac{(\Sigma x_i^2-n\bar{x}^2)\beta_1}{\Sigma x_i^2-n\bar{x}^2} = \beta_1 
+\end{align*}
 
 
 2. \textbf{Unbiasedness of $\hat{\beta}_0$:}
@@ -376,8 +516,18 @@ Finally,
 \begin{proof}
 	Assume, $Y_i \sim N(0, \sigma^2) $
 	\[
-		\mathbb{V}ar[\hat{\beta}_1] = \mathbb{V}ar (\frac{1}{S_{xx}}\sum (x_i-\bar{x})Y_i) = \frac{1}{S_{xx}^2}\sum \mathbb{V}ar Y_i = \frac{\sigma}{S_{xx}^2}
+		\mathbb{V}ar[\hat{\beta}_1] = \mathbb{V}ar (\frac{1}{S_{xx}}\sum (x_i-\bar{x})Y_i) = \frac{1}{S_{xx}^2}\sum \mathbb{V}ar Y_i = \frac{\sigma^2}{S_{xx}}
 	\]
+\end{proof}
+
+\begin{proposition}
+	$\Var [\hat{\beta_0}]= \frac{\sigma^2 S_{xx}^o}{n S_{xx}} $
+\end{proposition}
+
+
+
+\begin{proof}
+	\todo{add}
 \end{proof}
 
 	\clearpage
@@ -393,40 +543,50 @@ Finally,
 	In certain statistical applications, the conventional assumption of a non-zero intercept term ($\beta_0$) in a simple linear regression model may not align with the nature of the data. For example, in economics the cost of production be assumed to be zero, when there is no production, or in physics, when we are describing the relationship between force and the displacement, forced is assumede to be zero, when there is no displacement.
 	
 	
+	In linear regression through the origin, regression equation takes the form:
+	
+	\begin{equation}
+		\mathbf{y} = \beta_1^o \mathbf{x} + \mathbf{\epsilon},
+	\end{equation}
+	where $\mathbf{x}^T=(x_1,x_2,...,x_n)$
+	
+	
+	
 	Likelihood function $L$ is:
 	\begin{align*}
-		L(y_1,...,y_n | \beta, \sigma) &= \prod \frac{1}{\sqrt{2 \pi \sigma^2}} \exp(-\frac{1}{2\sigma^2 (y_i-\beta x_i)^2}) \\
-		&= \frac{1}{(2\pi \sigma^2)^{n/2}}\exp(-\frac{1}{2\sigma^2} \sum (y_i-\beta x_i)^2)
+		L(y_1,...,y_n | \beta_1^o, \sigma) &= \prod \frac{1}{\sqrt{2 \pi \sigma^2}} \exp(-\frac{1}{2\sigma^2 (y_i-\beta_1^o x_i)^2}) \\
+		&= \frac{1}{(2\pi \sigma^2)^{n/2}}\exp(-\frac{1}{2\sigma^2} \sum (y_i-\beta_1^o x_i)^2)
 	\end{align*}
 
 	Log-likelihood $l$ is:
 
 \[
-	l(y_1,...,y_n | \beta, \sigma)=-\frac{n}{2}\log(2\pi \sigma^2)-\frac{1}{2 \sigma^2} \sum (y_i - \beta x_i)^2
+	l(y_1,...,y_n | \beta_1^o, \sigma)=-\frac{n}{2}\log(2\pi \sigma^2)-\frac{1}{2 \sigma^2} \sum (y_i - \beta_1^o x_i)^2
 \]
 
+Thus we can compute the maximum likelihood estimator of $\beta_1^o$ by taking partial derivative of log-likelihood with respect to $\beta_1^o$:
 
 \begin{align*}
-	\frac{\partial l}{\partial \beta} = - \frac{1}{2 \sigma^2} & \sum 2(y_i-\beta x_i)(-x_i)=0 \\
-	\frac{1}{\sigma^2}& \sum (y_i x_i - \beta x_i ^2) = 0 \\
-	& \sum x_i y_i =  \sum  x_i^2 \beta \\
-	& \hat{\beta} = \frac{\sum x_i y_i}{\sum x_i^2}
+	\frac{\partial l}{\partial \beta_1^o} = - \frac{1}{2 \sigma^2} & \sum 2(y_i-\beta_1^o x_i)(-x_i)=0 \\
+	\frac{1}{\sigma^2}& \sum (y_i x_i - \beta_1^o x_i ^2) = 0 \\
+	& \sum x_i y_i =  \sum  x_i^2 \beta_1^o \\
+	& \hat{\beta_1^o} = \frac{\sum x_i y_i}{\sum x_i^2}
 \end{align*}
 
 
 	\begin{proposition}
-		$\hat{\beta}$ is unbiased
+		$\hat{\beta}_1^o$ is unbiased
 	\end{proposition}
 
 	\begin{proof}
 		\begin{align*}
-			\mathbb{E} [\hat{\beta}] &= \mathbb{E} [\frac{\sum x_i y_i}{\sum x_i^2}] = \sum \frac{1}{x_i^2} \mathbb{E}[\sum x_i y_i] = \\
-			&= \frac{\sum x_i\mathbb{E}[y_i]}{\sum x_i^2} = \frac{\sum x_i^2 \beta}{\sum x_i^2} = \beta 
+			\mathbb{E} [\hat{\beta_1^o}] &= \mathbb{E} [\frac{\sum x_i y_i}{\sum x_i^2}] = \sum \frac{1}{x_i^2} \mathbb{E}[\sum x_i y_i] = \\
+			&= \frac{\sum x_i\mathbb{E}[y_i]}{\sum x_i^2} = \frac{\sum x_i^2 \beta_1^o}{\sum x_i^2} = \beta_1^o 
 		\end{align*}
 	\end{proof}
 
 
-	\begin{proposition}
+	\begin{proposition} \label{prop:variance_slop_no_intercept}
 		$\mathbb{V}ar[\hat{\beta}_1^0] = \frac{\sigma^2}{\sum x_i^2}$
 	\end{proposition}
 
@@ -459,7 +619,7 @@ This might suggest that $\hat{\beta}_1^0$ might be more accurate estimator than 
 It would be convenient for us to find confidence interval for $\beta_1^0 - \beta_1$, since if 0 lies in the CI, then we can statistically infer that two estimators are very close.
 
 \begin{proposition} \label{prop:normally}
-	The difference of the two estimators is normally distributed as follows:
+	The difference of the two estimators is normally distributed as follows: \todo{rm}
 	\[
 		\hat{\beta_1^0}-\hat{\beta_1} \sim N(\beta_1^0-\beta_1, \sigma^2(\frac{1}{S_{xx}}-\frac{1}{S_{xx}^0}))
 	\]
@@ -484,7 +644,7 @@ It would be convenient for us to find confidence interval for $\beta_1^0 - \beta
 \end{proof}
 
 \begin{proposition}
-	$\E [\hat{\beta_1^0}-\hat{\beta_1}]=\beta_1^0-\beta_1$
+	$\E [\hat{\beta_1^0}-\hat{\beta_1}]=\beta_1^0-\beta_1$ \todo{not true in general}
 \end{proposition}
 
 \begin{proof}
@@ -531,10 +691,10 @@ CI is:
 
 Even though RTO might be worse than performing full linear regression model in terms of SSE (since full model always gives unbiased estimators, they are also MLE estimators, so SSE is minimized), there are other statistical parameters that are better in RTO when intercept term is small enough.
 
-Given that the true model is known, $\dot{y_i} = \beta_1 x_i + \alpha$, one might simulate the data points by adding normally-distributed error terms:
+Given that the true model is known, $\dot{y_i} = \beta_1 x_i + \beta_0$, one might simulate the data points by adding normally-distributed error terms:
 
 \[
-	y_i =  \beta_1 x_i + \alpha + \epsilon_i
+	y_i =  \beta_1 x_i + \beta_0 + \epsilon_i
 \]
 
 One might be interested now in comparing sum of squared deviations (SSD) of fitted points $\sum (\dot{y_i}-\hat{y_i})^2 $.
@@ -556,33 +716,135 @@ Let's start by generating a sample of 100 points, and assume that parameters are
 		\caption{Plot of three models}
 		\label{fig:threemodels}
 	\end{subfigure}
-	\caption{Overall caption for the figure}
+	\caption{Linear Regression model on simultated datapoints}
 \end{figure}
 
 
 Now, let's fit two models: no-intercept model, and full model. For that purposes we will use LinearRegression function from \code{sklearn.linear\_model} package. On fig. \ref{fig:threemodels} you can see the two models as well as the true model plotted up close.
 
-Now let's compare two statistics for these two models: BIC (Bayesian Information Criterion) and SSD.
+Now let's compare two statistics for these two models: BIC (Bayesian Information Criterion) and SSD. (SSD and BIC of no-intercept model will be denoted as $SSD_{no}$ and $BIC_{no}$)
 
 The results are as follows:
 
 \begin{align*}
-	BIC_{no} &= 386.1685814527955 \\
-	BIC &= 391.09782858386046 \\
-	SSD_{no} &= 1.2267420929010404 \\
-	SSD &= 4.150248687009578	
+	BIC_{no} &= 451.95123880008833 \\
+	BIC &= 457.6345669168381 \\
+	SSD_{no} &= 0.45764140442744106 \\
+	SSD &= 0.46305539852212607	
 \end{align*}
 
 
 It is clearly seen that no-intercept model provides better fit in terms of these parameters.
 
+Moreover, when we perform 1000 Monte Carlo simulations for 1000 different intercept values $\beta_0$, ranging from 0 to 0.2, and $\beta_1=1, \sigma^2=1$, and we plot the graph of $\Delta SSD := SSD_{no}-SSD$ to $\beta_0$, we can see that $\Delta SSD$ takes negative values in the region that is bellow blue dashed line in fig. \ref{fig:ssd_to_intercept}. This might suggest that no-intercept model is better in terms of SSD compared to the full model. However let's give this assumption a mathematical justification.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=\linewidth]{delta_ssd_to_intercept.png}
+	\caption{Plot of the difference of SSD to the values of intercept}
+	\label{fig:ssd_to_intercept}
+\end{figure}%
+
+\subsection{Expected value of $SSD$ and $SSD_{no}$}
+
+Our goal here is to calculate $\E [SSD]$ and $\E [SSD_{no}]$ to justify the region below zero in fig. \ref{fig:ssd_to_intercept}. In this section we are going to prove the following two propositions:
+
+\begin{proposition} \label{prop:ssd_no_intercept}
+	$\E[SSD_{no}] = n \beta_0^2-\beta_0^2n^2 \frac{\bar{x}^2}{\sum x^2}+ \sigma^2$ 
+\end{proposition}
+
+\begin{proposition} \label{prop:ssd_full_model}
+	$\E [SSD]= \frac{2\sigma^2}{S_{xx}}(S_{xx}^o-n\bar{x}^2)$
+\end{proposition}
+
+Assuming $\beta_0 >0$. In order to prove proposition \ref{prop:ssd_no_intercept}, we have to take into account that $\beta_0 \neq 0$, so the estimator $\beta_1^o$ is now biased.
+
+\begin{proposition} \label{prop:expect_slope_term_biased}
+	$	\E [\hat{\beta}_1^o]= \frac{\sum \beta_0 x }{\sum x^2} + \beta_1$ 
+\end{proposition}
+
+\begin{proof}
+
+\begin{align*}
+	\E [\hat{\beta}_1^o] &=\frac{\E \sum xy}{\sum x^2}
+	= \frac{\sum x \E[y]}{\sum x^2} 
+	=  \frac{\sum x (\beta_1 x + \beta_0) }{\sum x^2} \\
+	&= \frac{\sum \beta_0 x + \sum \beta_1 x^2}{\sum x^2} 
+= \frac{\sum \beta_0 x }{\sum x^2} + \beta_1
+\end{align*}  
+
+\end{proof}
 
 
+\begin{proposition} \label{prop:expect_slope_term_biased_squared}
+	$\E [\hat{\beta_1^o} ^2] = \frac{\sigma^2}{\sum x^2} + (\frac{\sum \beta_0 x}{\sum x^2}+ \beta_1)^2$ 
+\end{proposition}
+
+\begin{proof}
+	Comes from the fact that $\E [\hat{\beta_1^o} ^2] = \Var [\hat{\beta_1^o}] + \E [\hat{\beta_1^o}]^2 $ and then one can apply prop. \ref{prop:expect_slope_term_biased} and prop. \ref{prop:variance_slop_no_intercept}
+\end{proof}
 
 
+\begin{proof}[Proof of proposition \ref{prop:ssd_no_intercept}]
+Here, we assume that $\hat{y}$ are values fitted by no-intercept model:
+\begin{align*}
+	\E[SSD_{no}] &= \sum (\dot{y} - \hat{y})^2   && \text{\small{(df $SSD_{no}$)}}\\
+	&=  \sum \dot{y}^2 - \sum 2 \dot{y} \E [\hat{y}] + \sum \E [\hat{y}^2] && \text{\small{(linearity)}} \\
+	& = \sum \dot{y}^2 - \sum 2 \dot{y} x(\frac{\sum \beta_0 x }{\sum x^2} + \beta_1) + \sum x^2 ( \frac{\sigma^2}{\sum x^2}+(\frac{\sum \beta_0 x }{\sum x^2})^2 + \frac{2 \beta_0 \beta_1 \sum x}{\sum x^2} + \beta_1^2) && \text{\small{(pp \ref{prop:expect_slope_term_biased} \& \ref{prop:expect_slope_term_biased_squared})}}\\
+	&= \sum (\beta_0^2 + 2 \beta_0 \beta_1 x + x^2 \beta_1^2) - 2x(\beta_0+\beta_1x)(\frac{\sum \beta_0 x }{\sum x^2} + \beta_1)+ \\
+	& \quad \sigma^2+\beta_0^2\frac{n^2\bar{x}^2}{S_{xx}^o}+2n\beta_0\beta_1\bar{x}+\beta_1^2S_{xx}^0 \\
+	&= n \beta_0^2 + \cancel{2n\beta_0\beta_1\bar{x}}+\cancel{\beta_1^2S_{xx}^o}-2\beta_0^2n^2\frac{\bar{x}^2}{S_{xx}^o}-\cancel{4n\beta_0\beta_1\bar{x}}-\cancel{2\beta_1^2S_{xx}^o}+ \\
+	& \quad \sigma^2+\beta^2_0 \frac{n^2 \bar{x}^2}{S_{xx}^o}+\cancel{2n\beta_0\beta_1\bar{x}}+\cancel{\beta_1^2S_{xx}^o} \\
+	&= n\beta_0^2-\beta_0^2 n^2 \frac{\bar{x}^2}{S_{xx}^o}+ \sigma^2
+\end{align*}
 
-
+\end{proof}
 	
+	
+Before we begin the proof of proposition \ref{prop:ssd_full_model} let us change our assumptions again, and now let $\hat{y}$ define fitted values by full model.
+
+\begin{proposition} \label{prop:covariance_slope_intercept}
+	$\Cov (\hat{\beta_0},\hat{\beta_1})= \frac{-\bar{x} \sigma^2}{\sum (x-\bar{x})^2}$
+\end{proposition}
+	
+\begin{proof}
+	Let us adopt matrix notation from equation \ref{eq:linear regression}.
+	$Var(\hat{\beta})$ will give us a matrix that has variances of estimators $\hat{\beta_0}, \hat{\beta_1}$ in diagonal elements and their covariances in off-diagonal elements. Define $2 \times 1$ vector $\hat{\beta}$ as $\mathbf{b}$:
+	
+	\begin{align*}
+		\Var [\mathbf{b}] &= \E [\mathbf{b}^2] - \E [\mathbf{b}] \E[\mathbf{b}^T] \\
+		&= \E [\mathbf{((X^TX)^{-1}X^TY})^2] - \beta^2 \\
+		\intertext{Replace $\mathbf{Y}$ by eq. \ref{eq:linear regression}}
+		&= \E [\mathbf{((X^TX)^{-1}X^T(X
+			\beta+\epsilon)})^2] - \beta^2 \\
+		&= \E [\mathbf{((X^TX)^{-1}X^TX
+			\beta+(X^TX)^{-1}X^T\epsilon)})^2] - \beta^2 \\
+	\intertext{The term $\mathbf{(X^TX)^{-1}X^TX
+	}$ is equal to identity matrix $\mathbf{I_2}$ }
+		&=  \E [\mathbf{(\beta+(X^TX)^{-1}X^T\epsilon)})^2] - \beta^2 \\
+		&=  \beta^2 + \mathbf{\E [((X^TX)^{-1}X^T\epsilon)^2]} - \beta^2 \\
+		\intertext{The cross term becomes zero since $\E [\epsilon]=0$}
+		&= \mathbf{((X^TX)^{-1}X^T)^2\E [\epsilon^2]} \\
+		&= \mathbf{(X^TX)^{-1}X^TX(X^TX)^T \ ^{-1} \sigma^2} \\
+		\intertext{$\mathbf{(X^TX)^T \ ^{-1}= (X^TX)^{-1}}$ comes from the fact that $X^TX$ is a symmetric matrix}
+		&= \sigma^2 (\mathbf{X^TX})^{-1}
+	\end{align*}
+	
+	Now the off-diagonal term then can be computed easily as $\frac{-\bar{x}\sigma^2}{\sum (x-\bar{x})^2}$
+	
+\end{proof}
+
+
+\begin{proof}[Proof of proposition \ref{prop:ssd_full_model}]
+	\begin{align*}
+		\E[SSD] &= \E[\sum (\dot{y}-\hat{y})^2] = \E [\sum (\dot{y}^2 - 2 \dot{y}\hat{y}+\hat{y}^2)]= \\
+		&= n \beta_0^2 + 2 \beta_0 \beta_1 \sum x + \beta_1^2 \sum x^2 - \sum 2 \dot{y} \E [\hat{y}] + \sum \E [\hat{y}^2] = (\ast)\\
+		\intertext{($\E [\hat{y}] = \E [\hat{\beta_1}]x + \E [\hat{\beta_0}] = \beta_1 x + \beta_0=\dot{y}$)}
+		\intertext{$\E[\dot{y}^2]=\Var[\hat{\beta_0}]+\E[\hat{\beta_0}]+x^2(\Var [\hat{\beta_1}+\E [\hat{\beta_1}]^2])+2x\E[\hat{\beta_0}\hat{\beta_1}]$}
+		\intertext{and $\E[\hat{\beta_0}\hat{\beta_1}]= \Cov (\hat{\beta_0},\hat{\beta_1})+\E[\hat{\beta_0}]\E[\hat{\beta_0}]$, so substituting prop \ref{prop:covariance_slope_intercept} we get}
+		(\ast) &= n \beta_0^2+2\beta_0 \beta_1 n \bar{x} + \beta_1^2 S_{xx}^o - \sum 2(\beta_1x+\beta_0)^2+\frac{\sigma^2}{}
+	\end{align*}
+\end{proof}
 
 \clearpage
 
@@ -637,4 +899,94 @@ It is clearly seen that no-intercept model provides better fit in terms of these
 	
 	\chapter{Program Codes}
 	
+	\section{linear\_regression.py module}
+	
+	
+\begin{mdframed}[linecolor=black, topline=true, bottomline=true,
+	leftline=false, rightline=false, backgroundcolor=yellow!20!white]
+	\begin{minted}[mathescape, linenos, fontsize=\small]{python}
+	
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.linear_model import LinearRegression
+
+def linear_regression(x, y, intercept=True):
+"""
+facade function that implements LinearRegression from sklearn.linear_model
+"""
+model = LinearRegression(fit_intercept=intercept)
+x = x.reshape(-1,1)
+y = y.reshape(-1,1)
+model.fit(x,y)
+return model.predict(x)
+
+def bayesian_information_criterion(y, y_fit, n , sigma, k):
+"""
+BIC 
+"""
+max_log_likelihood = (
+-n/2 * np.log(2 * np.pi * sigma**2)-np.sum((y+y_fit)**2)/sigma**2
+)
+BIC = k*np.log(n)-2*max_log_likelihood
+return BIC
+
+def SSD(y, y_fit):
+"""
+function calculates sum of squared deviations of fitted
+values and true values
+"""
+return np.sum((y-y_fit)**2)
+	
+	\end{minted}
+\end{mdframed}
+	
+	\section{Script 1}
+	
+\begin{mdframed}[linecolor=black, topline=true, bottomline=true,
+	leftline=false, rightline=false, backgroundcolor=yellow!20!white]
+\begin{minted}[mathescape, linenos, fontsize=\small]{python}
+import numpy as np
+import matplotlib.pyplot as plt
+
+np.random.seed(42)
+
+num_samples = 100  # number of sample points
+
+#X = np.linspace(0, 1, num_samples) * 2 - 1
+X = np.random.rand(num_samples) * 2 - 1
+
+beta =  1 # true slope
+beta_0 = 0.05
+noise = np.random.normal(0, 0.5, num_samples)  # standard normal noise term
+
+y = beta * X + noise + beta_0
+
+
+plt.plot(
+X, beta * X, color='red', linewidth=1, label='True Linear Relationship'
+)
+plt.scatter(
+X, y, color='white', edgecolor='black', marker='o', label='Generated Data Points'
+)
+plt.legend()
+
+plt.axhline(0, color='green', linewidth=1, linestyle='--')
+plt.axvline(0, color='green', linewidth=1, linestyle='--')
+
+plt.title('')
+plt.show()
+	
+\end{minted}
+\end{mdframed}
+
+
+%\begin{mdframed}[linecolor=black, topline=true, bottomline=true,
+%	leftline=false, rightline=false, backgroundcolor=yellow!20!white]
+%	\begin{minted}[mathescape, linenos, fontsize=\small]{python}
+%	
+%	\end{minted}
+%\end{mdframed
+	
 \end{document}
+
+
