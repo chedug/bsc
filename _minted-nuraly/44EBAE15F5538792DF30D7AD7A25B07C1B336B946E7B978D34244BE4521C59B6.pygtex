@@ -1,0 +1,34 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+	
+\PYG{k+kn}{import} \PYG{n+nn}{numpy} \PYG{k}{as} \PYG{n+nn}{np}
+\PYG{k+kn}{import} \PYG{n+nn}{matplotlib.pyplot} \PYG{k}{as} \PYG{n+nn}{plt}
+\PYG{k+kn}{from} \PYG{n+nn}{sklearn.linear\PYGZus{}model} \PYG{k+kn}{import} \PYG{n}{LinearRegression}
+
+\PYG{k}{def} \PYG{n+nf}{linear\PYGZus{}regression}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,} \PYG{n}{y}\PYG{p}{,} \PYG{n}{intercept}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{):}
+\PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{}}
+\PYG{l+s+sd}{facade function that implements LinearRegression from sklearn.linear\PYGZus{}model}
+\PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{}}
+\PYG{n}{model} \PYG{o}{=} \PYG{n}{LinearRegression}\PYG{p}{(}\PYG{n}{fit\PYGZus{}intercept}\PYG{o}{=}\PYG{n}{intercept}\PYG{p}{)}
+\PYG{n}{x} \PYG{o}{=} \PYG{n}{x}\PYG{o}{.}\PYG{n}{reshape}\PYG{p}{(}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{l+m+mi}{1}\PYG{p}{)}
+\PYG{n}{y} \PYG{o}{=} \PYG{n}{y}\PYG{o}{.}\PYG{n}{reshape}\PYG{p}{(}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{l+m+mi}{1}\PYG{p}{)}
+\PYG{n}{model}\PYG{o}{.}\PYG{n}{fit}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,}\PYG{n}{y}\PYG{p}{)}
+\PYG{k}{return} \PYG{n}{model}\PYG{o}{.}\PYG{n}{predict}\PYG{p}{(}\PYG{n}{x}\PYG{p}{)}
+
+\PYG{k}{def} \PYG{n+nf}{bayesian\PYGZus{}information\PYGZus{}criterion}\PYG{p}{(}\PYG{n}{y}\PYG{p}{,} \PYG{n}{y\PYGZus{}fit}\PYG{p}{,} \PYG{n}{n} \PYG{p}{,} \PYG{n}{sigma}\PYG{p}{,} \PYG{n}{k}\PYG{p}{):}
+\PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{}}
+\PYG{l+s+sd}{BIC}
+\PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{}}
+\PYG{n}{max\PYGZus{}log\PYGZus{}likelihood} \PYG{o}{=} \PYG{p}{(}
+\PYG{o}{\PYGZhy{}}\PYG{n}{n}\PYG{o}{/}\PYG{l+m+mi}{2} \PYG{o}{*} \PYG{n}{np}\PYG{o}{.}\PYG{n}{log}\PYG{p}{(}\PYG{l+m+mi}{2} \PYG{o}{*} \PYG{n}{np}\PYG{o}{.}\PYG{n}{pi} \PYG{o}{*} \PYG{n}{sigma}\PYG{o}{**}\PYG{l+m+mi}{2}\PYG{p}{)}\PYG{o}{\PYGZhy{}}\PYG{n}{np}\PYG{o}{.}\PYG{n}{sum}\PYG{p}{((}\PYG{n}{y}\PYG{o}{+}\PYG{n}{y\PYGZus{}fit}\PYG{p}{)}\PYG{o}{**}\PYG{l+m+mi}{2}\PYG{p}{)}\PYG{o}{/}\PYG{n}{sigma}\PYG{o}{**}\PYG{l+m+mi}{2}
+\PYG{p}{)}
+\PYG{n}{BIC} \PYG{o}{=} \PYG{n}{k}\PYG{o}{*}\PYG{n}{np}\PYG{o}{.}\PYG{n}{log}\PYG{p}{(}\PYG{n}{n}\PYG{p}{)}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{2}\PYG{o}{*}\PYG{n}{max\PYGZus{}log\PYGZus{}likelihood}
+\PYG{k}{return} \PYG{n}{BIC}
+
+\PYG{k}{def} \PYG{n+nf}{SSD}\PYG{p}{(}\PYG{n}{y}\PYG{p}{,} \PYG{n}{y\PYGZus{}fit}\PYG{p}{):}
+\PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{}}
+\PYG{l+s+sd}{function calculates sum of squared deviations of fitted}
+\PYG{l+s+sd}{values and true values}
+\PYG{l+s+sd}{\PYGZdq{}\PYGZdq{}\PYGZdq{}}
+\PYG{k}{return} \PYG{n}{np}\PYG{o}{.}\PYG{n}{sum}\PYG{p}{((}\PYG{n}{y}\PYG{o}{\PYGZhy{}}\PYG{n}{y\PYGZus{}fit}\PYG{p}{)}\PYG{o}{**}\PYG{l+m+mi}{2}\PYG{p}{)}
+	
+\end{Verbatim}

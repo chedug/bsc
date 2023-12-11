@@ -650,7 +650,7 @@ Thus we can compute the maximum likelihood estimator of $\beta_1^o$ by taking pa
 	\end{proof}
 
 
-	\begin{proposition}
+	\begin{proposition} \label{prop:variance_no_intercept_is_lower}
 		\[
 			\mathbb{V}ar[\hat{\beta}_1^0] < \mathbb{V}ar[\hat{\beta}_1]
 		\]
@@ -739,7 +739,22 @@ CI is:
 
 
 
-	\subsection{Motivational example}
+\section{Comparison of two models}
+
+The goal of this section is to compare two models given that the observed data is generated from the function $y_i = \beta_1 x + \beta_0 + \epsilon_i$ with our standard assumptions. 
+
+
+
+\subsection{$\beta_0 = 0:$}
+
+When the true intercept term is equal to zero, for both models we have that their parameters are MLE of true parameters. However, from prop. \ref{prop:variance_no_intercept_is_lower} we know that the slope estimator of the no-intercept model is more accurate, hence no-intercept model is preferred.
+
+
+\subsection{$\beta_0 \neq 0:$}
+
+It is intuitive to presume that in general, when true intercept term is not equal to zero, intercept model should perform better, as it is unbiased, however the following example might show that the no-intercept model is better for small $\beta_0$ if we look at the sum of squared deviations of fitted points from the points on the true relationship line.
+
+	\subsubsection{Motivational example}
 
 Even though RTO might be worse than performing full linear regression model in terms of SSE (since full model always gives unbiased estimators, they are also MLE estimators, so SSE is minimized), there are other statistical parameters that are better in RTO when intercept term is small enough.
 

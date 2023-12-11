@@ -1,0 +1,37 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{n}{mean\PYGZus{}x} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{average}\PYG{p}{(}\PYG{n}{X}\PYG{p}{)}
+\PYG{n}{mean\PYGZus{}y} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{average}\PYG{p}{(}\PYG{n}{y}\PYG{p}{)}
+
+\PYG{n}{Sxx} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{sum}\PYG{p}{((}\PYG{n}{X}\PYG{o}{\PYGZhy{}}\PYG{n}{mean\PYGZus{}x}\PYG{p}{)}\PYG{o}{**}\PYG{l+m+mi}{2}\PYG{p}{)}
+\PYG{n}{Sxy} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{sum}\PYG{p}{((}\PYG{n}{X}\PYG{o}{\PYGZhy{}}\PYG{n}{mean\PYGZus{}x}\PYG{p}{)}\PYG{o}{*}\PYG{n}{y}\PYG{p}{)}
+
+
+\PYG{n}{beta\PYGZus{}1\PYGZus{}hat} \PYG{o}{=} \PYG{n}{Sxy}\PYG{o}{/}\PYG{n}{Sxx}
+\PYG{n}{beta\PYGZus{}0\PYGZus{}hat} \PYG{o}{=} \PYG{n}{mean\PYGZus{}y} \PYG{o}{\PYGZhy{}} \PYG{n}{beta\PYGZus{}1\PYGZus{}hat} \PYG{o}{*} \PYG{n}{mean\PYGZus{}x}
+
+\PYG{n}{beta\PYGZus{}hat} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{sum}\PYG{p}{(}\PYG{n}{X}\PYG{o}{*}\PYG{n}{y}\PYG{p}{)}\PYG{o}{/}\PYG{n}{np}\PYG{o}{.}\PYG{n}{sum}\PYG{p}{(}\PYG{n}{X}\PYG{o}{**}\PYG{l+m+mi}{2}\PYG{p}{)}
+
+
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{scatter}\PYG{p}{(}\PYG{n}{X}\PYG{p}{,} \PYG{n}{y}\PYG{p}{,} \PYG{n}{color}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}white\PYGZsq{}}\PYG{p}{,} \PYG{n}{edgecolor}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}black\PYGZsq{}}\PYG{p}{,} \PYG{n}{marker}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}o\PYGZsq{}}\PYG{p}{)}
+
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{axhline}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{color}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}green\PYGZsq{}}\PYG{p}{,} \PYG{n}{linewidth}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{linestyle}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}\PYGZhy{}\PYGZhy{}\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{axvline}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{color}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}green\PYGZsq{}}\PYG{p}{,} \PYG{n}{linewidth}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{linestyle}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}\PYGZhy{}\PYGZhy{}\PYGZsq{}}\PYG{p}{)}
+
+
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{X}\PYG{p}{,} \PYG{n}{beta\PYGZus{}1\PYGZus{}hat} \PYG{o}{*} \PYG{n}{X} \PYG{o}{+} \PYG{n}{beta\PYGZus{}0\PYGZus{}hat}\PYG{p}{,} \PYG{n}{color}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}blue\PYGZsq{}}\PYG{p}{,} \PYG{n}{linewidth}\PYG{o}{=}\PYG{l+m+mf}{0.5}\PYG{p}{,} \PYG{n}{label}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}with intercept\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{X}\PYG{p}{,} \PYG{n}{beta} \PYG{o}{*} \PYG{n}{X} \PYG{o}{+} \PYG{n}{beta\PYGZus{}0}\PYG{p}{,} \PYG{n}{color}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}green\PYGZsq{}}\PYG{p}{,} \PYG{n}{linewidth}\PYG{o}{=}\PYG{l+m+mf}{0.5}\PYG{p}{,} \PYG{n}{label}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}true model\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{X}\PYG{p}{,} \PYG{n}{beta\PYGZus{}hat} \PYG{o}{*} \PYG{n}{X}\PYG{p}{,} \PYG{n}{color}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}red\PYGZsq{}}\PYG{p}{,} \PYG{n}{linewidth}\PYG{o}{=}\PYG{l+m+mf}{0.5}\PYG{p}{,} \PYG{n}{label}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}no\PYGZhy{}intercept\PYGZsq{}}\PYG{p}{)}
+
+\PYG{n}{plt}\PYG{o}{.}\PYG{n}{legend}\PYG{p}{()}
+
+\PYG{n}{y\PYGZus{}hat} \PYG{o}{=} \PYG{n}{beta\PYGZus{}1\PYGZus{}hat} \PYG{o}{*} \PYG{n}{X} \PYG{o}{+} \PYG{n}{beta\PYGZus{}0\PYGZus{}hat}  \PYG{c+c1}{\PYGZsh{} intercept model response variable}
+\PYG{n}{y\PYGZus{}hat\PYGZus{}hat} \PYG{o}{=} \PYG{n}{beta\PYGZus{}hat} \PYG{o}{*} \PYG{n}{X}  \PYG{c+c1}{\PYGZsh{} no\PYGZhy{}intercept response variable}
+
+
+\PYG{n}{y} \PYG{o}{=} \PYG{n}{beta} \PYG{o}{*} \PYG{n}{X} \PYG{o}{+} \PYG{n}{beta\PYGZus{}0}
+
+\PYG{n}{SS\PYGZus{}dev\PYGZus{}intercept} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{sum}\PYG{p}{((}\PYG{n}{y}\PYG{o}{\PYGZhy{}}\PYG{n}{y\PYGZus{}hat}\PYG{p}{)}\PYG{o}{**}\PYG{l+m+mi}{2}\PYG{p}{)}
+\PYG{n}{SS\PYGZus{}dev\PYGZus{}no\PYGZus{}intercept} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{sum}\PYG{p}{((}\PYG{n}{y}\PYG{o}{\PYGZhy{}}\PYG{n}{y\PYGZus{}hat\PYGZus{}hat}\PYG{p}{)}\PYG{o}{**}\PYG{l+m+mi}{2}\PYG{p}{)}
+
+
+\end{Verbatim}
