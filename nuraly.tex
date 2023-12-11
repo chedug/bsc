@@ -452,8 +452,20 @@ So $\hat{\beta}_0, \hat{\beta}_1$ are Maximum Likelikelihood Estimators of the m
 
 \begin{figure}
 	\centering
-	\includegraphics[width=\linewidth]{projection.png}
-	\caption{Orthogonal projection of y to }
+	\begin{tikzpicture}
+	\draw[->,line width=1] (0,0)--(5,0);
+	\draw[->,line width=1] (0,0)--(5,5);
+	\draw[->,line width=1] (5,0)--(5,5);
+	\draw[->,line width=1] (0,0)--(4.6,-1.9);
+	\draw[->,line width=1] (0,0)--(4.5,2.1);
+	\draw (4.5,2.1)--(12,2.1)--(4.6,-1.9);
+	\node[right] at (5,0) {$\hat{y}=\beta_01+\beta_1x$};
+	\node[above left] at (2.5,2.5) {$y$};
+	\node[above left] at (3.1,1.5) {$1$};
+	\node[below left] at (1.8,-.7) {$x$};
+	\node[right] at (5,2.5) {$y-\hat{y}$};
+	\end{tikzpicture}
+	\caption{Orthogonal projection of $\mathbf{y}$ to $\spn \{ \mathbf{1,x} \}$}
 	\label{fig:projection}
 \end{figure}%
 
@@ -531,7 +543,7 @@ Finally,
 \] 
 
 \[
-	= \frac{1}{n}\mathbb{E}[\Sigma (\beta_0+\beta_1x_i)]-\beta_1 \bar{x} 
+	= \frac{1}{n}\mathbb{E}[\Sigma (\beta_0+\beta_1x_i+\epsilon)]-\beta_1 \bar{x} 
 	= \frac{1}{n}n\beta_0+\frac{1}{n}n\beta_1\bar{x}-\bar{x}\beta_1=\beta_0	
 \]
 
@@ -560,7 +572,11 @@ Finally,
 
 
 \begin{proof}
-	\todo{add}
+	\begin{align*}
+		\Var [\hat{\beta_0}] &= \Var [\bar{y}- \bar{x}\hat{\beta_1}] = \Var [\bar{y}] + \bar{x}^2 \Var [\hat{\beta_1}]- 2\bar{x} \Cov (\bar{y}, \hat{\beta_1}) = \\ 
+		\intertext{$\bar{y}=\sigma^2$}
+		&= 
+	\end{align*}
 \end{proof}
 
 	\clearpage
@@ -605,6 +621,9 @@ Thus we can compute the maximum likelihood estimator of $\beta_1^o$ by taking pa
 	& \sum x_i y_i =  \sum  x_i^2 \beta_1^o \\
 	& \hat{\beta_1^o} = \frac{\sum x_i y_i}{\sum x_i^2}
 \end{align*}
+
+
+
 
 
 	\begin{proposition}
@@ -684,7 +703,7 @@ It would be convenient for us to find confidence interval for $\beta_1^0 - \beta
 	By linearity of expected value, $\E [\hat{\beta_1^0}-\hat{\beta_1}]= \E[\hat{\beta_1^0}] - \E[\hat{\beta_1}]= \beta_1^0-\beta_1 $
 \end{proof}
 
-\textbf{Remark:} This is only true when true intercept is equal to one, and both of the estimators are MLE.
+\textbf{Remark:} This is only true when true intercept is equal to zero, since both of the estimators are MLE in this case.
 	
 	Now we are ready to prove proposition \ref{prop:normally}
 \begin{proof}[Proof of prop. \ref{prop:normally}]
@@ -1104,7 +1123,7 @@ SS_dev_no_intercept_mean /= 100
 
 delta_SSD[increment] = SS_dev_no_intercept_mean - SS_dev_intercept_mean
 alphas[increment] = beta_0
-
+	
 zeros = np.zeros_like(alphas)
 
 plt.plot(alphas, zeros, '--', linewidth=0.5)

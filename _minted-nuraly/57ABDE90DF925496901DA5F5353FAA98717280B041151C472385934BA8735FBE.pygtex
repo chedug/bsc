@@ -47,7 +47,7 @@
 
 \PYG{n}{delta\PYGZus{}SSD}\PYG{p}{[}\PYG{n}{increment}\PYG{p}{]} \PYG{o}{=} \PYG{n}{SS\PYGZus{}dev\PYGZus{}no\PYGZus{}intercept\PYGZus{}mean} \PYG{o}{\PYGZhy{}} \PYG{n}{SS\PYGZus{}dev\PYGZus{}intercept\PYGZus{}mean}
 \PYG{n}{alphas}\PYG{p}{[}\PYG{n}{increment}\PYG{p}{]} \PYG{o}{=} \PYG{n}{beta\PYGZus{}0}
-
+	
 \PYG{n}{zeros} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{zeros\PYGZus{}like}\PYG{p}{(}\PYG{n}{alphas}\PYG{p}{)}
 
 \PYG{n}{plt}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{alphas}\PYG{p}{,} \PYG{n}{zeros}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}\PYGZhy{}\PYGZhy{}\PYGZsq{}}\PYG{p}{,} \PYG{n}{linewidth}\PYG{o}{=}\PYG{l+m+mf}{0.5}\PYG{p}{)}
