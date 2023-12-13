@@ -200,7 +200,7 @@
 	
 	\setcounter{tocdepth}{1}
 	\tableofcontents
-	%\listoftables
+	\listoftables
 	\listoffigures
 		
 	\mainmatter
@@ -398,7 +398,7 @@ The more general variant of this assumption, in the case when we have classical 
 
 This is equivalent to saying that covariance of error terms is zero, since means are zero.
 
-\textbf{Remark:} \todo{ask professor} Although in the assumptions we treat regressors as random, conditioned on their observed values, in reality, $x_1, ..., x_n$ are realizations of random variables, so it is generally accepted to treat them as fixed. Although this might be bad technically, it allows us to shorten the notation, and make it more readable, while still being concise.
+\textbf{Remark:} Although in the assumptions we treat regressors as random, conditioned on their observed values, in reality, $x_1, ..., x_n$ are realizations of random variables, so it is generally accepted to treat them as fixed. Although this might be somewhat misleading, it allows us to shorten the notation, and make it more readable, while still being concise.
 
 For the purposes of this paper, we will also assume that error terms in eq. \ref{eq:linear regression}  are normally distributed with mean 0 and variance $\sigma^2$.
 
@@ -574,8 +574,12 @@ Finally,
 \begin{proof}
 	\begin{align*}
 		\Var [\hat{\beta_0}] &= \Var [\bar{y}- \bar{x}\hat{\beta_1}] = \Var [\bar{y}] + \bar{x}^2 \Var [\hat{\beta_1}]- 2\bar{x} \Cov (\bar{y}, \hat{\beta_1}) = \\ 
-		\intertext{$\bar{y}=\sigma^2$}
-		&= 
+		\intertext{($\Cov (\bar{y}, \hat{\beta_1})=0$ see Appendix \ref{appendix:covariance_y_bar_beta_hat})}
+		&= \frac{1}{n^2}\Var [\sum y] + \bar{x}^2 \frac{\sigma^2}{(x-\bar{x})^2} \\
+		&= \frac{\sigma^2}{n}+\bar{x}^2 \frac{\sigma^2}{(x-\bar{x})^2} \\
+		&= \frac{\sigma^2 \sum (x-\bar{x})^2}{n \sum (x-\bar{x})^2}+\frac{n \bar{x}^2 \sigma^2}{n \sum (x- \bar{x})^2} \\
+		&= \frac{\sigma^2 }{n \sum (x-\bar{x})^2} (\sum (x-\bar{x})^2+n\bar{x}^2) \\
+		&= \frac{\sigma^2 \sum x^2}{n \sum (x-\bar{x})^2}
 	\end{align*}
 \end{proof}
 
@@ -739,9 +743,59 @@ CI is:
 
 
 
-\section{Comparison of two models}
+\section{Model Comparison}
 
 The goal of this section is to compare two models given that the observed data is generated from the function $y_i = \beta_1 x + \beta_0 + \epsilon_i$ with our standard assumptions. 
+
+\subsubsection{Coefficient of Determination}
+
+	$R^2$ often used in statistics to \todo{do}
+
+\subsubsection{Akaike Information Criterion}
+
+Akaike Information Criterion is a statistical tool that was introduced by Akaike in 1974 \cite{akaike1974new} and defined as:
+
+\begin{equation*}
+	AIC = (-2) \log (\text{maximum likelihood}) + 2 k
+\end{equation*}
+
+Where $k$ is the number of independently adjusted parameters within the model.
+
+AIC in a sense estimates the prediction error for a given set of data, and effectively takes into account the number of assumed parameters, thus punishing overfitting, which often occurs due to increasing number of parameters in the model also increases likelihood, even if the model may give a poorer fit.
+
+AIC has its relation to another important notion in statistics, Kullback-Leibler divergence, which is defined as follows:
+
+Given that $x_1, x_2, ..., x_n$ are obtained results after $n$ independent observations of random variable with probability function $g(x)$, and a parametric family of density function is given by $f(x| \theta )$ then the average log-likelihood tends to this integral (assuming that integral exists) with probability 1
+\begin{equation}
+	S(g; f(.| \theta)) = \int g(x) \log f(x| \theta)dx
+\end{equation}
+The idea behind using the log function here is that it is the most sensitive to small deviations of $f(x| \theta)$ from $g(x)$. 
+Then the difference 
+\begin{equation*}
+	I(g; f(.|\theta)) = S(g;g) - S(g; f(.|\theta))
+\end{equation*}
+is called Kullback-Leibner mean information, and also can be interpreted as "distance" between two distributions $f$ and $g$, since $S(g;g) - S(g; f(.|\theta))$ is also 
+\[
+	\E_{g} [\log g(x)] - \E_{g} [\log f(x|\theta)]
+\]
+
+with respect to the density function $g(x)$. Hence, low values of KL divergence indicate that the two probability density functions are relatively close to each other.
+
+Akaike found that maximized log-likelihood is a biased estimate of 
+$\E [\log f(x|\hat{\theta)}$,
+ where $\hat{\theta}$ is a biased estimate of $\theta$, where bias approximately equals $k$, the overall number of independent parameters of a given model. Since, $\E [\log g(x)]$ is a constant, minimizing AIC means minimizing the estimate of KL divergence. 
+
+
+
+\subsubsection{Bayesian Information Criterion}
+
+Bayesian Information Criterion, Schwartz (1978) \cite{schwarz1978estimating},  is alternative estimate of goodness of fit of the model that penalizes the number of independent parameters and defined as:
+
+\begin{equation}
+	BIC = -2 \log(\text{maximized likelihood})+ k \log n
+\end{equation}
+
+The way how AIC and BIC penalize increasing number of parameters is different, and ultimately the choice between two criterions should depend on assumptions about reality and the intent of the model-based inference \cite{burnham2004multimodel}. However, for the sake of practice, we shall use both AIC and BIC in our model comparison.
 
 
 
@@ -752,7 +806,12 @@ When the true intercept term is equal to zero, for both models we have that thei
 
 \subsection{$\beta_0 \neq 0:$}
 
-It is intuitive to presume that in general, when true intercept term is not equal to zero, intercept model should perform better, as it is unbiased, however the following example might show that the no-intercept model is better for small $\beta_0$ if we look at the sum of squared deviations of fitted points from the points on the true relationship line.
+It is intuitive to presume that in general, when true intercept term is not equal to zero, intercept model should perform better, as it is unbiased, however the following example might suggest that the no-intercept model is better for small values of $\beta_0$ if we look at the sum of squared deviations of fitted points from the points on the true relationship line:
+
+\[
+	\sum (\dot{y}-\hat{y})^2
+\]
+Where $\dot{y}=\beta_1 x + \beta_0$ and $\beta_0, \beta_1$ are true intercept and slope values, respectively.
 
 	\subsubsection{Motivational example}
 
@@ -766,7 +825,7 @@ Given that the true model is known, $\dot{y_i} = \beta_1 x_i + \beta_0$, one mig
 
 One might be interested now in comparing sum of squared deviations (SSD) of fitted points $\sum (\dot{y_i}-\hat{y_i})^2 $.
 
-Let's start by generating a sample of 100 points, and assume that parameters are known as $\beta = 1, \alpha = 0.05$ (see fig. \ref{fig:simulation}):
+Let's start by generating a sample of 100 points, and assume that parameters are known as $\beta = 1, \alpha = 0.005, \sigma=1$ (see fig. \ref{fig:simulation}):
 
 
 
@@ -789,19 +848,18 @@ Let's start by generating a sample of 100 points, and assume that parameters are
 
 Now, let's fit two models: no-intercept model, and full model. For that purposes we will use LinearRegression function from \code{sklearn.linear\_model} package. On fig. \ref{fig:threemodels} you can see the two models as well as the true model plotted up close.
 
-Now let's compare two statistics for these two models: BIC (Bayesian Information Criterion) and SSD. (SSD and BIC of no-intercept model will be denoted as $SSD_{no}$ and $BIC_{no}$)
+\begin{table}
+	\centering
+	\begin{tabular}{lccc} 
+		& AIC & BIC & SSD \\
+		Intercept Model & 1100.70 & 1108.51 & 0.46305 \\
+		No Intercept Model & 1098.68 & 1103.89 & 0.46011 \\
+	\end{tabular}
+	\caption{AIC, BIC, and SSD for Intercept and No Intercept Models.}
+	\label{tab:model_comparison}
+\end{table}
 
-The results are as follows:
-
-\begin{align*}
-	BIC_{no} &= 451.95123880008833 \\
-	BIC &= 457.6345669168381 \\
-	SSD_{no} &= 0.45764140442744106 \\
-	SSD &= 0.46305539852212607	
-\end{align*}
-
-
-It is clearly seen that no-intercept model provides better fit in terms of these parameters.
+Now let's compare three statistics for these two models: BIC, AIC and SSD. The results can be seen in the Table \ref{tab:model_comparison}. It is clearly seen that no-intercept model provides slightly better fit in terms of these parameters.
 
 Moreover, when we perform 1000 Monte Carlo simulations for 1000 different intercept values $\beta_0$, ranging from 0 to 0.2, and $\beta_1=1, \sigma^2=1$, and we plot the graph of $\Delta SSD := SSD_{no}-SSD$ to $\beta_0$, we can see that $\Delta SSD$ takes negative values in the region that is bellow blue dashed line in fig. \ref{fig:ssd_to_intercept}. This might suggest that no-intercept model is better in terms of SSD compared to the full model. However let's give this assumption a mathematical justification.
 
@@ -813,6 +871,8 @@ Moreover, when we perform 1000 Monte Carlo simulations for 1000 different interc
 \end{figure}%
 
 \subsection{Expected value of $SSD$ and $SSD_{no}$}
+
+We will denote with $SSD$ and $SSD_{no}$ the sum of squared deviations of the fitted values from values on the true relationship line for full and no-intercept models, respectively. 
 
 Our goal here is to calculate $\E [SSD]$ and $\E [SSD_{no}]$ to justify the region below zero in fig. \ref{fig:ssd_to_intercept}. In this section we are going to prove the following two propositions:
 
@@ -893,7 +953,7 @@ Before we begin the proof of proposition \ref{prop:ssd_full_model} let us change
 		\intertext{The cross term becomes zero since $\E [\epsilon]=0$}
 		&= \mathbf{((X^TX)^{-1}X^T)^2\E [\epsilon^2]} \\
 		&= \mathbf{(X^TX)^{-1}X^TX(X^TX)^T \ ^{-1} \sigma^2} \\
-		\intertext{$\mathbf{(X^TX)^T \ ^{-1}= (X^TX)^{-1}}$ comes from the fact that $X^TX$ is a symmetric matrix}
+		\intertext{($\mathbf{(X^TX)^T \ ^{-1}= (X^TX)^{-1}}$ comes from the fact that $X^TX$ is a symmetric matrix)}
 		&= \sigma^2 (\mathbf{X^TX})^{-1}
 	\end{align*}
 	
@@ -917,7 +977,7 @@ Before we begin the proof of proposition \ref{prop:ssd_full_model} let us change
 	\end{align*}
 \end{proof}
 
-Looking at the expected value of SSD for both models we see that expected SSD for full model is only explained by variance of the error terms, whereas no-intercept model's SSD also depends on the value of true intercept. Therefore for small values of intercept no-intercept model performs better in terms of sum of squared deviations of fitted values from true values.
+Looking at the expected value of SSD for both models we see that expected SSD for full model is only explained by variance of the error terms, whereas no-intercept model's SSD also depends on the value of true intercept. Therefore for small values of intercept no-intercept model is expected to perform better in terms of sum of squared deviations of fitted values from true values.
 
 
 \clearpage
@@ -947,7 +1007,22 @@ Looking at the expected value of SSD for both models we see that expected SSD fo
 	
 	\appendix
 	
-	\chapter{Program Codes}
+	\chapter{Appendix}
+	
+	\section{Miscellaneous calculations}
+	
+	\begin{proposition}  $\Cov (\bar{y}, \hat{\beta_1})=0$ \label{appendix:covariance_y_bar_beta_hat}
+	\end{proposition}
+	
+	\begin{proof}
+		\begin{align*}
+			\Cov (\bar{y}, \hat{\beta_1}) &= \Cov (\frac{1}{n}\sum_i y_i, \frac{\sum_j (x_j - \bar{x})y_j}{\sum (x - \bar{x})^2})\\
+			&= \frac{1}{n} \sum_i \sum_j \frac{x_j-\bar{x}}{\sum_i(x_i - \bar{x})^2} \Cov (y_j , y_i) \\
+			&= \frac{1}{n} \sum_i \frac{(x_i - \bar{x})}{\sum_i (x_i-\bar{x})^2}\sigma^2 \\
+			&= 0
+			\intertext{since $\sum(x_i - \bar{x})=0$}
+		\end{align*}
+	\end{proof}
 	
 	\section{linear\_regression.py module}
 	

@@ -1,5 +1,15 @@
 \begin{thebibliography}{1}
 
+\bibitem{akaike1974new}
+Hirotugu Akaike.
+\newblock A new look at the statistical model identification.
+\newblock {\em IEEE transactions on automatic control}, 19(6):716--723, 1974.
+
+\bibitem{burnham2004multimodel}
+Kenneth~P Burnham and David~R Anderson.
+\newblock Multimodel inference: understanding aic and bic in model selection.
+\newblock {\em Sociological methods \& research}, 33(2):261--304, 2004.
+
 \bibitem{eisenhauer2003regression}
 Joseph~G Eisenhauer.
 \newblock Regression through the origin.
@@ -26,5 +36,10 @@ Fumio Hayashi.
 John Neter, William Wasserman, and Michael~H Kutner.
 \newblock {\em Applied linear regression models}.
 \newblock Richard D. Irwin, 1983.
+
+\bibitem{schwarz1978estimating}
+Gideon Schwarz.
+\newblock Estimating the dimension of a model.
+\newblock {\em The annals of statistics}, pages 461--464, 1978.
 
 \end{thebibliography}

@@ -14,13 +14,23 @@ def linear_regression(x, y, intercept=True):
 
 def bayesian_information_criterion(y, y_fit, n , sigma, k):
     """
-    BIC 
+    BIC calculation for OLS
     """
     max_log_likelihood = (
         -n/2 * np.log(2 * np.pi * sigma**2)-np.sum((y+y_fit)**2)/sigma**2
         )
     BIC = k*np.log(n)-2*max_log_likelihood
     return BIC
+
+def akaike_information_criterion(y, y_fit, n , sigma, k):
+    """
+    AIC calculation for OLS
+    """
+    max_log_likelihood = (
+            -n/2 * np.log(2 * np.pi * sigma**2)-np.sum((y+y_fit)**2)/sigma**2
+            )
+    AIC = -2*max_log_likelihood+2*k
+    return AIC
 
 def SSD(y, y_fit):
     """
