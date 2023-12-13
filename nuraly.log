@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.11.7)  13 DEC 2023 13:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.11.7)  13 DEC 2023 15:21
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1534,9 +1534,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-8.31995pt}.
 
 [15]
-Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 752.
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 20.31995pt, for example:
@@ -1556,21 +1553,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [17]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 802.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 809.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 802.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 809.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 802.
-<./figures/simulation.png, id=312, 371.3875pt x 249.93375pt>
-File: ./figures/simulation.png Graphic file (type png)
-<use ./figures/simulation.png>
-Package pdftex.def Info: ./figures/simulation.png  used on input line 835.
-(pdftex.def)             Requested size: 209.12683pt x 140.73993pt.
-<./figures/threemodels.png, id=314, 381.425pt x 248.93pt>
-File: ./figures/threemodels.png Graphic file (type png)
-<use ./figures/threemodels.png>
-Package pdftex.def Info: ./figures/threemodels.png  used on input line 841.
-(pdftex.def)             Requested size: 209.12683pt x 136.4827pt.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 809.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1581,16 +1568,35 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-8.31995pt}.
 
 [18]
+<./figures/simulation.png, id=321, 371.3875pt x 249.93375pt>
+File: ./figures/simulation.png Graphic file (type png)
+<use ./figures/simulation.png>
+Package pdftex.def Info: ./figures/simulation.png  used on input line 842.
+(pdftex.def)             Requested size: 209.12683pt x 140.73993pt.
+<./figures/threemodels.png, id=323, 381.425pt x 248.93pt>
+File: ./figures/threemodels.png Graphic file (type png)
+<use ./figures/threemodels.png>
+Package pdftex.def Info: ./figures/threemodels.png  used on input line 848.
+(pdftex.def)             Requested size: 209.12683pt x 136.4827pt.
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 8
-49.
+56.
  (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
-<./figures/delta_ssd_to_intercept.png, id=324, 387.4475pt x 266.9975pt>
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 20.31995pt, for example:
+(fancyhdr)                \setlength{\headheight}{20.31995pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-8.31995pt}.
+
+[19 <./figures/simulation.png> <./figures/threemodels.png>]
+<./figures/delta_ssd_to_intercept.png, id=334, 387.4475pt x 266.9975pt>
 File: ./figures/delta_ssd_to_intercept.png Graphic file (type png)
 <use ./figures/delta_ssd_to_intercept.png>
 Package pdftex.def Info: ./figures/delta_ssd_to_intercept.png  used on input li
-ne 868.
+ne 875.
 (pdftex.def)             Requested size: 418.25368pt x 288.23076pt.
 
 
@@ -1601,20 +1607,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-8.31995pt}.
 
-[19 <./figures/simulation.png> <./figures/threemodels.png>]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 20.31995pt, for example:
-(fancyhdr)                \setlength{\headheight}{20.31995pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-8.31995pt}.
-
 [20 <./figures/delta_ssd_to_intercept.png>]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 926.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 933.
 
-Overfull \hbox (71.32695pt too wide) detected at line 926
+Overfull \hbox (71.32695pt too wide) detected at line 933
 []
  []
 
@@ -1636,7 +1633,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-8.31995pt}.
 
 [22]
-Overfull \hbox (8.93375pt too wide) detected at line 977
+Overfull \hbox (8.93375pt too wide) detected at line 984
 []
  []
 
@@ -1686,11 +1683,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 Appendix A.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1031.
+(mdframed)              on input line 1041.
 \openout4 = `nuraly.pyg'.
 
 (_minted-nuraly/default.pygstyle)
-(_minted-nuraly/44EBAE15F5538792DF30D7AD7A25B07C717280B041151C472385934BA8735FB
+(_minted-nuraly/E88121640551EDFC781D6DA01851908C717280B041151C472385934BA8735FB
 E.pygtex
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10.95> not available
 (Font)              Font shape `T1/cmtt/m/n' tried instead on input line 3.
@@ -1706,13 +1703,22 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [27
 
 ]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 20.31995pt, for example:
+(fancyhdr)                \setlength{\headheight}{20.31995pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-8.31995pt}.
+
+[28]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1073.
+(mdframed)              on input line 1093.
 \openout4 = `nuraly.pyg'.
 
 
-(_minted-nuraly/469CE4CC09E730317FB4CBCA161CBC71717280B041151C472385934BA8735FB
+(_minted-nuraly/ACB63E01F8EB6FCC94E77CE248F513A2717280B041151C472385934BA8735FB
 E.pygtex
 LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 
 20.
@@ -1728,23 +1734,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-8.31995pt}.
 
-[28]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 20.31995pt, for example:
-(fancyhdr)                \setlength{\headheight}{20.31995pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-8.31995pt}.
-
 [29]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1117.
+(mdframed)              on input line 1136.
 \openout4 = `nuraly.pyg'.
 
 
-(_minted-nuraly/64E0B3EA36CD66BD018FCE8CA1DB3118717280B041151C472385934BA8735FB
+(_minted-nuraly/AE3C802B716A6A15423565798A8F1EC5717280B041151C472385934BA8735FB
 E.pygtex)
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1755,14 +1752,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-8.31995pt}.
 
 [30]
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 1166.
-\openout4 = `nuraly.pyg'.
-
-
-(_minted-nuraly/57ABDE90DF925496901DA5F5353FAA98717280B041151C472385934BA8735FB
-E.pygtex)
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 20.31995pt, for example:
@@ -1772,6 +1761,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-8.31995pt}.
 
 [31]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1231.
+\openout4 = `nuraly.pyg'.
+
+
+(_minted-nuraly/C266FCFA70AE591333EA91003A231C6A717280B041151C472385934BA8735FB
+E.pygtex)
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 20.31995pt, for example:
@@ -1780,7 +1777,34 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-8.31995pt}.
 
-[32] (nuraly.aux)
+[32]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 20.31995pt, for example:
+(fancyhdr)                \setlength{\headheight}{20.31995pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-8.31995pt}.
+
+[33]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 20.31995pt, for example:
+(fancyhdr)                \setlength{\headheight}{20.31995pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-8.31995pt}.
+
+[34]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 20.31995pt, for example:
+(fancyhdr)                \setlength{\headheight}{20.31995pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-8.31995pt}.
+
+[35] (nuraly.aux)
  ***********
 LaTeX2e <2023-11-01>
 L3 programming layer <2023-11-01>
@@ -1791,10 +1815,10 @@ runsystem(del nuraly.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 34270 strings out of 474592
- 708434 string characters out of 5745799
- 1951533 words of memory out of 5000000
- 55677 multiletter control sequences out of 15000+600000
+ 34208 strings out of 474592
+ 707059 string characters out of 5745799
+ 1950533 words of memory out of 5000000
+ 55613 multiletter control sequences out of 15000+600000
  664244 words of font info for 183 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,19n,93p,1080b,1134s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1816,9 +1840,9 @@ mb8a.pfb><C:/Users/nural/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/ut
 mr8a.pfb><C:/Users/nural/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/ut
 mr8a.pfb><C:/Users/nural/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/ut
 mri8a.pfb>
-Output written on nuraly.pdf (37 pages, 352106 bytes).
+Output written on nuraly.pdf (40 pages, 361707 bytes).
 PDF statistics:
- 632 PDF objects out of 1000 (max. 8388607)
- 123 named destinations out of 1000 (max. 500000)
+ 656 PDF objects out of 1000 (max. 8388607)
+ 125 named destinations out of 1000 (max. 500000)
  215 words of extra memory for PDF output out of 10000 (max. 10000000)
 

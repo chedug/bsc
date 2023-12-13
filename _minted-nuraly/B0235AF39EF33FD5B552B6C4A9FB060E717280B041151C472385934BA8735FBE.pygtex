@@ -1,5 +1,7 @@
 \begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
 \PYG{n}{delta\PYGZus{}SSD} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{zeros}\PYG{p}{(}\PYG{l+m+mi}{1000}\PYG{p}{)}
+\PYG{n}{delta\PYGZus{}AIC} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{zeros}\PYG{p}{(}\PYG{l+m+mi}{1000}\PYG{p}{)}
+\PYG{n}{delta\PYGZus{}BIC} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{zeros}\PYG{p}{(}\PYG{l+m+mi}{1000}\PYG{p}{)}
 \PYG{n}{alphas} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{zeros}\PYG{p}{(}\PYG{l+m+mi}{1000}\PYG{p}{)}
 
 \PYG{n}{np}\PYG{o}{.}\PYG{n}{random}\PYG{o}{.}\PYG{n}{seed}\PYG{p}{(}\PYG{l+m+mi}{42}\PYG{p}{)}
@@ -7,6 +9,10 @@
 \PYG{k}{for} \PYG{n}{increment} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{1000}\PYG{p}{):}
 \PYG{n}{SS\PYGZus{}dev\PYGZus{}intercept\PYGZus{}mean} \PYG{o}{=} \PYG{l+m+mi}{0}
 \PYG{n}{SS\PYGZus{}dev\PYGZus{}no\PYGZus{}intercept\PYGZus{}mean} \PYG{o}{=} \PYG{l+m+mi}{0}
+\PYG{n}{AIC\PYGZus{}intercept\PYGZus{}mean} \PYG{o}{=} \PYG{l+m+mi}{0}
+\PYG{n}{AIC\PYGZus{}no\PYGZus{}intercept\PYGZus{}mean} \PYG{o}{=} \PYG{l+m+mi}{0}
+\PYG{n}{BIC\PYGZus{}intercept\PYGZus{}mean} \PYG{o}{=} \PYG{l+m+mi}{0}
+\PYG{n}{BIC\PYGZus{}no\PYGZus{}intercept\PYGZus{}mean} \PYG{o}{=} \PYG{l+m+mi}{0}
 \PYG{n}{num\PYGZus{}samples} \PYG{o}{=} \PYG{l+m+mi}{100}
 \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{100}\PYG{p}{):}
 
@@ -28,8 +34,8 @@
 
 \PYG{n}{beta\PYGZus{}hat} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{sum}\PYG{p}{(}\PYG{n}{X}\PYG{o}{*}\PYG{n}{y}\PYG{p}{)}\PYG{o}{/}\PYG{n}{np}\PYG{o}{.}\PYG{n}{sum}\PYG{p}{(}\PYG{n}{X}\PYG{o}{**}\PYG{l+m+mi}{2}\PYG{p}{)}
 
-\PYG{c+c1}{\PYGZsh{} y\PYGZus{}hat = linear\PYGZus{}regression(X, y)}
-\PYG{c+c1}{\PYGZsh{} y\PYGZus{}hat\PYGZus{}hat = linear\PYGZus{}regression(X,y, False)}
+\PYG{c+c1}{\PYGZsh{} y\PYGZus{}hat = linear\PYGZus{}regression(X, y).flatten()  \PYGZsh{} intercept model response variable}
+\PYG{c+c1}{\PYGZsh{} y\PYGZus{}hat\PYGZus{}hat = linear\PYGZus{}regression(X, y, intercept=False).flatten()  \PYGZsh{} no\PYGZhy{}intercept response variable}
 
 \PYG{n}{y\PYGZus{}hat} \PYG{o}{=} \PYG{n}{beta\PYGZus{}1\PYGZus{}hat} \PYG{o}{*} \PYG{n}{X} \PYG{o}{+} \PYG{n}{beta\PYGZus{}0\PYGZus{}hat}  \PYG{c+c1}{\PYGZsh{} intercept model response variable}
 \PYG{n}{y\PYGZus{}hat\PYGZus{}hat} \PYG{o}{=} \PYG{n}{beta\PYGZus{}hat} \PYG{o}{*} \PYG{n}{X}  \PYG{c+c1}{\PYGZsh{} no\PYGZhy{}intercept response variable}
@@ -39,15 +45,35 @@
 \PYG{n}{SS\PYGZus{}dev\PYGZus{}intercept} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{sum}\PYG{p}{((}\PYG{n}{y\PYGZus{}true}\PYG{o}{\PYGZhy{}}\PYG{n}{y\PYGZus{}hat}\PYG{p}{)}\PYG{o}{**}\PYG{l+m+mi}{2}\PYG{p}{)}
 \PYG{n}{SS\PYGZus{}dev\PYGZus{}no\PYGZus{}intercept} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{sum}\PYG{p}{((}\PYG{n}{y\PYGZus{}true}\PYG{o}{\PYGZhy{}}\PYG{n}{y\PYGZus{}hat\PYGZus{}hat}\PYG{p}{)}\PYG{o}{**}\PYG{l+m+mi}{2}\PYG{p}{)}
 
+\PYG{n}{AIC\PYGZus{}intercept} \PYG{o}{=} \PYG{n}{akaike\PYGZus{}information\PYGZus{}criterion}\PYG{p}{(}\PYG{n}{y}\PYG{p}{,} \PYG{n}{y\PYGZus{}hat}\PYG{p}{,} \PYG{n}{num\PYGZus{}samples}\PYG{p}{,} \PYG{n}{sigma}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{)}
+\PYG{n}{AIC\PYGZus{}no\PYGZus{}intercept} \PYG{o}{=} \PYG{n}{akaike\PYGZus{}information\PYGZus{}criterion}\PYG{p}{(}\PYG{n}{y}\PYG{p}{,} \PYG{n}{y\PYGZus{}hat\PYGZus{}hat}\PYG{p}{,} \PYG{n}{num\PYGZus{}samples}\PYG{p}{,} \PYG{n}{sigma}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{)}
+
+\PYG{n}{BIC\PYGZus{}intercept} \PYG{o}{=} \PYG{n}{bayesian\PYGZus{}information\PYGZus{}criterion}\PYG{p}{(}\PYG{n}{y}\PYG{p}{,} \PYG{n}{y\PYGZus{}hat}\PYG{p}{,} \PYG{n}{num\PYGZus{}samples}\PYG{p}{,} \PYG{n}{sigma}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{)}
+\PYG{n}{BIC\PYGZus{}no\PYGZus{}intercept} \PYG{o}{=} \PYG{n}{bayesian\PYGZus{}information\PYGZus{}criterion}\PYG{p}{(}\PYG{n}{y}\PYG{p}{,} \PYG{n}{y\PYGZus{}hat\PYGZus{}hat}\PYG{p}{,} \PYG{n}{num\PYGZus{}samples}\PYG{p}{,} \PYG{n}{sigma}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{)}
+
+\PYG{n}{AIC\PYGZus{}intercept\PYGZus{}mean} \PYG{o}{+=} \PYG{n}{AIC\PYGZus{}intercept}
+\PYG{n}{AIC\PYGZus{}no\PYGZus{}intercept\PYGZus{}mean} \PYG{o}{+=} \PYG{n}{AIC\PYGZus{}no\PYGZus{}intercept}
+
+\PYG{n}{BIC\PYGZus{}intercept\PYGZus{}mean} \PYG{o}{+=} \PYG{n}{BIC\PYGZus{}intercept}
+\PYG{n}{BIC\PYGZus{}no\PYGZus{}intercept\PYGZus{}mean} \PYG{o}{+=} \PYG{n}{BIC\PYGZus{}no\PYGZus{}intercept}
+
 \PYG{n}{SS\PYGZus{}dev\PYGZus{}intercept\PYGZus{}mean} \PYG{o}{+=} \PYG{n}{SS\PYGZus{}dev\PYGZus{}intercept}
 \PYG{n}{SS\PYGZus{}dev\PYGZus{}no\PYGZus{}intercept\PYGZus{}mean} \PYG{o}{+=} \PYG{n}{SS\PYGZus{}dev\PYGZus{}no\PYGZus{}intercept}
 
-\PYG{n}{SS\PYGZus{}dev\PYGZus{}intercept\PYGZus{}mean} \PYG{o}{/=} \PYG{l+m+mi}{100}
-\PYG{n}{SS\PYGZus{}dev\PYGZus{}no\PYGZus{}intercept\PYGZus{}mean} \PYG{o}{/=} \PYG{l+m+mi}{100}
+\PYG{n}{SS\PYGZus{}dev\PYGZus{}intercept\PYGZus{}mean} \PYG{o}{/=} \PYG{n}{num\PYGZus{}samples}
+\PYG{n}{SS\PYGZus{}dev\PYGZus{}no\PYGZus{}intercept\PYGZus{}mean} \PYG{o}{/=} \PYG{n}{num\PYGZus{}samples}
+
+\PYG{n}{AIC\PYGZus{}intercept\PYGZus{}mean} \PYG{o}{/=} \PYG{n}{num\PYGZus{}samples}
+\PYG{n}{AIC\PYGZus{}no\PYGZus{}intercept\PYGZus{}mean} \PYG{o}{/=} \PYG{n}{num\PYGZus{}samples}
+
+\PYG{n}{BIC\PYGZus{}intercept\PYGZus{}mean} \PYG{o}{/=} \PYG{n}{num\PYGZus{}samples}
+\PYG{n}{BIC\PYGZus{}no\PYGZus{}intercept\PYGZus{}mean} \PYG{o}{/=} \PYG{n}{num\PYGZus{}samples}
 
 \PYG{n}{delta\PYGZus{}SSD}\PYG{p}{[}\PYG{n}{increment}\PYG{p}{]} \PYG{o}{=} \PYG{n}{SS\PYGZus{}dev\PYGZus{}no\PYGZus{}intercept\PYGZus{}mean} \PYG{o}{\PYGZhy{}} \PYG{n}{SS\PYGZus{}dev\PYGZus{}intercept\PYGZus{}mean}
+\PYG{n}{delta\PYGZus{}AIC}\PYG{p}{[}\PYG{n}{increment}\PYG{p}{]} \PYG{o}{=} \PYG{n}{AIC\PYGZus{}no\PYGZus{}intercept\PYGZus{}mean} \PYG{o}{\PYGZhy{}} \PYG{n}{AIC\PYGZus{}intercept\PYGZus{}mean}
+\PYG{n}{delta\PYGZus{}BIC}\PYG{p}{[}\PYG{n}{increment}\PYG{p}{]} \PYG{o}{=} \PYG{n}{BIC\PYGZus{}no\PYGZus{}intercept\PYGZus{}mean} \PYG{o}{\PYGZhy{}} \PYG{n}{BIC\PYGZus{}intercept\PYGZus{}mean}
 \PYG{n}{alphas}\PYG{p}{[}\PYG{n}{increment}\PYG{p}{]} \PYG{o}{=} \PYG{n}{beta\PYGZus{}0}
-	
+
 \PYG{n}{zeros} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{zeros\PYGZus{}like}\PYG{p}{(}\PYG{n}{alphas}\PYG{p}{)}
 
 \PYG{n}{plt}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}\PYG{n}{alphas}\PYG{p}{,} \PYG{n}{zeros}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}\PYGZhy{}\PYGZhy{}\PYGZsq{}}\PYG{p}{,} \PYG{n}{linewidth}\PYG{o}{=}\PYG{l+m+mf}{0.5}\PYG{p}{)}
@@ -56,5 +82,6 @@
 \PYG{n}{plt}\PYG{o}{.}\PYG{n}{xlabel}\PYG{p}{(}\PYG{l+s+sa}{r}\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}\PYGZbs{}beta\PYGZus{}0\PYGZdl{}\PYGZdq{}}\PYG{p}{)}
 \PYG{n}{plt}\PYG{o}{.}\PYG{n}{ylabel}\PYG{p}{(}\PYG{l+s+sa}{r}\PYG{l+s+s2}{\PYGZdq{}\PYGZdl{}\PYGZbs{}Delta SSD\PYGZdl{}\PYGZdq{}}\PYG{p}{)}
 \PYG{n}{plt}\PYG{o}{.}\PYG{n}{show}\PYG{p}{()}
+
 
 \end{Verbatim}

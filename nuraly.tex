@@ -749,7 +749,14 @@ The goal of this section is to compare two models given that the observed data i
 
 \subsubsection{Coefficient of Determination}
 
-	$R^2$ often used in statistics to \todo{do}
+	$R^2$ or a coefficient of determination is defined as $$R^2= 1 - \frac{SSE}{SST}$$
+	Is is often used to measure how well a model predicts an outcome. It is a proportion of variation in the dependent variable that is explained by independent variables.
+	
+	However, notion of SST and SSR for no-intercept model is different from the full model as defined in prop. \ref{prop:sst_equation}, since $\sum (\hat{y}_i-\bar{y})(y_i-\hat{y}_i)$ will generally take a non-zero value, so the proof of prop. \ref{prop:sst_equation} fails. It is often argued \cite{eisenhauer2003regression} that defining SST as the sum of squared deviations from the mean is inappropriate when the regression line passes through the origin, but does not necessarily pass through $(\bar{x}, \bar{y})$,  therefore equation in prop. \ref{prop:sst_equation} is replaced by:
+	
+	$$\underbrace{\sum_{i=1}^{n} y_i^2}_{SST} = \underbrace{\sum_{i=1}^{n} \hat{y}_i^2}_{SSR} + \underbrace{\sum_{i=1}^{n} (y_i - \hat{y}_i)^2}_{SSE}$$
+	
+	Considering the new definition of $SST$ for RTO, it now does not make much sense to use $R^2$ values of RTO and ordinary OLS linear regressions for model comparison. However it still important to mention this, because this measure is widely used and will result in erroneous inferences if one does not realize this subtle difference.
 
 \subsubsection{Akaike Information Criterion}
 
@@ -846,14 +853,14 @@ Let's start by generating a sample of 100 points, and assume that parameters are
 \end{figure}
 
 
-Now, let's fit two models: no-intercept model, and full model. For that purposes we will use LinearRegression function from \code{sklearn.linear\_model} package. On fig. \ref{fig:threemodels} you can see the two models as well as the true model plotted up close.
+Now, let's fit two models: no-intercept model, and full model. For that purposes we will use LinearRegression function from \code{sklearn.linear\_model} package. On fig. \ref{fig:threemodels} you can see the two models as well as the true model plotted up close (The code for plotting all of the plots can be found in appendix).
 
 \begin{table}
 	\centering
 	\begin{tabular}{lccc} 
 		& AIC & BIC & SSD \\
-		Intercept Model & 1100.70 & 1108.51 & 0.46305 \\
-		No Intercept Model & 1098.68 & 1103.89 & 0.46011 \\
+		Intercept Model & 1102.35 & 1110.16 & 0.46305 \\
+		No Intercept Model & 1100.24 & 1105.45 & 0.45767 \\
 	\end{tabular}
 	\caption{AIC, BIC, and SSD for Intercept and No Intercept Models.}
 	\label{tab:model_comparison}
@@ -989,7 +996,10 @@ Looking at the expected value of SSD for both models we see that expected SSD fo
 	
 	\section{Conclusion}
 	
-	In this thesis, we have compared several properties of RTO and OLS models, found variances of estimators of slope, created confidence interval for difference of two slope estimators, and found found average values of sum of squared deviations of fitted values from true values, showing that on average, for small intercept values, linear regression through the origin provides better fit.
+	In this thesis, we have compared several properties of RTO and OLS models, found variances of estimators of slope, created confidence interval for difference of two slope estimators, and found average values of sum of squared deviations of fitted values from true values, showing that on average, for small intercept values, linear regression through the origin provides better fit.
+	
+	Fitting RTO for the dataset that was generated from linear function that contained intercept term showed us that, although RTO provided biased estimators, for very small values of the intercept, bias of the RTO can be alleviated by its simplicity: full model has an estimate for intercept term which in turn increases the overall variability of the model, whereas no-intercept model lacks this estimate and makes it more precise, even though, in general, it is less accurate. 
+	
 	
 	
 	
@@ -1047,13 +1057,23 @@ return model.predict(x)
 
 def bayesian_information_criterion(y, y_fit, n , sigma, k):
 """
-BIC 
+BIC calculation for OLS
 """
 max_log_likelihood = (
--n/2 * np.log(2 * np.pi * sigma**2)-np.sum((y+y_fit)**2)/sigma**2
+-n/2 * np.log(2 * np.pi * sigma**2)-np.sum((y-y_fit)**2)/(2*sigma**2)
 )
 BIC = k*np.log(n)-2*max_log_likelihood
 return BIC
+
+def akaike_information_criterion(y, y_fit, n , sigma, k):
+"""
+AIC calculation for OLS
+"""
+max_log_likelihood = (
+-n/2 * np.log(2 * np.pi * sigma**2)-np.sum((y-y_fit)**2)/(2*sigma**2)
+)
+AIC = -2*max_log_likelihood+2*k
+return AIC
 
 def SSD(y, y_fit):
 """
@@ -1082,12 +1102,12 @@ num_samples = 100  # number of sample points
 #X = np.linspace(0, 1, num_samples) * 2 - 1
 X = np.random.rand(num_samples) * 2 - 1
 
+sigma = 0.5
 beta =  1 # true slope
-beta_0 = 0.05
-noise = np.random.normal(0, 0.5, num_samples)  # standard normal noise term
+beta_0 = 0.0005
+noise = np.random.normal(0, sigma, num_samples)  # standard normal noise term
 
 y = beta * X + noise + beta_0
-
 
 plt.plot(
 X, beta * X, color='red', 
@@ -1104,7 +1124,6 @@ plt.axvline(0, color='green', linewidth=1, linestyle='--')
 
 plt.title('')
 plt.show()
-	
 \end{minted}
 \end{mdframed}
 
@@ -1135,11 +1154,32 @@ plt.axhline(0, color='green', linewidth=1, linestyle='--')
 plt.axvline(0, color='green', linewidth=1, linestyle='--')
 
 
-plt.plot(X, beta_1_hat * X + beta_0_hat, color='blue', linewidth=0.5, label='with intercept')
-plt.plot(X, beta * X + beta_0, color='green', linewidth=0.5, label='true model')
+plt.plot(X, beta_1_hat * X + beta_0_hat, color='blue', 
+linewidth=0.5, label='with intercept')
+plt.plot(X, beta * X + beta_0, color='green',
+linewidth=0.5, label='true model')
 plt.plot(X, beta_hat * X, color='red', linewidth=0.5, label='no-intercept')
 
 plt.legend()
+
+# zoomed plot
+
+plt.scatter(X, y, color='white', edgecolor='black', marker='o')
+
+plt.axhline(0, color='green', linewidth=1, linestyle='--')
+plt.axvline(0, color='green', linewidth=1, linestyle='--')
+
+plt.plot(X, beta_1_hat * X + beta_0_hat,
+color='blue', linewidth=0.5, label='with intercept')
+plt.plot(X, beta * X + beta_0,
+color='green', linewidth=0.5, label='true model')
+plt.plot(X, beta_hat * X, color='red', linewidth=0.5, label='no-intercept')
+
+plt.legend()
+
+plt.xlim(-0.5, 0.5) 
+plt.ylim(-0.5, 0.5)  
+
 
 y_hat = beta_1_hat * X + beta_0_hat  # intercept model response variable
 y_hat_hat = beta_hat * X  # no-intercept response variable
@@ -1147,9 +1187,34 @@ y_hat_hat = beta_hat * X  # no-intercept response variable
 
 y = beta * X + beta_0
 
+from linear_regression import (bayesian_information_criterion,
+akaike_information_criterion)
+
+y = y.flatten()
+X = X.flatten()
+Y_pred = Y_pred.flatten()
+Y = Y_pred_no = Y_pred_no.flatten()
+
+BIC = bayesian_information_criterion(y, Y_pred, 
+num_samples, sigma, 3)
+BIC_no = bayesian_information_criterion(y, Y_pred_no, 
+num_samples, sigma, 2)
+
+AIC = akaike_information_criterion(y, Y_pred,
+ num_samples, sigma, 3)
+AIC_no = akaike_information_criterion(y, Y_pred_no, 
+num_samples, sigma, 2)
+
+print(f"BIC of intercept model is {BIC: >22}")
+print(f"BIC of no-intercept model is {BIC_no: >19}")
+print(f"AIC of intercept model is {AIC: >22}")
+print(f"AIC of no-intercept model is {AIC_no: >19}")
+
 SS_dev_intercept = np.sum((y-y_hat)**2)
 SS_dev_no_intercept = np.sum((y-y_hat_hat)**2)
 
+print(f"SSD of intercept model: {SS_dev_intercept}")
+print(f"SSD of no-intercept model: {SS_dev_no_intercept}")
 
 	\end{minted}
 \end{mdframed}
@@ -1166,6 +1231,8 @@ SS_dev_no_intercept = np.sum((y-y_hat_hat)**2)
 	leftline=false, rightline=false, backgroundcolor=yellow!20!white]
 	\begin{minted}[mathescape, linenos, fontsize=\small]{python}
 delta_SSD = np.zeros(1000)
+delta_AIC = np.zeros(1000)
+delta_BIC = np.zeros(1000)
 alphas = np.zeros(1000)
 
 np.random.seed(42)
@@ -1173,6 +1240,10 @@ np.random.seed(42)
 for increment in range(1000):
 SS_dev_intercept_mean = 0
 SS_dev_no_intercept_mean = 0
+AIC_intercept_mean = 0
+AIC_no_intercept_mean = 0
+BIC_intercept_mean = 0
+BIC_no_intercept_mean = 0
 num_samples = 100 
 for i in range(100):
 
@@ -1194,9 +1265,6 @@ beta_0_hat = mean_y - beta_1_hat * mean_x
 
 beta_hat = np.sum(X*y)/np.sum(X**2)
 
-# y_hat = linear_regression(X, y)
-# y_hat_hat = linear_regression(X,y, False)
-
 y_hat = beta_1_hat * X + beta_0_hat  # intercept model response variable
 y_hat_hat = beta_hat * X  # no-intercept response variable
 
@@ -1205,15 +1273,39 @@ y_true = beta * X + beta_0
 SS_dev_intercept = np.sum((y_true-y_hat)**2)
 SS_dev_no_intercept = np.sum((y_true-y_hat_hat)**2)
 
+AIC_intercept = akaike_information_criterion(y, y_hat,
+num_samples, sigma, 3)
+AIC_no_intercept = akaike_information_criterion(y, y_hat_hat,
+num_samples, sigma, 2)
+
+BIC_intercept = bayesian_information_criterion(y, y_hat,
+num_samples, sigma, 3)
+BIC_no_intercept = bayesian_information_criterion(y, y_hat_hat,
+num_samples, sigma, 2)
+
+AIC_intercept_mean += AIC_intercept
+AIC_no_intercept_mean += AIC_no_intercept
+
+BIC_intercept_mean += BIC_intercept
+BIC_no_intercept_mean += BIC_no_intercept
+
 SS_dev_intercept_mean += SS_dev_intercept
 SS_dev_no_intercept_mean += SS_dev_no_intercept
 
-SS_dev_intercept_mean /= 100
-SS_dev_no_intercept_mean /= 100
+SS_dev_intercept_mean /= num_samples
+SS_dev_no_intercept_mean /= num_samples
+
+AIC_intercept_mean /= num_samples
+AIC_no_intercept_mean /= num_samples
+
+BIC_intercept_mean /= num_samples
+BIC_no_intercept_mean /= num_samples
 
 delta_SSD[increment] = SS_dev_no_intercept_mean - SS_dev_intercept_mean
+delta_AIC[increment] = AIC_no_intercept_mean - AIC_intercept_mean
+delta_BIC[increment] = BIC_no_intercept_mean - BIC_intercept_mean
 alphas[increment] = beta_0
-	
+
 zeros = np.zeros_like(alphas)
 
 plt.plot(alphas, zeros, '--', linewidth=0.5)
@@ -1222,6 +1314,7 @@ plt.plot(alphas, delta_SSD, color='blue', linewidth=0.5)
 plt.xlabel(r"$\beta_0$")
 plt.ylabel(r"$\Delta SSD$")
 plt.show()
+
 
 		\end{minted}
 \end{mdframed}

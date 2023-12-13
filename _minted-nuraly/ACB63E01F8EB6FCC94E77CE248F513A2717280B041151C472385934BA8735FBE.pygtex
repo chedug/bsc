@@ -9,12 +9,12 @@
 \PYG{c+c1}{\PYGZsh{}X = np.linspace(0, 1, num\PYGZus{}samples) * 2 \PYGZhy{} 1}
 \PYG{n}{X} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{random}\PYG{o}{.}\PYG{n}{rand}\PYG{p}{(}\PYG{n}{num\PYGZus{}samples}\PYG{p}{)} \PYG{o}{*} \PYG{l+m+mi}{2} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}
 
+\PYG{n}{sigma} \PYG{o}{=} \PYG{l+m+mf}{0.5}
 \PYG{n}{beta} \PYG{o}{=}  \PYG{l+m+mi}{1} \PYG{c+c1}{\PYGZsh{} true slope}
-\PYG{n}{beta\PYGZus{}0} \PYG{o}{=} \PYG{l+m+mf}{0.05}
-\PYG{n}{noise} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{random}\PYG{o}{.}\PYG{n}{normal}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mf}{0.5}\PYG{p}{,} \PYG{n}{num\PYGZus{}samples}\PYG{p}{)}  \PYG{c+c1}{\PYGZsh{} standard normal noise term}
+\PYG{n}{beta\PYGZus{}0} \PYG{o}{=} \PYG{l+m+mf}{0.0005}
+\PYG{n}{noise} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{random}\PYG{o}{.}\PYG{n}{normal}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{sigma}\PYG{p}{,} \PYG{n}{num\PYGZus{}samples}\PYG{p}{)}  \PYG{c+c1}{\PYGZsh{} standard normal noise term}
 
 \PYG{n}{y} \PYG{o}{=} \PYG{n}{beta} \PYG{o}{*} \PYG{n}{X} \PYG{o}{+} \PYG{n}{noise} \PYG{o}{+} \PYG{n}{beta\PYGZus{}0}
-
 
 \PYG{n}{plt}\PYG{o}{.}\PYG{n}{plot}\PYG{p}{(}
 \PYG{n}{X}\PYG{p}{,} \PYG{n}{beta} \PYG{o}{*} \PYG{n}{X}\PYG{p}{,} \PYG{n}{color}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}red\PYGZsq{}}\PYG{p}{,}
@@ -31,5 +31,4 @@
 
 \PYG{n}{plt}\PYG{o}{.}\PYG{n}{title}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}}\PYG{p}{)}
 \PYG{n}{plt}\PYG{o}{.}\PYG{n}{show}\PYG{p}{()}
-	
 \end{Verbatim}
