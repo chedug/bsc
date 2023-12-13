@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.11.7)  13 DEC 2023 15:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10.12) (preloaded format=pdflatex 2023.11.7)  13 DEC 2023 15:54
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1373,8 +1373,8 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.234 	G
-        ordon \cite{gordon1981errors} has also contributed to the dispute of...
+l.233 	G
+        ordon \cite{gordon1981errors} has also contributed to the dispute ov...
 [1
 
 
@@ -1390,7 +1390,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [2]
  2.
 
-Overfull \hbox (0.1541pt too wide) in paragraph at lines 278--279
+Overfull \hbox (0.1541pt too wide) in paragraph at lines 274--275
 \T1/ptm/m/n/12 tor for the pa-ram-e-ter $\OML/ztmcm/m/it/12 ^^R$ \T1/ptm/m/n/12
  is any mea-sur-able func-tion of the ran-dom vari-ables $\OML/ztmcm/m/it/12 X[
 ]; X[]; [] ; X[]$\T1/ptm/m/n/12 . 
@@ -1418,7 +1418,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [4]
  3.
 
-Overfull \hbox (39.29962pt too wide) in paragraph at lines 304--305
+Overfull \hbox (39.29962pt too wide) in paragraph at lines 313--314
 []\T1/ptm/m/n/12 In Sim-ple Lin-ear Re-gres-sion, we are given a ran-dom sam-pl
 e of data points $\OT1/ztmcm/m/n/12 (\OML/ztmcm/m/it/12 x[]; y[]\OT1/ztmcm/m/n/
 12 )\OML/ztmcm/m/it/12 ; :::; \OT1/ztmcm/m/n/12 (\OML/ztmcm/m/it/12 x[]; y[]\OT
@@ -1521,7 +1521,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-8.31995pt}.
 
 [14]
-Overfull \hbox (68.6329pt too wide) detected at line 720
+Overfull \hbox (68.6329pt too wide) detected at line 729
 []
  []
 
@@ -1553,11 +1553,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [17]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 809.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 818.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 809.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 818.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 809.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 818.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1571,15 +1571,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 <./figures/simulation.png, id=321, 371.3875pt x 249.93375pt>
 File: ./figures/simulation.png Graphic file (type png)
 <use ./figures/simulation.png>
-Package pdftex.def Info: ./figures/simulation.png  used on input line 842.
+Package pdftex.def Info: ./figures/simulation.png  used on input line 851.
 (pdftex.def)             Requested size: 209.12683pt x 140.73993pt.
 <./figures/threemodels.png, id=323, 381.425pt x 248.93pt>
 File: ./figures/threemodels.png Graphic file (type png)
 <use ./figures/threemodels.png>
-Package pdftex.def Info: ./figures/threemodels.png  used on input line 848.
+Package pdftex.def Info: ./figures/threemodels.png  used on input line 857.
 (pdftex.def)             Requested size: 209.12683pt x 136.4827pt.
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 8
-56.
+65.
  (C:\Users\nural\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
@@ -1596,7 +1596,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 File: ./figures/delta_ssd_to_intercept.png Graphic file (type png)
 <use ./figures/delta_ssd_to_intercept.png>
 Package pdftex.def Info: ./figures/delta_ssd_to_intercept.png  used on input li
-ne 875.
+ne 884.
 (pdftex.def)             Requested size: 418.25368pt x 288.23076pt.
 
 
@@ -1609,9 +1609,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [20 <./figures/delta_ssd_to_intercept.png>]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 933.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 942.
 
-Overfull \hbox (71.32695pt too wide) detected at line 933
+Overfull \hbox (71.32695pt too wide) detected at line 942
 []
  []
 
@@ -1633,7 +1633,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-8.31995pt}.
 
 [22]
-Overfull \hbox (8.93375pt too wide) detected at line 984
+Overfull \hbox (8.93375pt too wide) detected at line 993
 []
  []
 
@@ -1683,7 +1683,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 Appendix A.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1041.
+(mdframed)              on input line 1051.
 \openout4 = `nuraly.pyg'.
 
 (_minted-nuraly/default.pygstyle)
@@ -1714,7 +1714,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [28]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1093.
+(mdframed)              on input line 1103.
 \openout4 = `nuraly.pyg'.
 
 
@@ -1737,7 +1737,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [29]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1136.
+(mdframed)              on input line 1146.
 \openout4 = `nuraly.pyg'.
 
 
@@ -1763,7 +1763,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [31]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1231.
+(mdframed)              on input line 1241.
 \openout4 = `nuraly.pyg'.
 
 
@@ -1810,7 +1810,7 @@ LaTeX2e <2023-11-01>
 L3 programming layer <2023-11-01>
  ***********
 Package rerunfilecheck Info: File `nuraly.out' has not changed.
-(rerunfilecheck)             Checksum: A2C7F6FDEC870FBAD8D310FA21369787;3208.
+(rerunfilecheck)             Checksum: 0C7E854D54DB9B33EEB0F28033383D2F;3208.
 runsystem(del nuraly.pyg)...executed.
 
  ) 
@@ -1821,7 +1821,7 @@ Here is how much of TeX's memory you used:
  55613 multiletter control sequences out of 15000+600000
  664244 words of font info for 183 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,19n,93p,1080b,1134s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,19n,93p,1089b,1134s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\nural\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tctt
 1095.pk> <C:\Users\nural\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
 0\ecit1095.pk> <C:\Users\nural\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
@@ -1840,7 +1840,7 @@ mb8a.pfb><C:/Users/nural/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/ut
 mr8a.pfb><C:/Users/nural/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/ut
 mr8a.pfb><C:/Users/nural/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/ut
 mri8a.pfb>
-Output written on nuraly.pdf (40 pages, 361707 bytes).
+Output written on nuraly.pdf (40 pages, 363174 bytes).
 PDF statistics:
  656 PDF objects out of 1000 (max. 8388607)
  125 named destinations out of 1000 (max. 500000)

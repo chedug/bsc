@@ -223,37 +223,33 @@
 	\titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter.\hsp}{0pt}{\Huge\bfseries} 
 	  
 	\chapter{Introduction}
-	
-	
+			
 	\section{Background}
-	In the world of regression analysis, choosing the right model is a constant challenge, balancing simplicity and accuracy. This thesis focuses on a specific aspect—linear regression through the origin (RTO) —examining its statistical properties when dealing with just one explanatory variable. Our goal is to identify situations where this approach might be more suitable than the commonly used simple linear regression. Through this study, we aim to shed light on the conditions that make regression through the origin a preferable choice, offering insights that bridge mathematical rigor with real-world applicability. Join us on this journey as we navigate the complexities of statistical modeling, striving to understand when and why regression through the origin might outperform its more conventional counterpart.
-	\section{Literature review}
-
-	Gerald J. Hahn \cite{hahn1977fitting} published an article on fitting models with no intercept term. In their paper, they focused on appropriateness of no-intercept linear regression model in different scenarios. For example, while physical nature of sample data might advocate for the use of no-intercept model, it would often happen that true nature of the data is not linear, and extrapolation of the data to the region that falls outside of the range of the sample makes it clear that other models should be used. They also provide a procedure for checking the significance of the intercept: one must fit the intercept model and then construct a confidence interval that contains true intercept, and then check, whether 0 is included in the interval. If it is included, then there is no evidence that the intercept model provides significantly better fit to the data than no intercept model. Hahn also raised an issue that was related the coefficient of determination that was erroneously computed in popular computing packages of that time.
+	In the world of regression analysis, choosing the right model is a constant challenge, balancing simplicity and accuracy. This thesis focuses on a specific aspect—linear regression through the origin (RTO)—examining its statistical properties when dealing with just one explanatory variable. Our goal is to identify situations where this approach might be more suitable than the commonly used simple linear regression. Through this study, we aim to shed light on the conditions that make regression through the origin a preferable choice, offering insights that bridge mathematical rigor with real-world applicability. Join us on this journey as we navigate the complexities of statistical modeling, striving to understand when and why regression through the origin might outperform its more conventional counterpart.
 	
-	Gordon \cite{gordon1981errors} has also contributed to the dispute of computation of $R^2$ and suggested that this parameter has to be computed for both models by the same formula 
+	\section{Literature Review}
+	Gerald J. Hahn \cite{hahn1977fitting} published an article on fitting models with no intercept term. In their paper, they focused on the appropriateness of the no-intercept linear regression model in different scenarios. For example, while the physical nature of sample data might advocate for the use of a no-intercept model, it often happens that the true nature of the data is not linear. Extrapolation of the data to the region that falls outside the range of the sample makes it clear that other models should be used. They also provide a procedure for checking the significance of the intercept: one must fit the intercept model and then construct a confidence interval that contains the true intercept, and then check whether 0 is included in the interval. If it is included, then there is no evidence that the intercept model provides a significantly better fit to the data than the no-intercept model. Hahn also raised an issue related to the coefficient of determination that was erroneously computed in popular computing packages of that time.
+	
+	Gordon \cite{gordon1981errors} has also contributed to the dispute over the computation of $R^2$ and suggested that this parameter has to be computed for both models using the same formula
 	
 	\begin{equation} \label{eq:coefficient_of_determination}
 		R^2 = 1 - \frac{\sum_i \epsilon_i ^2}{\sum_i (y_i-\bar{y})^2}
 	\end{equation}
-
 	
-	However, as Eisenhauer \cite{eisenhauer2003regression} noted, the equation \ref{eq:coefficient_of_determination} might be inconsistent for no-intercept model and provide uninterpretable negative result, so a different formula for no-intercept model is commonly used, 
+	However, as Eisenhauer \cite{eisenhauer2003regression} noted, the equation \ref{eq:coefficient_of_determination} might be inconsistent for the no-intercept model and provide an uninterpretable negative result. So, a different formula for the no-intercept model is commonly used:
+	
 	\begin{equation}
 		R^2 = \frac{\sum \hat{y_i}^2}{\sum y_i^2}
 	\end{equation}
 	
-	This new formula becomes not consistent with the prior one, thus  $R^2$ calculated for intercept and no-intercept models are incomparable. 
+	This new formula is not consistent with the prior one; thus, $R^2$ calculated for intercept and no-intercept models are incomparable.
 	
-	
-	
-	\section{Research question}
-	
-	The main goal of this paper is to familiarize reader with linear regression through the origin, derive properties of its estimators, and determine when RTO might be a better model than linear regression with intercept.
+	\section{Research Question}
+	The main goal of this paper is to familiarize the reader with linear regression through the origin, derive properties of its estimators, compare RTO with the full linear regression model with an intercept, and determine when RTO might outperform the full OLS model.
 	
 	\section{Outline}
-
-		
+	We will start with a recap of some statistical notions that are fundamental to the topic of discussion. Then, we will go through the necessary conditions of OLS regression and connect the notion of least squares with maximum likelihood. After that, we will derive properties of linear regression for both intercept and no-intercept models, and lastly, provide an example of the case when the no-intercept model is better than the full model and try to explain why.
+	
 	\chapter{Preliminaries}
 
 
@@ -291,6 +287,19 @@ when $\theta$ is the true parameter.
 
 
 We will call estimator $\hat{\theta}$ a Maximum Likelihood Estimator of $\theta$ if it maximizes \ref{eq:likelihood}. One common approach to find this estimator is to take partial derivative with respect to $\theta$ of log-likelihood function $l(\theta)=\log L(\theta)$. Since logarithm is a monotonically increasing function, the maximum of $l(\theta)$ will be the same as maximum of $L(\theta)$
+
+
+\textbf{Remark:} For the sake of convenience, the summation operator and summands will frequently be expressed without an explicit index. The index will only be specified when its omission might cause confusion.
+
+For example:
+\[
+	\sum (x-\bar{x}) 
+\]
+Is equivalent to:
+
+\[
+	\sum_{i=1} (x_i-\bar{x})
+\]
 
 
 
@@ -428,7 +437,7 @@ By taking partial derivatives with respect to our parameters, we can find that e
 	
 
 % Text
-Let the solutions of the above equations be denoted as $\hat{\beta}_0$, $\hat{\beta}_1$, $\hat{\sigma}^2$ for $\beta_0$, $\beta_1$, $\sigma^2$. If $\hat{y}_i = \hat{\beta}_0 + \hat{\beta}_1 x_i$, then...
+Let the solutions of the above equations be denoted as $\hat{\beta}_0$, $\hat{\beta}_1$, $\hat{\sigma}^2$ for $\beta_0$, $\beta_1$, $\sigma^2$. If $\hat{y}_i = \hat{\beta}_0 + \hat{\beta}_1 x_i$ and $S_{xx}= \sum (x-\bar{x})^2, S_{xy}=\sum (x-\bar{x})y$, then...
 
 % Equations
 \begin{align}
@@ -566,7 +575,7 @@ Finally,
 \end{proof}
 
 \begin{proposition}
-	$\Var [\hat{\beta_0}]= \frac{\sigma^2 S_{xx}^o}{n S_{xx}} $
+	$\Var [\hat{\beta_0}]= \frac{\sigma^2 S_{xx}^o}{n S_{xx}} $, where $S_{xx}^o=\sum x^2$
 \end{proposition}
 
 
@@ -996,10 +1005,11 @@ Looking at the expected value of SSD for both models we see that expected SSD fo
 	
 	\section{Conclusion}
 	
-	In this thesis, we have compared several properties of RTO and OLS models, found variances of estimators of slope, created confidence interval for difference of two slope estimators, and found average values of sum of squared deviations of fitted values from true values, showing that on average, for small intercept values, linear regression through the origin provides better fit.
-	
-	Fitting RTO for the dataset that was generated from linear function that contained intercept term showed us that, although RTO provided biased estimators, for very small values of the intercept, bias of the RTO can be alleviated by its simplicity: full model has an estimate for intercept term which in turn increases the overall variability of the model, whereas no-intercept model lacks this estimate and makes it more precise, even though, in general, it is less accurate. 
-	
+In this thesis, we have conducted a comparative analysis of several properties between RTO and OLS models. We explored the variances of estimators of the slope, created a confidence interval for the difference of two slope estimators, and determined the average values of the sum of squared deviations of fitted values from true values. Our findings indicate that, on average, for small intercept values, linear regression through the origin provides a better fit.
+
+When we augment the normal OLS assumptions with the additional assumption that the true intercept term is zero, we can confidently assert that RTO is a valid choice between the two models. This is because RTO is unbiased and provides a smaller variance.
+
+Fitting RTO to a dataset generated from a linear function that includes an intercept term revealed that, although RTO produced biased estimators, the bias for very small intercept values can be mitigated by its simplicity. The full model includes an estimate for the intercept term, increasing the overall variability of the model. On the other hand, the no-intercept model lacks this estimate, resulting in a more precise model, even though it is generally less accurate.
 	
 	
 	
