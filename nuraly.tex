@@ -373,7 +373,7 @@ From this assumption it follows that:
 \end{equation}
 
 \begin{proof}
-	From law of total expectation it also follows that $\E (\epsilon_i ) = \E (\E (\epsilon_i | \mathbf{X}))=0$
+	From law of total expectation it follows that $\E (\epsilon_i ) = \E (\E (\epsilon_i | \mathbf{X}))=0$
 \end{proof}
 
 The cross moments are orthogonal to all observations:
@@ -391,11 +391,11 @@ The cross moments are orthogonal to all observations:
 
 Because the mean of error terms is zero, the orthogonality condition, implies that error terms have zero correlation with observations.
 
-\begin{assumption}[\textbf{no multicollinearity}]
-	Data vector $\mathbf{X}$ has no duplicates with probability 1.
+\begin{assumption}[\textbf{No collinearity}]
+	Vector $(x_1, x_2,...,x_n)$ is not collinear with constant $\mathbf{1}$ vector with probability 1
 \end{assumption}
 
-The more general variant of this assumption, in the case when we have classical linear regression with multiple regressors, the multicollinearity would mean that the rank of the $n \times K$ data matrix $\mathbf{X}$ is exactly $K$ with probability 1. In other words, columns of the data matrix have to be linearly independent with probability 1.
+The more general variant of this assumption, in the case when we have classical linear regression with multiple regressors, is no multicollinearity. No multicollinearity would mean that the rank of the $n \times K$ data matrix $\mathbf{X}$ is exactly $K$ with probability 1. In other words, columns of the data matrix have to be linearly independent with probability 1.
 
 \begin{assumption}[\textbf{homoskedasticity}]
 	$\E(\epsilon_i^2| \mathbf{X}) = \sigma^2 > 0 \quad (i=1,2,...,n)$
@@ -455,7 +455,7 @@ So $\hat{\beta}_0, \hat{\beta}_1$ are Maximum Likelikelihood Estimators of the m
 
 \begin{proof}
 	From equations \ref{eq:est_beta_0} and \ref{eq:est_beta_1} we can see that $y-\hat{y}$ is perpendicular to both $\mathbf{1}$ and $\mathbf{x}$, and we know that $\hat{y}=\hat{\beta_1}x+\hat{\beta_0}$, i.e. $\hat{y}$ lies in $\spn \{ \mathbf{1}, \mathbf{x} \}$.
-	Notice that $y-\hat{y}=\epsilon$, so since $\hat{y}$ is perpendicular to $\epsilon$, MLE from \ref{est:intercept} and \ref{est:slope} are indedd MSE estimators too.
+	Notice that $y-\hat{y}=\epsilon$, so since $\hat{y}$ is perpendicular to $\epsilon$, MLE from \ref{est:intercept} and \ref{est:slope} are indeed MSE estimators too.
 \end{proof}
 
 
@@ -524,6 +524,9 @@ Finally,
 
 \end{proof}
 
+Conventionally the terms $\sum_{i=1}^{n} (y_i - \bar{y})^2$, $\sum_{i=1}^{n} (\hat{y_i} - \bar{y})^2$, $\sum_{i=1}^{n} (y_i - \hat{y})^2$ are called Sum of Squares Total (SST),
+ Sum of Squares due to Regression (SSR), and Sum of Squares Error (SSE), respectively.
+
 
 % Proposition
 \textbf{Proposition 1.4.} The estimators $\hat{\beta}_0$, $\hat{\beta}_1$, $\frac{SSE}{n-2}$ are unbiased estimators of $\beta_0$, $\beta_1$, $\sigma^2$ respectively.
@@ -558,10 +561,36 @@ Finally,
 
 
 3. \textbf{Unbiasedness of $\frac{SSE}{n-2}$ as an estimator of $\sigma^2$:}
+
+Define matrix
 \[
-\mathbb{E}\left(\frac{SSE}{n-2}\right) = \frac{1}{n-2} (n - 2) \sigma^2 = \sigma^2
+U=
+\begin{bmatrix}
+	\frac{1}{\sqrt{n}} & \dots & \frac{1}{\sqrt{n}} \\
+	\frac{(x_1-\bar{x})}{\sqrt{S_{xx}}} & \dots & \frac{(x_n-\bar{x})}{\sqrt{S_{xx}}} \\
+	\vdots & \vdots & \vdots \\
+	\dots & \dots & \dots
+\end{bmatrix}
 \]
 
+Where all rows after the second one are deterministic such that U is orthogonal, then $UY=Z$, so that: 
+
+$Z_1 = \sqrt{n}\bar{Y}, \ Z_2 = \frac{S_{xy}}{ \sqrt{S_{xx} }} $, \ and \ $Z_j \sim N(0,\sigma^2) \quad (j=3,...,n)$
+
+Let $\sum_i Z_i^2 = \sum_i Y_i^2$. Notice that we can do this, since choice of U was arbitrary up to the orthogonality of the matrix. Then:
+
+\begin{align*}
+	\sum y^2 &= \sum (y-\bar{y})^2 + n \bar{y} \\
+	&= \sum (\hat{y}-\bar{y})^2 + \sum (y-\hat{y})^2+ n \bar{y}^2 \\
+	&= \sum (\hat{\beta_0}+\beta_1 x-\hat{\beta_0}-\hat{\beta_1}\bar{x})^2 + \sum (y-\hat{y})^2+ n \bar{y}^2 \\
+	&= \sum (\hat{\beta_1} x-\hat{\beta_1}\bar{x})^2 + \sum (y-\hat{y})^2+ n \bar{y}^2 \\
+	&= \hat{\beta_1}^2 \sum ( x-\bar{x})^2 + \sum (y-\hat{y})^2+ n \bar{y}^2 \\
+	&= \frac{S_{xy}^2}{S_{xx}}+n \bar{y}2 + \sum (y-hat{y})^2
+\end{align*}
+
+Since $\sum y^2 \sim \sigma^2 \chi (n)$, it follows that $\sum (y-\bar{y})^2 \sim \sigma^2 \chi (n-2) $
+
+Hence, $\E [\frac{SSE}{n-2}]= \frac{\sigma^2 (n-2)}{n-2} = \sigma^2 $
 
 \begin{proposition}
 	$\mathbb{V}ar[\hat{\beta}_1] = \frac{\sigma^2}{S_{xx}}$
@@ -629,9 +658,9 @@ Finally,
 Thus we can compute the maximum likelihood estimator of $\beta_1^o$ by taking partial derivative of log-likelihood with respect to $\beta_1^o$:
 
 \begin{align*}
-	\frac{\partial l}{\partial \beta_1^o} = - \frac{1}{2 \sigma^2} & \sum 2(y_i-\beta_1^o x_i)(-x_i)=0 \\
-	\frac{1}{\sigma^2}& \sum (y_i x_i - \beta_1^o x_i ^2) = 0 \\
-	& \sum x_i y_i =  \sum  x_i^2 \beta_1^o \\
+	\frac{\partial l}{\partial \hat{\beta_1^o}} = - \frac{1}{2 \sigma^2} & \sum 2(y_i-\hat{\beta_1^o} x_i)(-x_i)=0 \\
+	\frac{1}{\sigma^2}& \sum (y_i x_i - \hat{\beta_1^o} x_i ^2) = 0 \\
+	& \sum x_i y_i =  \sum  x_i^2 \hat{\beta_1^o} \\
 	& \hat{\beta_1^o} = \frac{\sum x_i y_i}{\sum x_i^2}
 \end{align*}
 
@@ -642,24 +671,17 @@ Thus we can compute the maximum likelihood estimator of $\beta_1^o$ by taking pa
 	\begin{proposition}
 		$\hat{\beta}_1^o$ is unbiased
 	\end{proposition}
-
 	\begin{proof}
 		\begin{align*}
 			\mathbb{E} [\hat{\beta_1^o}] &= \mathbb{E} [\frac{\sum x_i y_i}{\sum x_i^2}] = \sum \frac{1}{x_i^2} \mathbb{E}[\sum x_i y_i] = \\
 			&= \frac{\sum x_i\mathbb{E}[y_i]}{\sum x_i^2} = \frac{\sum x_i^2 \beta_1^o}{\sum x_i^2} = \beta_1^o 
 		\end{align*}
 	\end{proof}
-
-
-	\begin{proposition} \label{prop:variance_slop_no_intercept}
-		$\mathbb{V}ar[\hat{\beta}_1^0] = \frac{\sigma^2}{\sum x_i^2}$
+	\begin{proposition} \label{prop:variance_slop_no_intercept}	$\mathbb{V}ar[\hat{\beta}_1^0] = \frac{\sigma^2}{\sum x_i^2}$
 	\end{proposition}
-
-
-	\begin{proof}
-		\[
+	\begin{proof}	$
 		\mathbb{V}ar[\hat{\beta}_1^0] =  \mathbb{V}ar[\frac{\sum x_i y_i}{\sum x_i^2}] = \frac{1}{(\sum x_i^2)^2} \sum x_i^2 \mathbb{V}ar[Y_i] = \frac{\sigma^2}{\sum x_i^2}
-		\]
+		$
 	\end{proof}
 
 

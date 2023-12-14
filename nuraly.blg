@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: nuraly.aux
+Reallocating 'name_of_file' (item size: 1) to 7 items.
+Reallocating 'name_of_file' (item size: 1) to 6 items.
+The style file: plain.bst
+Database file #1: nuraly.bib
+You've used 8 entries,
+            2118 wiz_defined-function locations,
+            554 strings with 5111 characters,
+and the built_in function-call counts, 2374 in all, are:
+= -- 244
+> -- 73
+< -- 1
++ -- 31
+- -- 22
+* -- 154
+:= -- 397
+add.period$ -- 24
+call.type$ -- 8
+change.case$ -- 33
+chr.to.int$ -- 0
+cite$ -- 8
+duplicate$ -- 99
+empty$ -- 206
+format.name$ -- 22
+if$ -- 495
+int.to.chr$ -- 0
+int.to.str$ -- 8
+missing$ -- 10
+newline$ -- 43
+num.names$ -- 16
+pop$ -- 33
+preamble$ -- 1
+purify$ -- 27
+quote$ -- 0
+skip$ -- 67
+stack$ -- 0
+substring$ -- 180
+swap$ -- 17
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 28
+warning$ -- 0
+while$ -- 29
+width$ -- 9
+write$ -- 88

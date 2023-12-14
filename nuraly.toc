@@ -9,21 +9,21 @@
 \contentsline {section}{\numberline {3.1}Simple linear regression}{5}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Assumptions}{5}{section.3.2}%
 \contentsline {section}{\numberline {3.3}Properties}{7}{section.3.3}%
-\contentsline {chapter}{\numberline {4}Linear Regression Regression with no intercept term}{12}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Simple Linear Regression with no intercept term}{12}{section.4.1}%
+\contentsline {chapter}{\numberline {4}Linear Regression Regression with no intercept term}{13}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Simple Linear Regression with no intercept term}{13}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Model Comparison}{16}{section.4.2}%
 \contentsline {subsubsection}{Coefficient of Determination}{16}{section.4.2}%
 \contentsline {subsubsection}{Akaike Information Criterion}{17}{section.4.2}%
 \contentsline {subsubsection}{Bayesian Information Criterion}{18}{equation.4.2.3}%
-\contentsline {subsection}{\numberline {4.2.1}$\beta _0 = 0:$}{18}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}$\beta _0 \neq 0:$}{18}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.1}$\beta _0 = 0:$}{19}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}$\beta _0 \neq 0:$}{19}{subsection.4.2.2}%
 \contentsline {subsubsection}{Motivational example}{19}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Expected value of $SSD$ and $SSD_{no}$}{21}{subsection.4.2.3}%
-\contentsline {chapter}{\numberline {5}Summary and closing words}{25}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Conclusion}{25}{section.5.1}%
-\contentsline {chapter}{\numberline {A}Appendix}{27}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Miscellaneous calculations}{27}{section.A.1}%
-\contentsline {section}{\numberline {A.2}linear\_regression.py module}{27}{section.A.2}%
-\contentsline {section}{\numberline {A.3}Script 1}{29}{section.A.3}%
-\contentsline {section}{\numberline {A.4}Script 2}{30}{section.A.4}%
-\contentsline {section}{\numberline {A.5}Script 3}{32}{section.A.5}%
+\contentsline {subsection}{\numberline {4.2.3}Expected value of $SSD$ and $SSD_{no}$}{20}{subsection.4.2.3}%
+\contentsline {chapter}{\numberline {5}Summary and closing words}{26}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Conclusion}{26}{section.5.1}%
+\contentsline {chapter}{\numberline {A}Appendix}{28}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Miscellaneous calculations}{28}{section.A.1}%
+\contentsline {section}{\numberline {A.2}linear\_regression.py module}{28}{section.A.2}%
+\contentsline {section}{\numberline {A.3}Script 1}{30}{section.A.3}%
+\contentsline {section}{\numberline {A.4}Script 2}{31}{section.A.4}%
+\contentsline {section}{\numberline {A.5}Script 3}{33}{section.A.5}%
