@@ -19,11 +19,11 @@
 \contentsline {subsection}{\numberline {4.2.2}$\beta _0 \neq 0:$}{19}{subsection.4.2.2}%
 \contentsline {subsubsection}{Motivational example}{19}{subsection.4.2.2}%
 \contentsline {subsection}{\numberline {4.2.3}Expected value of $SSD$ and $SSD_{no}$}{20}{subsection.4.2.3}%
-\contentsline {chapter}{\numberline {5}Summary and closing words}{26}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Conclusion}{26}{section.5.1}%
-\contentsline {chapter}{\numberline {A}Appendix}{28}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Miscellaneous calculations}{28}{section.A.1}%
-\contentsline {section}{\numberline {A.2}linear\_regression.py module}{28}{section.A.2}%
-\contentsline {section}{\numberline {A.3}Script 1}{30}{section.A.3}%
-\contentsline {section}{\numberline {A.4}Script 2}{31}{section.A.4}%
-\contentsline {section}{\numberline {A.5}Script 3}{33}{section.A.5}%
+\contentsline {chapter}{\numberline {5}Summary and closing words}{25}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Conclusion}{25}{section.5.1}%
+\contentsline {chapter}{\numberline {A}Appendix}{27}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Miscellaneous calculations}{27}{section.A.1}%
+\contentsline {section}{\numberline {A.2}linear\_regression.py module}{27}{section.A.2}%
+\contentsline {section}{\numberline {A.3}Script 1}{29}{section.A.3}%
+\contentsline {section}{\numberline {A.4}Script 2}{30}{section.A.4}%
+\contentsline {section}{\numberline {A.5}Script 3}{32}{section.A.5}%
